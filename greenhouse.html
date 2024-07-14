@@ -48,10 +48,16 @@
                 <img src="images/3tepl.jpg" alt="Инновации" class="rounded-lg mb-4">
                 <p>Внедрение передовых технологий для повышения эффективности и экологичности.</p>
             </div>
-            <div class="bg-white shadow-lg rounded-lg p-6">
+            <div class="bg-white shadow-lg rounded-lg p-6 relative">
                 <h3 class="font-bold text-xl mb-4 text-green-900">Экологичность</h3>
                 <img src="images/greenhouse.png" alt="Экологичность" class="rounded-lg mb-4">
                 <p>Эко-дружественные решения для создания устойчивого будущего.</p>
+                <!-- Позиционирование кнопок в соответствии с вашим указанием -->
+                <button class="info-button" style="top: 43%; left: 20%;" onclick="showModal(1)"></button>
+                <button class="info-button" style="top: 48%; left: 17%;" onclick="showModal(2)"></button>
+                <button class="info-button" style="top: 55.5%; left: 20%;" onclick="showModal(3)"></button>
+                <button class="info-button" style="top: 62%; left: 56%;" onclick="showModal(4)"></button>
+                <button class="info-button" style="top: 44%; left: 75%;" onclick="showModal(5)"></button>
             </div>
             <div class="bg-white shadow-lg rounded-lg p-6">
                 <h3 class="font-bold text-xl mb-4 text-green-900">Технологии</h3>
@@ -64,6 +70,32 @@
 <footer class="bg-green-900 text-white text-center p-4">
     <p>© 2024 BioInvest. Все права защищены.</p>
 </footer>
+<div class="modal" id="modal1">
+    <h2 class="font-bold">Часть 1</h2>
+    <p>Информация о части 1 теплицы...</p>
+    <button onclick="closeModal()">Закрыть</button>
+</div>
+<div class="modal" id="modal2">
+    <h2 class="font-bold">Часть 2</h2>
+    <p>Информация о части 2 теплицы...</p>
+    <button onclick="closeModal()">Закрыть</button>
+</div>
+<div class="modal" id="modal3">
+    <h2 class="font-bold">Часть 3</h2>
+    <p>Информация о части 3 теплицы...</p>
+    <button onclick="closeModal()">Закрыть</button>
+</div>
+<div class="modal" id="modal4">
+    <h2 class="font-bold">Часть 4</h2>
+    <p>Информация о части 4 теплицы...</p>
+    <button onclick="closeModal()">Закрыть</button>
+</div>
+<div class="modal" id="modal5">
+    <h2 class="font-bold">Часть 5</h2>
+    <p>Информация о части 5 теплицы...</p>
+    <button onclick="closeModal()">Закрыть</button>
+</div>
+<div class="overlay" onclick="closeModal()"></div>
 <script>
     window.addEventListener('scroll', function() {
         var header = document.querySelector('header');
@@ -73,6 +105,18 @@
             header.classList.remove('header-scrolled');
         }
     });
+
+    function showModal(id) {
+        document.getElementById('modal' + id).style.display = 'block';
+        document.querySelector('.overlay').style.display = 'block';
+    }
+
+    function closeModal() {
+        document.querySelectorAll('.modal').forEach(modal => {
+            modal.style.display = 'none';
+        });
+        document.querySelector('.overlay').style.display = 'none';
+    }
 </script>
 </body>
 </html>

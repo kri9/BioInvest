@@ -62,3 +62,34 @@ body {
 .bg-center {
     background-position: center;
 }
+
+.info-button {
+    width: 20px;
+    height: 20px;
+    background-color: red; /* Для видимости, измените по необходимости */
+    position:absolute;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.modal {
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid #ccc;
+    background: white;
+    z-index: 10;
+    padding: 20px;
+    border-radius: 8px;
+}
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 5;
+}

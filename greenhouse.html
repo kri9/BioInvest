@@ -10,20 +10,20 @@
     <link rel="stylesheet" href="greenhouse-styles.css">
 </head>
 <body>
-<header class="fixed-header bg-green-900">
+<header class="fixed top-0 left-0 w-full bg-green-900 text-white shadow-md z-50">
     <div class="container mx-auto flex items-center justify-between p-4">
         <div class="flex items-center">
-            <img src="images/logo.png" alt="BioInvest Logo" class="h-16">
+            <img src="images/logo.png" alt="BioInvest Logo" class="h-12 md:h-16">
         </div>
-        <nav class="flex space-x-4">
-            <a href="index.html" class="text-white nav-item">Главная</a>
-            <a href="#" class="text-white nav-item">О компании</a>
-            <a href="#" class="text-white nav-item">Услуги</a>
-            <a href="#" class="text-white nav-item">Продукты</a>
-            <a href="greenhouse.html" class="text-white nav-item">Теплица</a>
-            <a href="#" class="text-white nav-item">Контакты</a>
+        <nav class="hidden md:flex space-x-4">
+            <a href="index.html" class="nav-item">Главная</a>
+            <a href="#" class="nav-item">О компании</a>
+            <a href="#" class="nav-item">Услуги</a>
+            <a href="#" class="nav-item">Продукты</a>
+            <a href="greenhouse.html" class="nav-item">Теплица</a>
+            <a href="#" class="nav-item">Контакты</a>
         </nav>
-        <div class="flex space-x-4">
+        <div class="hidden md:flex space-x-4">
             <a href="#" class="text-white"><i class="fab fa-facebook-f"></i></a>
             <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
             <a href="#" class="text-white"><i class="fab fa-linkedin-in"></i></a>
@@ -31,9 +31,27 @@
             <a href="#" class="text-white"><i class="fas fa-user-circle"></i></a>
             <a href="#" class="text-white"><i class="fas fa-lock"></i></a>
         </div>
+        <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none"><i class="fas fa-bars"></i></button>
     </div>
 </header>
-<main>
+<nav id="mobile-menu" class="hidden fixed top-0 left-0 w-full h-full bg-green-800 text-white z-50 flex flex-col items-center justify-center">
+    <button id="close-menu-button" class="absolute top-4 right-4 text-white focus:outline-none"><i class="fas fa-times"></i></button>
+    <a href="index.html" class="nav-item py-2 text-xl">Главная</a>
+    <a href="#" class="nav-item py-2 text-xl">О компании</a>
+    <a href="#" class="nav-item py-2 text-xl">Услуги</a>
+    <a href="#" class="nav-item py-2 text-xl">Продукты</a>
+    <a href="greenhouse.html" class="nav-item py-2 text-xl">Теплица</a>
+    <a href="#" class="nav-item py-2 text-xl">Контакты</a>
+    <div class="flex space-x-4 mt-4">
+        <a href="#" class="text-white"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="text-white"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="text-white"><i class="fas fa-user-circle"></i></a>
+        <a href="#" class="text-white"><i class="fas fa-lock"></i></a>
+    </div>
+</nav>
+<main class="pt-20">
     <section class="hero bg-cover bg-center" style="background-image: url('images/greenhouse_background.png'); height: 60vh;">
         <div class="container mx-auto flex items-center justify-center h-full">
             <h1 class="text-white text-5xl font-bold">Теплицы</h1>
@@ -43,26 +61,46 @@
         <h2 class="font-bold text-3xl mb-4 text-green-900">Наши Теплицы</h2>
         <p class="mb-8 text-gray-700">Внедрение передовых технологий для повышения эффективности и экологичности.</p>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="bg-white shadow-lg rounded-lg p-6">
+            <div class="card bg-green-100 shadow-lg rounded-lg p-6 relative">
+                <i class="fas fa-seedling absolute text-green-900 opacity-20 text-9xl" style="top: 20px; right: 20px;"></i>
                 <h3 class="font-bold text-xl mb-4 text-green-900">Инновации</h3>
                 <img src="images/3tepl.jpg" alt="Инновации" class="rounded-lg mb-4">
                 <p>Внедрение передовых технологий для повышения эффективности и экологичности.</p>
             </div>
-            <div class="bg-white shadow-lg rounded-lg p-6 relative">
+            <div class="card bg-green-100 shadow-lg rounded-lg p-6 relative">
+                <i class="fas fa-leaf absolute text-green-900 opacity-20 text-9xl" style="top: 20px; right: 20px;"></i>
                 <h3 class="font-bold text-xl mb-4 text-green-900">Экологичность</h3>
                 <img src="images/greenhouse.png" alt="Экологичность" class="rounded-lg mb-4">
                 <p>Эко-дружественные решения для создания устойчивого будущего.</p>
-                <!-- Позиционирование кнопок в соответствии с вашим указанием -->
                 <button class="info-button" style="top: 43%; left: 20%;" onclick="showModal(1)"></button>
                 <button class="info-button" style="top: 48%; left: 17%;" onclick="showModal(2)"></button>
                 <button class="info-button" style="top: 55.5%; left: 20%;" onclick="showModal(3)"></button>
                 <button class="info-button" style="top: 62%; left: 56%;" onclick="showModal(4)"></button>
                 <button class="info-button" style="top: 44%; left: 75%;" onclick="showModal(5)"></button>
             </div>
-            <div class="bg-white shadow-lg rounded-lg p-6">
+            <div class="card bg-green-100 shadow-lg rounded-lg p-6 relative">
+                <i class="fas fa-water absolute text-green-900 opacity-20 text-9xl" style="top: 20px; right: 20px;"></i>
                 <h3 class="font-bold text-xl mb-4 text-green-900">Технологии</h3>
-                <img src="images/greenhouse1.jpg" alt="Технологии" class="rounded-lg mb-4">
+                <img src="images/teplica-projekt.png" alt="Технологии" class="rounded-lg mb-4">
                 <p>Использование новейших технологий для улучшения производительности.</p>
+            </div>
+            <div class="card bg-green-100 shadow-lg rounded-lg p-6 relative">
+                <i class="fas fa-hand-holding-water absolute text-green-900 opacity-20 text-9xl" style="top: 20px; right: 20px;"></i>
+                <h3 class="font-bold text-xl mb-4 text-green-900">Производительность</h3>
+                <img src="images/proizvoditelnost.jpg" alt="Производительность" class="rounded-lg mb-4">
+                <p>Повышение производительности с использованием передовых методов.</p>
+            </div>
+            <div class="card bg-green-100 shadow-lg rounded-lg p-6 relative">
+                <i class="fas fa-recycle absolute text-green-900 opacity-20 text-9xl" style="top: 20px; right: 20px;"></i>
+                <h3 class="font-bold text-xl mb-4 text-green-900">Устойчивость</h3>
+                <img src="images/ustojchivost.png" alt="Устойчивость" class="rounded-lg mb-4">
+                <p>Устойчивые решения для минимизации воздействия на окружающую среду.</p>
+            </div>
+            <div class="card bg-green-100 shadow-lg rounded-lg p-6 relative">
+                <i class="fas fa-apple-alt absolute text-green-900 opacity-20 text-9xl" style="top: 20px; right: 20px;"></i>
+                <h3 class="font-bold text-xl mb-4 text-green-900">Качество</h3>
+                <img src="images/kachestvo.png" alt="Качество" class="rounded-lg mb-4">
+                <p>Высококачественные продукты для удовлетворения всех потребностей.</p>
             </div>
         </div>
     </section>
@@ -71,29 +109,55 @@
     <p>© 2024 BioInvest. Все права защищены.</p>
 </footer>
 <div class="modal" id="modal1">
-    <h2 class="font-bold">Часть 1</h2>
-    <p>Информация о части 1 теплицы...</p>
+    <h2 class="font-bold">Фрамуги</h2>
+    <p>Фрамуги-1500 мм.
+        Выполнены из 10мм поликарбоната
+        премиального качества. Не подвержены
+        к ультрафиолету и имеют высокие
+        прочностные характеристики.
+    </p>
     <button onclick="closeModal()">Закрыть</button>
 </div>
 <div class="modal" id="modal2">
-    <h2 class="font-bold">Часть 2</h2>
-    <p>Информация о части 2 теплицы...</p>
+    <h2 class="font-bold">Каркас теплицы</h2>
+    <p>Каркас теплицы-выполен из 3мм
+        оцинкованной стали, выдерживает
+        высокие нагрузки а так же устойчив к
+        коррозии. Долговечен.</p>
     <button onclick="closeModal()">Закрыть</button>
 </div>
 <div class="modal" id="modal3">
-    <h2 class="font-bold">Часть 3</h2>
-    <p>Информация о части 3 теплицы...</p>
+    <h2 class="font-bold">Поливочная рампа</h2>
+    <p>Поливочная рампа-   внаши теплицы
+        легко монтируется поливочная рампа
+        любого производителя. Выбор остается
+        за клиентом.. </p>
     <button onclick="closeModal()">Закрыть</button>
 </div>
 <div class="modal" id="modal4">
-    <h2 class="font-bold">Часть 4</h2>
-    <p>Информация о части 4 теплицы...</p>
-    <button onclick="closeModal()">Закрыть</button>
+    <h2 class="font-bold">Ворота</h2>
+    <p>Ворота стандартного размера 3500х3500 мм.
+        Имеют калитку 90х2000  для  оперативного
+        доступа человека. По желанию размеы ворот
+        могут быть индивидуалены для каждого проекта. </п>
+        <button onclick="closeModal()">Закрыть</button>
 </div>
 <div class="modal" id="modal5">
-    <h2 class="font-bold">Часть 5</h2>
-    <p>Информация о части 5 теплицы...</p>
-    <button onclick="closeModal()">Закрыть</button>
+    <h2 class="font-bold">Теплица</h2>
+    <p>Стандартнная длина теплицы 80 метров
+        и может быть увеличена до 120 метров
+        в зависимости от проекта.
+        Фундамент ленточный стандартный 300х400 мм.
+        В зависимости от грунтов, фундамент может быть
+        выполнен в виде ростверка.
+        Пленка EVA долговечная, выдерживает сильные
+        ветровые и снеговые нагрузки. Добавлены специальные
+        морозостойкие добавки, до -40 так же эластична и до -80
+        сохраняет свои качества.
+        Техническая зона в входной группе, организована для
+        размещения необходимого оборудования а так же для
+        комфортного засеивания.</п>
+        <button onclick="closeModal()">Закрыть</button>
 </div>
 <div class="overlay" onclick="closeModal()"></div>
 <script>
@@ -117,6 +181,23 @@
         });
         document.querySelector('.overlay').style.display = 'none';
     }
+
+    // Мобильное меню
+    document.getElementById('mobile-menu-button').addEventListener('click', function() {
+        var mobileMenu = document.getElementById('mobile-menu');
+        mobileMenu.classList.toggle('hidden');
+        if (!mobileMenu.classList.contains('hidden')) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'auto';
+        }
+    });
+
+    document.getElementById('close-menu-button').addEventListener('click', function() {
+        var mobileMenu = document.getElementById('mobile-menu');
+        mobileMenu.classList.add('hidden');
+        document.body.style.overflow = 'auto';
+    });
 </script>
 </body>
 </html>

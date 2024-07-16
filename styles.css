@@ -11,48 +11,55 @@ body {
 }
 
 .header-scrolled {
-    background: #009e4e;
+    background: #004d40;
+}
+
+.nav-item {
+    padding: 10px 15px;
+    transition: background 0.3s, color 0.3s;
 }
 
 .nav-item:hover {
-    color: #dddddd;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
 }
 
 .hero {
     position: relative;
     height: 60vh;
-    background: url('images/cropped-zad.jpg') no-repeat center center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
+    background-size: cover;
+    background-position: center;
 }
 
 .hero h1 {
     color: white;
     font-size: 4rem;
     font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.content {
-    padding: 40px 0;
-    text-align: center;
+.bg-green-700 {
+    background-color: #2f855a;
 }
 
-.content h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
+.bg-green-900 {
+    background-color: #22543d;
 }
 
-.content p {
-    font-size: 1.25rem;
-    max-width: 750px;
-    margin: 0 auto;
+.text-green-900 {
+    color: #22543d;
 }
 
-.services {
-    padding: 40px 0;
-    text-align: center;
+.rounded-lg {
+    border-radius: 12px;
+}
+
+.shadow-lg {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .services .service-item {
@@ -71,4 +78,45 @@ body {
 .services .service-item p {
     margin-top: 5px;
     font-size: 1rem;
+}
+
+.card i {
+    transition: all 0.3s ease-in-out;
+}
+
+.card:hover i {
+    transform: scale(1.1);
+}
+
+#mobile-menu {
+    display: none;
+    transition: transform 0.3s ease-in-out;
+}
+
+#mobile-menu.hidden {
+    display: none;
+}
+
+#mobile-menu.show {
+    display: flex;
+    transform: translateY(0);
+}
+
+#close-menu-button {
+    top: 16px;
+    right: 16px;
+    color: white;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 8px;
+    border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+    }
+
+    #mobile-menu {
+        display: flex;
+    }
 }

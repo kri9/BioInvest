@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BioInvest</title>
+    <!-- Подключаем Tailwind и стили -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
@@ -17,14 +18,49 @@
         <div class="flex items-center">
             <img src="images/logo.png" alt="BioInvest Logo" class="h-12 md:h-16">
         </div>
-        <nav class="hidden md:flex space-x-4">
-            <a href="#" class="nav-item">Главная</a>
-            <a href="#" class="nav-item">О компании</a>
-            <a href="greenhouse.html" class="nav-item">Теплицы</a>
-            <a href="#" class="nav-item">Услуги</a>
-            <a href="#" class="nav-item">Продукты</a>
-            <a href="#" class="nav-item">Контакты</a>
+        <nav class="hidden md:flex space-x-4 items-center justify-center w-full">
+            <div class="relative group">
+                <a href="index.html" class="nav-item">Главная</a>
+            </div>
+            <div class="relative group">
+                <a href="#" class="nav-item">О компании</a>
+                <div class="absolute left-0 hidden group-hover:block bg-green-700 text-white top-full rounded shadow-lg">
+                    <a href="#" class="submenu-item block whitespace-no-wrap px-4 py-2">История</a>
+                    <a href="#" class="submenu-item block whitespace-no-wrap px-4 py-2">Цели и задачи</a>
+                </div>
+            </div>
+            <div class="relative group">
+                <a href="#" class="nav-item">Лесовосстановление</a>
+                <div class="absolute left-0 hidden group-hover:block bg-green-700 text-white top-full rounded shadow-lg">
+                    <a href="greenhouse.html" class="submenu-item block whitespace-no-wrap px-4 py-2">Теплицы</a>
+                    <a href="#" class="submenu-item block whitespace-no-wrap px-4 py-2">Поливочные рампы</a>
+                    <a href="#" class="submenu-item block whitespace-no-wrap px-4 py-2">Оборудование</a>
+                    <a href="#" class="submenu-item block whitespace-no-wrap px-4 py-2">Термопленка PATILUX</a>
+                    <a href="#" class="submenu-item block whitespace-no-wrap px-4 py-2">Кассеты</a>
+                </div>
+            </div>
+            <div class="relative group">
+                <a href="#" class="nav-item">Проектирование и строительство</a>
+                <div class="absolute left-0 hidden group-hover:block bg-green-700 text-white top-full rounded shadow-lg">
+                    <a href="#" class="submenu-item block whitespace-no-wrap px-4 py-2">Лесосеменные центры под ключ</a>
+                    <a href="#" class="submenu-item block whitespace-no-wrap px-4 py-2">Ремонт теплиц</a>
+                </div>
+            </div>
+            <div class="relative group">
+                <a href="#" class="nav-item">Семена и саженцы</a>
+                <div class="absolute left-0 hidden group-hover:block bg-green-700 text-white top-full rounded shadow-lg">
+                    <a href="#" class="submenu-item block whitespace-no-wrap px-4 py-2">Семена</a>
+                    <a href="#" class="submenu-item block whitespace-no-wrap px-4 py-2">Саженцы ОКС и ЗКС</a>
+                </div>
+            </div>
+            <div class="relative group">
+                <a href="#" class="nav-item">Контакты</a>
+                <div class="absolute left-0 hidden group-hover:block bg-green-700 text-white top-full rounded shadow-lg">
+                    <a href="#" class="submenu-item block whitespace-no-wrap px-4 py-2">Обратная связь</a>
+                </div>
+            </div>
         </nav>
+
         <div class="hidden md:flex space-x-4">
             <a href="#" class="text-white"><i class="fab fa-facebook-f"></i></a>
             <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
@@ -33,28 +69,96 @@
             <a href="#" class="text-white"><i class="fas fa-user-circle"></i></a>
             <a href="#" class="text-white"><i class="fas fa-lock"></i></a>
         </div>
-        <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none"><i class="fas fa-bars"></i></button>
+        <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+            <i class="fas fa-bars"></i>
+        </button>
     </div>
 </header>
-<nav id="mobile-menu" class="hidden fixed top-0 left-0 w-full h-full bg-green-800 text-white z-50 flex flex-col items-center justify-center">
-    <button id="close-menu-button" class="absolute top-4 right-4 text-white focus:outline-none"><i class="fas fa-times"></i></button>
-    <a href="#" class="nav-item py-2 text-xl">Главная</a>
-    <a href="#" class="nav-item py-2 text-xl">О компании</a>
-    <a href="greenhouse.html" class="nav-item py-2 text-xl">Теплицы</a>
-    <a href="#" class="nav-item py-2 text-xl">Услуги</a>
-    <a href="#" class="nav-item py-2 text-xl">Продукты</a>
-    <a href="#" class="nav-item py-2 text-xl">Контакты</a>
-    <div class="flex space-x-4 mt-4">
-        <a href="#" class="text-white"><i class="fab fa-facebook-f"></i></a>
-        <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
-        <a href="#" class="text-white"><i class="fab fa-linkedin-in"></i></a>
-        <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
-        <a href="#" class="text-white"><i class="fas fa-user-circle"></i></a>
-        <a href="#" class="text-white"><i class="fas fa-lock"></i></a>
-    </div>
+
+<!-- Мобильное меню -->
+<nav id="mobile-menu" class="hidden fixed top-0 left-0 w-full h-full bg-green-800 text-white z-50 overflow-auto">
+    <button id="close-menu-button" class="absolute top-4 right-4 text-white focus:outline-none">
+        <i class="fas fa-times"></i>
+    </button>
+    <ul class="flex flex-col items-center mt-12 space-y-4 px-4">
+        <li class="w-full">
+            <a href="#" class="nav-item py-2 text-xl w-full text-center">Главная</a>
+        </li>
+        <li class="w-full">
+            <div class="relative w-full">
+                <button class="nav-item py-2 text-xl flex items-center justify-between w-full focus:outline-none" onclick="toggleSubmenu(this)">
+                    О компании
+                    <i class="fas fa-chevron-down ml-2"></i>
+                </button>
+                <ul class="hidden bg-green-700 rounded mt-1 w-full">
+                    <li><a href="#" class="submenu-item block px-4 py-2">История</a></li>
+                    <li><a href="#" class="submenu-item block px-4 py-2">Цели и задачи</a></li>
+                </ul>
+            </div>
+        </li>
+
+        <li class="w-full">
+            <div class="relative w-full">
+                <button class="nav-item py-2 text-xl flex items-center justify-between w-full focus:outline-none" onclick="toggleSubmenu(this)">
+                    Лесовосстановление
+                    <i class="fas fa-chevron-down ml-2"></i>
+                </button>
+                <ul class="hidden bg-green-700 rounded mt-1 w-full">
+                    <li><a href="#" class="submenu-item block px-4 py-2">Теплицы</a></li>
+                    <li><a href="#" class="submenu-item block px-4 py-2">Поливочные рампы</a></li>
+                    <li><a href="#" class="submenu-item block px-4 py-2">Оборудование</a></li>
+                    <li><a href="#" class="submenu-item block px-4 py-2">Термопленка PATILUX</a></li>
+                    <li><a href="#" class="submenu-item block px-4 py-2">Кассеты</a></li>
+                </ul>
+            </div>
+        </li>
+        <li class="w-full">
+            <div class="relative w-full">
+                <button class="nav-item py-2 text-xl flex items-center justify-between w-full focus:outline-none" onclick="toggleSubmenu(this)">
+                    Проектирование и строительство
+                    <i class="fas fa-chevron-down ml-2"></i>
+                </button>
+                <ul class="hidden bg-green-700 rounded mt-1 w-full">
+                    <li><a href="#" class="submenu-item block px-4 py-2">Лесосеменные центры под ключ</a></li>
+                    <li><a href="#" class="submenu-item block px-4 py-2">Ремонт теплиц</a></li>
+                </ul>
+            </div>
+        </li>
+        <li class="w-full">
+            <div class="relative w-full">
+                <button class="nav-item py-2 text-xl flex items-center justify-between w-full focus:outline-none" onclick="toggleSubmenu(this)">
+                    Семена и саженцы
+                    <i class="fas fa-chevron-down ml-2"></i>
+                </button>
+                <ul class="hidden bg-green-700 rounded mt-1 w-full">
+                    <li><a href="#" class="submenu-item block px-4 py-2">Семена</a></li>
+                    <li><a href="#" class="submenu-item block px-4 py-2">Саженцы ОКС и ЗКС</a></li>
+                </ul>
+            </div>
+        </li>
+        <li class="w-full">
+            <div class="relative w-full">
+                <button class="nav-item py-2 text-xl flex items-center justify-between w-full focus:outline-none" onclick="toggleSubmenu(this)">
+                    Контакты
+                    <i class="fas fa-chevron-down ml-2"></i>
+                </button>
+                <ul class="hidden bg-green-700 rounded mt-1 w-full">
+                    <li><a href="#" class="submenu-item block px-4 py-2">Обратная связь</a></li>
+                </ul>
+            </div>
+        </li>
+        <li class="flex space-x-4 mt-4">
+            <a href="#" class="text-white"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="text-white"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="text-white"><i class="fas fa-user-circle"></i></a>
+            <a href="#" class="text-white"><i class="fas fa-lock"></i></a>
+        </li>
+    </ul>
 </nav>
 
-<main class="pt-20">
+<main class="pt-24">
     <section class="hero bg-cover bg-center" style="background-image: url('images/cropped-zad.jpg'); height: 60vh;">
         <div class="container mx-auto flex items-center justify-center h-full">
             <h1 class="text-white text-5xl font-bold">ДОБРО ПОЖАЛОВАТЬ НА САЙТ КОМПАНИИ ООО "БИО-ИНВЕСТ"</h1>
@@ -119,13 +223,15 @@
             </div>
         </div>
     </section>
+</main>
 
 <footer class="bg-green-900 text-white text-center p-4">
     <p>© 2024 BioInvest. Все права защищены.</p>
 </footer>
 
 <script>
-    window.addEventListener('scroll', function() {
+    // Скролл для изменения фона хедера
+    window.addEventListener('scroll', function () {
         var header = document.querySelector('header');
         if (window.scrollY > 50) {
             header.classList.add('header-scrolled');
@@ -134,32 +240,24 @@
         }
     });
 
-    document.getElementById('mobile-menu-button').addEventListener('click', function() {
+    // Открытие мобильного меню
+    document.getElementById('mobile-menu-button').addEventListener('click', function () {
         var mobileMenu = document.getElementById('mobile-menu');
-        mobileMenu.classList.toggle('hidden');
-        if (!mobileMenu.classList.contains('hidden')) {
-            document.body.style.overflow = 'hidden';
-        } else {
-            document.body.style.overflow = 'auto';
-        }
+        mobileMenu.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
     });
 
-    document.getElementById('close-menu-button').addEventListener('click', function() {
+    // Закрытие мобильного меню
+    document.getElementById('close-menu-button').addEventListener('click', function () {
         var mobileMenu = document.getElementById('mobile-menu');
         mobileMenu.classList.add('hidden');
         document.body.style.overflow = 'auto';
     });
 
-    function showModal(id) {
-        document.getElementById('modal' + id).style.display = 'block';
-        document.querySelector('.overlay').style.display = 'block';
-    }
-
-    function closeModal() {
-        document.querySelectorAll('.modal').forEach(modal => {
-            modal.style.display = 'none';
-        });
-        document.querySelector('.overlay').style.display = 'none';
+    // Функция для переключения подменю в мобильной версии
+    function toggleSubmenu(button) {
+        var submenu = button.nextElementSibling;
+        submenu.classList.toggle('hidden');
     }
 </script>
 </body>

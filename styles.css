@@ -1,22 +1,25 @@
+/* Общие стили */
 body {
     font-family: 'Roboto', sans-serif;
-}
-
-.fixed-header {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-    transition: background 0.3s;
 }
 
 .header-scrolled {
     background: #004d40;
 }
 
+main {
+    padding-top: 6rem; /* Ensure content is not hidden under the fixed header */
+}
+
+/* Стили для меню и подменю */
 .nav-item {
     padding: 10px 15px;
     transition: background 0.3s, color 0.3s;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .nav-item:hover {
@@ -24,6 +27,95 @@ body {
     border-radius: 5px;
 }
 
+/* Подменю */
+.submenu-item {
+    padding: 10px 15px;
+    position: relative;
+    overflow: hidden;
+    transition: color 0.3s;
+}
+
+.submenu-item::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0%;
+    height: 2px;
+    background-color: #fff;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.submenu-item:hover::after {
+    width: 100%;
+}
+
+.submenu-item:hover {
+    color: #e0e0e0;
+}
+
+/* Анимация подменю */
+
+/* Подменю */
+
+.group:hover .group-hover\:block {
+    display: block;
+}
+
+/* Цвета */
+.bg-green-700 {
+    background-color: #2f855a;
+}
+
+.bg-green-900 {
+    background-color: #22543d;
+}
+
+.text-green-900 {
+    color: #22543d;
+}
+
+/* Мобильное меню */
+#mobile-menu ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    width: 100%;
+}
+
+#mobile-menu li {
+    width: 100%;
+}
+
+#mobile-menu .submenu-item {
+    padding-left: 20px;
+}
+
+#mobile-menu button.nav-item {
+    background: none;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+#mobile-menu .submenu-item {
+    padding-left: 20px;
+    transition: background 0.3s ease;
+}
+
+#mobile-menu .submenu-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Обеспечиваем корректное отображение на iPhone 14 Pro Max */
+@media (max-width: 430px) {
+    #mobile-menu button.nav-item {
+        font-size: 1rem;
+    }
+}
+
+/* Герой секция */
 .hero {
     position: relative;
     height: 60vh;
@@ -42,18 +134,7 @@ body {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.bg-green-700 {
-    background-color: #2f855a;
-}
-
-.bg-green-900 {
-    background-color: #22543d;
-}
-
-.text-green-900 {
-    color: #22543d;
-}
-
+/* Дополнительные стили */
 .rounded-lg {
     border-radius: 12px;
 }
@@ -88,35 +169,12 @@ body {
     transform: scale(1.1);
 }
 
-#mobile-menu {
-    display: none;
-    transition: transform 0.3s ease-in-out;
-}
-
-#mobile-menu.hidden {
-    display: none;
-}
-
-#mobile-menu.show {
-    display: flex;
-    transform: translateY(0);
-}
-
-#close-menu-button {
-    top: 16px;
-    right: 16px;
-    color: white;
-    background: rgba(0, 0, 0, 0.2);
-    padding: 8px;
-    border-radius: 50%;
-}
-
+/* Стили для мобильных версий */
 @media (max-width: 768px) {
-    nav {
-        flex-direction: column;
+    .services .service-item {
+        margin-bottom: 1rem;
     }
-
-    #mobile-menu {
-        display: flex;
+    .grid {
+        grid-template-columns: 1fr !important;
     }
 }

@@ -60,6 +60,9 @@ header {
 }
 
 /* Анимация подменю */
+
+/* Подменю */
+
 .group:hover .group-hover\:block {
     display: block;
 }
@@ -107,6 +110,12 @@ header {
 
 #mobile-menu .submenu-item:hover {
     background: rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 430px) {
+    #mobile-menu button.nav-item {
+        font-size: 1rem;
+    }
 }
 
 main {

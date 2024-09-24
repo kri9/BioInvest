@@ -4,19 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Системы затенения - BioInvest</title>
+    <title>Сеянцы ОКС и ЗКС - BioInvest</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="shading-system.css">
+    <link rel="stylesheet" href="seedlings.css">
 </head>
 
-<body class="bg-gray-100">
-<header class="fixed w-full bg-green-900 text-white shadow-md z-50">
-    <div class="container mx-auto flex items-center justify-between p-4">
-        <div class="flex items-center">
-            <img src="images/logo.png" alt="BioInvest Logo" class="h-12 md:h-16">
-        </div>
+<body class="bg-gray-50 font-roboto">
+<header class="bg-green-900 text-white shadow-md py-4">
+    <div class="container mx-auto flex justify-between items-center">
+        <img src="images/logo.png" alt="BioInvest Logo" class="h-12">
         <nav class="hidden md:flex space-x-4 items-center justify-center w-full">
             <div class="relative group">
                 <a href="index.html" class="nav-item">Главная</a>
@@ -58,22 +56,12 @@
                 </div>
             </div>
         </nav>
-
-        <div class="hidden md:flex space-x-4">
-            <a href="#" class="text-white"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
-            <a href="#" class="text-white"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
-            <a href="#" class="text-white"><i class="fas fa-user-circle"></i></a>
-            <a href="#" class="text-white"><i class="fas fa-lock"></i></a>
-        </div>
-        <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+        <button id="mobile-menu-button" class="md:hidden text-white">
             <i class="fas fa-bars"></i>
         </button>
     </div>
 </header>
 
-<!-- Мобильное меню -->
 <nav id="mobile-menu" class="hidden fixed top-0 left-0 w-full h-full bg-green-800 text-white z-50 overflow-auto">
     <button id="close-menu-button" class="absolute top-4 right-4 text-white focus:outline-none">
         <i class="fas fa-times"></i>
@@ -154,72 +142,51 @@
             <a href="#" class="text-white"><i class="fas fa-lock"></i></a>
         </li>
     </ul>
-
 </nav>
 
-<main class="pt-24">
-    <section class="hero bg-cover bg-center" style="background-image: url('images/shading-bg.jpg'); height: 60vh;">
-        <div class="container mx-auto flex items-center justify-center h-full">
-            <h1 class="text-white text-5xl font-bold text-center">Системы затенения для теплиц</h1>
-        </div>
-    </section>
 
-    <section class="bg-green-700 text-white py-10">
-        <div class="container mx-auto text-center">
-            <h2 class="text-3xl font-bold mb-4">Зачем нужна система затенения?</h2>
-            <p class="max-w-2xl mx-auto">
-                Во время закаливания сеянцев, в зависимости от региона, мы часто сталкиваемся с активным и палящим солнцем, которое обжигает растения и не дает им нормально развиваться. Для этого мы имеем собственную, разработанную своими инженерами систему затенения. Максимальная ширина площадки закаливания до 35 метров.
-            </p>
-        </div>
-    </section>
-
-    <section class="services bg-gray-100 py-10">
-        <div class="container mx-auto text-center">
-            <h2 class="text-3xl font-bold mb-8 text-green-900">Особенности наших систем затенения</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="service-item">
-                    <div class="icon bg-green-600 text-white rounded-full p-5 inline-block">
-                        <i class="fas fa-sun text-4xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mt-4 text-green-900">Защита от солнца</h3>
-                    <p class="mt-2">Эффективная защита растений от ожогов и пересыхания благодаря регулировке затенения.</p>
+<main class="pt-20">
+    <section class="py-10 px-4 container mx-auto">
+        <h1 class="text-4xl font-bold text-center text-green-900 mb-10">Сеянцы ОКС и ЗКС</h1>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300">
+                <img src="images/pine-oks.png" alt="Сеянец сосны с ОКС" class="w-full h-60 object-cover">
+                <div class="p-6">
+                    <h2 class="text-2xl font-bold text-green-900 mb-4">Сеянец сосны с ОКС</h2>
+                    <p class="text-lg text-gray-700">
+                        На постоянной основе мы реализуем сеянцы сосны и ели, выращенные согласно стандартам ГОСТ. В наличии всегда сеянцы ЗКС (закрытой корневой системой) и ОКС (открытой корневой системой).
+                    </p>
                 </div>
-                <div class="service-item">
-                    <div class="icon bg-green-600 text-white rounded-full p-5 inline-block">
-                        <i class="fas fa-temperature-low text-4xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mt-4 text-green-900">Контроль температуры</h3>
-                    <p class="mt-2">Поддержание оптимальной температуры для роста и развития растений.</p>
+            </div>
+            <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300">
+                <img src="images/pine-zks.jpg" alt="Сеянец сосны с ЗКС" class="w-full h-60 object-cover">
+                <div class="p-6">
+                    <h2 class="text-2xl font-bold text-green-900 mb-4">Сеянец сосны с ЗКС</h2>
+                    <p class="text-lg text-gray-700">
+                        В качестве посевного материала используются только семена первого класса. Приживаемость ели и сосны ЗКС – более 92%.
+                    </p>
                 </div>
-                <div class="service-item">
-                    <div class="icon bg-green-600 text-white rounded-full p-5 inline-block">
-                        <i class="fas fa-seedling text-4xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mt-4 text-green-900">Адаптация к внешним условиям</h3>
-                    <p class="mt-2">Закалка растений, обеспечивающая их устойчивость к изменяющимся погодным условиям.</p>
+            </div>
+            <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300">
+                <img src="images/spruce-oks.jpg" alt="Сеянец ели с ОКС" class="w-full h-60 object-cover">
+                <div class="p-6">
+                    <h2 class="text-2xl font-bold text-green-900 mb-4">Сеянец ели с ОКС</h2>
+                    <p class="text-lg text-gray-700">
+                        Стандарты сеянцев с ЗКС: Высота сеянца – от 7 до 15 см, толщина шейки стволика – от 2 мм.
+                    </p>
+                </div>
+            </div>
+            <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300">
+                <img src="images/spruce-oks.jpg" alt="Сеянец ели с ЗКС" class="w-full h-60 object-cover">
+                <div class="p-6">
+                    <h2 class="text-2xl font-bold text-green-900 mb-4">Сеянец ели с ЗКС</h2>
+                    <p class="text-lg text-gray-700">
+                        Доставка сеянцев в любую точку по требованию клиента. Мы гарантируем высокое качество и надежность нашего материала.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
-
-    <section class="gallery bg-white py-10">
-        <div class="container mx-auto text-center">
-            <h2 class="text-3xl font-bold mb-6 text-green-900">Галерея систем затенения</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-                <!-- Placeholder for images -->
-                <div class="image-item shadow-lg rounded overflow-hidden">
-                    <img src="images/shading1.jpeg" alt="Система затенения 1" class="w-full h-48 object-cover">
-                </div>
-                <div class="image-item shadow-lg rounded overflow-hidden">
-                    <img src="images/shading2.jpeg" alt="Система затенения 2" class="w-full h-48 object-cover">
-                </div>
-                <div class="image-item shadow-lg rounded overflow-hidden">
-                    <img src="images/shading3.jpeg" alt="Система затенения 3" class="w-full h-48 object-cover">
-                </div>
-            </div>
-        </div>
-    </section>
-
 </main>
 
 <footer class="bg-green-900 text-white text-center p-4">
@@ -257,6 +224,7 @@
         submenu.classList.toggle('hidden');
     }
 </script>
+
 </body>
 
 </html>

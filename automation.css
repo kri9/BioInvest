@@ -77,6 +77,14 @@ header {
     color: #22543d;
 }
 
+.bg-green-50 {
+    background-color: #f0fdf4;
+}
+
+.bg-white {
+    background-color: #ffffff;
+}
+
 /* Мобильное меню */
 #mobile-menu ul {
     padding: 0;
@@ -115,37 +123,17 @@ header {
     }
 }
 
-
 main {
     padding-top: 6rem;
 }
 
 /* Стили для секций */
-section.bg-cover {
-    height: 50vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    background-size: cover;
-    background-position: center;
+section {
+    padding: 2rem 0;
 }
 
-section.bg-cover h1 {
-    color: white;
-    font-size: 4rem;
+h1, h2, h3 {
     font-weight: bold;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.grid {
-    display: grid;
-    gap: 1.5rem;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-}
-
-.bg-gray-100 {
-    background-color: #f5f5f5;
 }
 
 .rounded-lg {
@@ -156,17 +144,10 @@ section.bg-cover h1 {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-h3.text-xl {
+.text-xl {
     font-size: 1.25rem;
     margin-top: 0.5rem;
     color: #22543d;
-}
-
-/* Мобильное меню */
-#mobile-menu-button {
-    background: none;
-    border: none;
-    outline: none;
 }
 
 footer {
@@ -174,4 +155,25 @@ footer {
     padding: 1rem 0;
     color: white;
     text-align: center;
+}
+
+/* Карточки с иконками */
+.grid div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: box-shadow 0.3s;
+}
+
+.grid i {
+    transition: transform 0.3s ease;
+}
+
+.grid:hover i {
+    transform: scale(1.1);
+}
+
+.grid:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }

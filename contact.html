@@ -4,19 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Системы затенения - BioInvest</title>
+    <title>Свяжитесь с нами - BioInvest</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="shading-system.css">
+    <link rel="stylesheet" href="contact.css">
 </head>
 
-<body class="bg-gray-100">
-<header class="fixed w-full bg-green-900 text-white shadow-md z-50">
-    <div class="container mx-auto flex items-center justify-between p-4">
-        <div class="flex items-center">
-            <img src="images/logo.png" alt="BioInvest Logo" class="h-12 md:h-16">
-        </div>
+<body class="bg-gray-50 font-roboto">
+<header class="bg-green-900 text-white shadow-md py-4">
+    <div class="container mx-auto flex justify-between items-center">
+        <img src="images/logo.png" alt="BioInvest Logo" class="h-12">
         <nav class="hidden md:flex space-x-4 items-center justify-center w-full">
             <div class="relative group">
                 <a href="index.html" class="nav-item">Главная</a>
@@ -58,22 +55,12 @@
                 </div>
             </div>
         </nav>
-
-        <div class="hidden md:flex space-x-4">
-            <a href="#" class="text-white"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
-            <a href="#" class="text-white"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
-            <a href="#" class="text-white"><i class="fas fa-user-circle"></i></a>
-            <a href="#" class="text-white"><i class="fas fa-lock"></i></a>
-        </div>
-        <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+        <button id="mobile-menu-button" class="md:hidden text-white">
             <i class="fas fa-bars"></i>
         </button>
     </div>
 </header>
 
-<!-- Мобильное меню -->
 <nav id="mobile-menu" class="hidden fixed top-0 left-0 w-full h-full bg-green-800 text-white z-50 overflow-auto">
     <button id="close-menu-button" class="absolute top-4 right-4 text-white focus:outline-none">
         <i class="fas fa-times"></i>
@@ -154,72 +141,49 @@
             <a href="#" class="text-white"><i class="fas fa-lock"></i></a>
         </li>
     </ul>
-
 </nav>
 
-<main class="pt-24">
-    <section class="hero bg-cover bg-center" style="background-image: url('images/shading-bg.jpg'); height: 60vh;">
-        <div class="container mx-auto flex items-center justify-center h-full">
-            <h1 class="text-white text-5xl font-bold text-center">Системы затенения для теплиц</h1>
-        </div>
+
+<main class="pt-20">
+    <section class="map-container mb-10">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6139746014063!2d30.3099249161234!3d59.93711338187664!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310ff3d6f6fd%3A0xfedfbc29a8bfc709!2z0JvQvtC70LfQtdC90YHQutCw0Y8g0YPQuy4g0JzQvtGB0LrQstCwLCA3NCwg0JzQvdGB0LrQuNC5INC60L7Qu9C-0LPQvtGA0L7QstCwLCDQpdCw0YjQtdGB0LrQsNGPINC-0LHQuy4sIDExOTAxOA!5e0!3m2!1sru!2sru!4v1695697563213!5m2!1sru!2sru"
+                width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
     </section>
 
-    <section class="bg-green-700 text-white py-10">
-        <div class="container mx-auto text-center">
-            <h2 class="text-3xl font-bold mb-4">Зачем нужна система затенения?</h2>
-            <p class="max-w-2xl mx-auto">
-                Во время закаливания сеянцев, в зависимости от региона, мы часто сталкиваемся с активным и палящим солнцем, которое обжигает растения и не дает им нормально развиваться. Для этого мы имеем собственную, разработанную своими инженерами систему затенения. Максимальная ширина площадки закаливания до 35 метров.
-            </p>
-        </div>
-    </section>
-
-    <section class="services bg-gray-100 py-10">
-        <div class="container mx-auto text-center">
-            <h2 class="text-3xl font-bold mb-8 text-green-900">Особенности наших систем затенения</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="service-item">
-                    <div class="icon bg-green-600 text-white rounded-full p-5 inline-block">
-                        <i class="fas fa-sun text-4xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mt-4 text-green-900">Защита от солнца</h3>
-                    <p class="mt-2">Эффективная защита растений от ожогов и пересыхания благодаря регулировке затенения.</p>
-                </div>
-                <div class="service-item">
-                    <div class="icon bg-green-600 text-white rounded-full p-5 inline-block">
-                        <i class="fas fa-temperature-low text-4xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mt-4 text-green-900">Контроль температуры</h3>
-                    <p class="mt-2">Поддержание оптимальной температуры для роста и развития растений.</p>
-                </div>
-                <div class="service-item">
-                    <div class="icon bg-green-600 text-white rounded-full p-5 inline-block">
-                        <i class="fas fa-seedling text-4xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mt-4 text-green-900">Адаптация к внешним условиям</h3>
-                    <p class="mt-2">Закалка растений, обеспечивающая их устойчивость к изменяющимся погодным условиям.</p>
-                </div>
+    <section class="container mx-auto px-4">
+        <h1 class="text-4xl font-bold text-center text-green-900 mb-8">Свяжитесь с нами</h1>
+        <div class="bg-white p-8 shadow-md rounded-lg">
+            <div class="text-center mb-8">
+                <p>Компания BioInvest, Санкт-Петербург, наб. р. Мойки, д. 74</p>
+                <p>Свяжитесь с нами сегодня:</p>
+                <p class="mt-4"><i class="fas fa-phone-alt mr-2"></i>+7 921 933-83-53</p>
+                <p><i class="fas fa-envelope mr-2"></i>info@bioinvest.ru</p>
             </div>
+            <form action="#" method="post" class="space-y-6">
+                <div>
+                    <label for="name" class="block text-sm font-medium text-gray-700">Ваше имя *</label>
+                    <input type="text" id="name" name="name" required class="mt-1 block w-full p-2 border border-gray-300 rounded">
+                </div>
+                <div>
+                    <label for="email" class="block text-sm font-medium text-gray-700">Ваш email *</label>
+                    <input type="email" id="email" name="email" required class="mt-1 block w-full p-2 border border-gray-300 rounded">
+                </div>
+                <div>
+                    <label for="phone" class="block text-sm font-medium text-gray-700">Ваш телефон *</label>
+                    <input type="tel" id="phone" name="phone" required class="mt-1 block w-full p-2 border border-gray-300 rounded">
+                </div>
+                <div>
+                    <label for="message" class="block text-sm font-medium text-gray-700">Ваше сообщение *</label>
+                    <textarea id="message" name="message" rows="4" required class="mt-1 block w-full p-2 border border-gray-300 rounded"></textarea>
+                </div>
+                <div class="flex items-start">
+                    <input type="checkbox" id="consent" name="consent" required class="h-4 w-4 text-green-600 border-gray-300 rounded">
+                    <label for="consent" class="ml-2 text-sm text-gray-600">Я согласен с условиями обработки данных.</label>
+                </div>
+                <button type="submit" class="bg-green-700 text-white py-2 px-4 rounded hover:bg-green-800 transition">Отправить</button>
+            </form>
         </div>
     </section>
-
-    <section class="gallery bg-white py-10">
-        <div class="container mx-auto text-center">
-            <h2 class="text-3xl font-bold mb-6 text-green-900">Галерея систем затенения</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-                <!-- Placeholder for images -->
-                <div class="image-item shadow-lg rounded overflow-hidden">
-                    <img src="images/shading1.jpeg" alt="Система затенения 1" class="w-full h-48 object-cover">
-                </div>
-                <div class="image-item shadow-lg rounded overflow-hidden">
-                    <img src="images/shading2.jpeg" alt="Система затенения 2" class="w-full h-48 object-cover">
-                </div>
-                <div class="image-item shadow-lg rounded overflow-hidden">
-                    <img src="images/shading3.jpeg" alt="Система затенения 3" class="w-full h-48 object-cover">
-                </div>
-            </div>
-        </div>
-    </section>
-
 </main>
 
 <footer class="bg-green-900 text-white text-center p-4">

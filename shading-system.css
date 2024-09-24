@@ -4,7 +4,7 @@ body {
     background-color: #f5f5f5;
     margin: 0;
     padding: 0;
-    overflow-x: hidden; /* Отключение горизонтальной прокрутки */
+    overflow-x: hidden;
 }
 
 .header-scrolled {
@@ -12,7 +12,7 @@ body {
 }
 
 main {
-    padding-top: 6rem; /* Ensure content is not hidden under the fixed header */
+    padding-top: 6rem;
 }
 
 /* Стили для меню и подменю */
@@ -128,18 +128,7 @@ main {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.bg-green-700 {
-    background-color: #2f855a;
-}
-
-.bg-green-900 {
-    background-color: #22543d;
-}
-
-.text-green-900 {
-    color: #22543d;
-}
-
+/* Дополнительные стили */
 .rounded-lg {
     border-radius: 12px;
 }
@@ -174,55 +163,29 @@ main {
     transform: scale(1.1);
 }
 
-/* Стили для мобильных версий */
-@media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-    }
-
-    #mobile-menu {
-        display: flex;
-    }
+.gallery {
+    padding: 2rem 0;
 }
 
-.info-button {
-    width: 20px;
-    height: 20px;
-    background-color: darkgreen; /* Для видимости, измените по необходимости */
-    position: absolute;
-    border-radius: 50%;
-    cursor: pointer;
-}
-
-.modal {
-    display: none;
-    position: fixed;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    border: 1px solid #ccc;
-    background: white;
-    z-index: 10;
-    padding: 20px;
-    border-radius: 8px;
-}
-
-.overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 5;
-}
-
-.card {
+.image-item {
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.card:hover {
-    transform: translateY(-10px);
+.image-item:hover {
+    transform: scale(1.05);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.image-item img {
+    border-radius: 0.5rem;
+}
+
+/* Стили для мобильных версий */
+@media (max-width: 768px) {
+    .services .service-item {
+        margin-bottom: 1rem;
+    }
+    .grid {
+        grid-template-columns: 1fr !important;
+    }
 }

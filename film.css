@@ -1,21 +1,21 @@
-/* Общие стили */
+/* Общие стили для страницы */
 body {
     font-family: 'Roboto', sans-serif;
     background-color: #f5f5f5;
     margin: 0;
     padding: 0;
-    overflow-x: hidden; /* Отключение горизонтальной прокрутки */
 }
 
-.header-scrolled {
-    background: #004d40;
+header {
+    background: #22543d;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-main {
-    padding-top: 6rem; /* Ensure content is not hidden under the fixed header */
-}
-
-/* Стили для меню и подменю */
 .nav-item {
     padding: 10px 15px;
     transition: background 0.3s, color 0.3s;
@@ -109,10 +109,13 @@ main {
     background: rgba(255, 255, 255, 0.1);
 }
 
-/* Герой секция */
+main {
+    padding-top: 6rem;
+}
+
+/* Стили для секций */
 .hero {
-    position: relative;
-    height: 60vh;
+    height: 50vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -128,16 +131,8 @@ main {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.bg-green-700 {
-    background-color: #2f855a;
-}
-
-.bg-green-900 {
-    background-color: #22543d;
-}
-
-.text-green-900 {
-    color: #22543d;
+.bg-gray-100 {
+    background-color: #f5f5f5;
 }
 
 .rounded-lg {
@@ -148,81 +143,31 @@ main {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.services .service-item {
+.text-xl {
+    font-size: 1.25rem;
+    margin-top: 0.5rem;
+    color: #22543d;
+}
+
+footer {
+    background-color: #22543d;
+    padding: 1rem 0;
+    color: white;
     text-align: center;
 }
 
-.services .service-item .icon {
-    display: inline-block;
+/* Карточки с иконками */
+.grid div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
-.services .service-item h3 {
-    margin-top: 10px;
-    font-size: 1.5rem;
+.grid i {
+    transition: transform 0.3s ease;
 }
 
-.services .service-item p {
-    margin-top: 5px;
-    font-size: 1rem;
-}
-
-.card i {
-    transition: all 0.3s ease-in-out;
-}
-
-.card:hover i {
+.grid i:hover {
     transform: scale(1.1);
-}
-
-/* Стили для мобильных версий */
-@media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-    }
-
-    #mobile-menu {
-        display: flex;
-    }
-}
-
-.info-button {
-    width: 20px;
-    height: 20px;
-    background-color: darkgreen; /* Для видимости, измените по необходимости */
-    position: absolute;
-    border-radius: 50%;
-    cursor: pointer;
-}
-
-.modal {
-    display: none;
-    position: fixed;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    border: 1px solid #ccc;
-    background: white;
-    z-index: 10;
-    padding: 20px;
-    border-radius: 8px;
-}
-
-.overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 5;
-}
-
-.card {
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }

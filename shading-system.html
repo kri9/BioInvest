@@ -4,12 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BioInvest</title>
-    <!-- Подключаем Tailwind и стили -->
+    <title>Системы затенения - BioInvest</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="shading-system.css">
 </head>
 
 <body class="bg-gray-100">
@@ -32,7 +31,7 @@
                 <a href="#" class="nav-item">Лесовосстановление</a>
                 <div class="absolute left-0 hidden group-hover:block bg-green-700 text-white top-full rounded shadow-lg">
                     <a href="greenhouse.html" class="submenu-item block whitespace-no-wrap px-4 py-2">Теплицы</a>
-                    <a href="shading-system.html" class="submenu-item block whitespace-no-wrap px-4 py-2">Система затенения</a>
+                    <a href="#" class="submenu-item block whitespace-no-wrap px-4 py-2">Система затенения</a>
                     <a href="#" class="submenu-item block whitespace-no-wrap px-4 py-2">Доп оборудование</a>
                     <a href="#" class="submenu-item block whitespace-no-wrap px-4 py-2">Термопленка PATILUX</a>
                 </div>
@@ -81,7 +80,7 @@
     </button>
     <ul class="flex flex-col items-center mt-12 space-y-4 px-4">
         <li class="w-full">
-            <a href="#" class="nav-item py-2 text-xl w-full text-center">Главная</a>
+            <a href="index.html" class="nav-item py-2 text-xl w-full text-center">Главная</a>
         </li>
         <li class="w-full">
             <div class="relative w-full">
@@ -104,7 +103,7 @@
                 </button>
                 <ul class="hidden bg-green-700 rounded mt-1 w-full">
                     <li><a href="#" class="submenu-item block px-4 py-2">Теплицы</a></li>
-                    <li><a href="shading-system.html" class="submenu-item block px-4 py-2">Система затенения</a></li>
+                    <li><a href="#" class="submenu-item block px-4 py-2">Система затенения</a></li>
                     <li><a href="#" class="submenu-item block px-4 py-2">Доп оборудование</a></li>
                     <li><a href="#" class="submenu-item block px-4 py-2">Термопленка PATILUX</a></li>
                 </ul>
@@ -155,73 +154,72 @@
             <a href="#" class="text-white"><i class="fas fa-lock"></i></a>
         </li>
     </ul>
+
 </nav>
 
 <main class="pt-24">
-    <section class="hero bg-cover bg-center" style="background-image: url('images/cropped-zad.jpg'); height: 60vh;">
+    <section class="hero bg-cover bg-center" style="background-image: url('images/shading-bg.jpg'); height: 60vh;">
         <div class="container mx-auto flex items-center justify-center h-full">
-            <h1 class="text-white text-5xl font-bold">ДОБРО ПОЖАЛОВАТЬ НА САЙТ КОМПАНИИ ООО "БИО-ИНВЕСТ"</h1>
+            <h1 class="text-white text-5xl font-bold text-center">Системы затенения для теплиц</h1>
         </div>
     </section>
 
     <section class="bg-green-700 text-white py-10">
         <div class="container mx-auto text-center">
-            <h2 class="text-3xl font-bold mb-4">Почему выбирают BioInvest?</h2>
+            <h2 class="text-3xl font-bold mb-4">Зачем нужна система затенения?</h2>
             <p class="max-w-2xl mx-auto">
-                BioInvest — это передовая компания в области био-инвестиций, предлагающая широкий спектр продуктов и услуг для коммерческого лесоводства, озеленения и создания природных ландшафтов.
+                Во время закаливания сеянцев, в зависимости от региона, мы часто сталкиваемся с активным и палящим солнцем, которое обжигает растения и не дает им нормально развиваться. Для этого мы имеем собственную, разработанную своими инженерами систему затенения. Максимальная ширина площадки закаливания до 35 метров.
             </p>
         </div>
     </section>
 
     <section class="services bg-gray-100 py-10">
         <div class="container mx-auto text-center">
-            <h2 class="text-3xl font-bold mb-8 text-green-900">Наши услуги</h2>
+            <h2 class="text-3xl font-bold mb-8 text-green-900">Особенности наших систем затенения</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="service-item">
+                    <div class="icon bg-green-600 text-white rounded-full p-5 inline-block">
+                        <i class="fas fa-sun text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mt-4 text-green-900">Защита от солнца</h3>
+                    <p class="mt-2">Эффективная защита растений от ожогов и пересыхания благодаря регулировке затенения.</p>
+                </div>
+                <div class="service-item">
+                    <div class="icon bg-green-600 text-white rounded-full p-5 inline-block">
+                        <i class="fas fa-temperature-low text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mt-4 text-green-900">Контроль температуры</h3>
+                    <p class="mt-2">Поддержание оптимальной температуры для роста и развития растений.</p>
+                </div>
                 <div class="service-item">
                     <div class="icon bg-green-600 text-white rounded-full p-5 inline-block">
                         <i class="fas fa-seedling text-4xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold mt-4 text-green-900">Семена</h3>
-                    <p class="mt-2">Высококачественные семена для вашего бизнеса.</p>
-                </div>
-                <div class="service-item">
-                    <div class="icon bg-green-600 text-white rounded-full p-5 inline-block">
-                        <i class="fas fa-leaf text-4xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mt-4 text-green-900">Удобрения</h3>
-                    <p class="mt-2">Эффективные удобрения для лучших результатов.</p>
-                </div>
-                <div class="service-item">
-                    <div class="icon bg-green-600 text-white rounded-full p-5 inline-block">
-                        <i class="fas fa-tree text-4xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mt-4 text-green-900">Озеленение</h3>
-                    <p class="mt-2">Профессиональные услуги по озеленению территорий.</p>
-                </div>
-                <div class="service-item">
-                    <div class="icon bg-green-600 text-white rounded-full p-5 inline-block">
-                        <i class="fas fa-warehouse text-4xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mt-4 text-green-900">Теплицы</h3>
-                    <p class="mt-2">Современные теплицы для вашего хозяйства.</p>
-                </div>
-                <div class="service-item">
-                    <div class="icon bg-green-600 text-white rounded-full p-5 inline-block">
-                        <i class="fas fa-map text-4xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mt-4 text-green-900">Проектирование</h3>
-                    <p class="mt-2">Профессиональные услуги по проектированию питомников.</p>
-                </div>
-                <div class="service-item">
-                    <div class="icon bg-green-600 text-white rounded-full p-5 inline-block">
-                        <i class="fas fa-cogs text-4xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mt-4 text-green-900">Оборудование</h3>
-                    <p class="mt-2">Современное оборудование для вашего бизнеса.</p>
+                    <h3 class="text-xl font-bold mt-4 text-green-900">Адаптация к внешним условиям</h3>
+                    <p class="mt-2">Закалка растений, обеспечивающая их устойчивость к изменяющимся погодным условиям.</p>
                 </div>
             </div>
         </div>
     </section>
+
+    <section class="gallery bg-white py-10">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-6 text-green-900">Галерея систем затенения</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                <!-- Placeholder for images -->
+                <div class="image-item shadow-lg rounded overflow-hidden">
+                    <img src="images/shading1.jpeg" alt="Система затенения 1" class="w-full h-48 object-cover">
+                </div>
+                <div class="image-item shadow-lg rounded overflow-hidden">
+                    <img src="images/shading2.jpeg" alt="Система затенения 2" class="w-full h-48 object-cover">
+                </div>
+                <div class="image-item shadow-lg rounded overflow-hidden">
+                    <img src="images/shading3.jpeg" alt="Система затенения 3" class="w-full h-48 object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
 </main>
 
 <footer class="bg-green-900 text-white text-center p-4">

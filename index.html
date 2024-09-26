@@ -158,7 +158,7 @@
 </nav>
 
 <main class="pt-24">
-    <section class="hero bg-cover bg-center" style="background-image: url('images/cropped-zad.jpg'); height: 60vh;">
+    <section class="hero bg-cover bg-center slideshow">
         <div class="container mx-auto flex items-center justify-center h-full">
             <h1 class="text-white text-5xl font-bold">ДОБРО ПОЖАЛОВАТЬ НА САЙТ КОМПАНИИ ООО "БИО-ИНВЕСТ"</h1>
         </div>
@@ -168,7 +168,7 @@
         <div class="container mx-auto text-center">
             <h2 class="text-3xl font-bold mb-4">Почему выбирают BioInvest?</h2>
             <p class="max-w-2xl mx-auto">
-                BioInvest — это передовая компания в области био-инвестиций, предлагающая широкий спектр продуктов и услуг для коммерческого лесоводства, озеленения и создания природных ландшафтов.
+                BioInvest — это передовая компания в области био-инвестиций, предлагающая широкий спектр продуктов и услуг для коммерческого лесоводства и создания природных ландшафтов.
             </p>
         </div>
     </section>
@@ -181,22 +181,8 @@
                     <div class="icon bg-green-600 text-white rounded-full p-5 inline-block">
                         <i class="fas fa-seedling text-4xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold mt-4 text-green-900">Семена</h3>
+                    <h3 class="text-xl font-bold mt-4 text-green-900">Семена и Сеянцы</h3>
                     <p class="mt-2">Высококачественные семена для вашего бизнеса.</p>
-                </div>
-                <div class="service-item">
-                    <div class="icon bg-green-600 text-white rounded-full p-5 inline-block">
-                        <i class="fas fa-leaf text-4xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mt-4 text-green-900">Удобрения</h3>
-                    <p class="mt-2">Эффективные удобрения для лучших результатов.</p>
-                </div>
-                <div class="service-item">
-                    <div class="icon bg-green-600 text-white rounded-full p-5 inline-block">
-                        <i class="fas fa-tree text-4xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mt-4 text-green-900">Озеленение</h3>
-                    <p class="mt-2">Профессиональные услуги по озеленению территорий.</p>
                 </div>
                 <div class="service-item">
                     <div class="icon bg-green-600 text-white rounded-full p-5 inline-block">
@@ -212,12 +198,46 @@
                     <h3 class="text-xl font-bold mt-4 text-green-900">Проектирование</h3>
                     <p class="mt-2">Профессиональные услуги по проектированию питомников.</p>
                 </div>
-                <div class="service-item">
-                    <div class="icon bg-green-600 text-white rounded-full p-5 inline-block">
-                        <i class="fas fa-cogs text-4xl"></i>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials bg-white py-10">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-8 text-green-900">Отзывы клиентов</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="testimonial p-4 bg-gray-100 rounded-lg shadow-lg">
+                    <p class="italic">"Отличное качество семян и быстрые сроки доставки. Будем сотрудничать и дальше."</p>
+                    <div class="flex justify-center mt-2 text-yellow-500">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
                     </div>
-                    <h3 class="text-xl font-bold mt-4 text-green-900">Оборудование</h3>
-                    <p class="mt-2">Современное оборудование для вашего бизнеса.</p>
+                    <h4 class="font-bold mt-4 text-green-900">Анна С.</h4>
+                </div>
+                <div class="testimonial p-4 bg-gray-100 rounded-lg shadow-lg">
+                    <p class="italic">"Профессиональные консультации и помощь на всех этапах проектирования."</p>
+                    <div class="flex justify-center mt-2 text-yellow-500">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4 class="font-bold mt-4 text-green-900">Иван К.</h4>
+                </div>
+                <div class="testimonial p-4 bg-gray-100 rounded-lg shadow-lg">
+                    <p class="italic">"Качественное оборудование и надежные теплицы. Очень довольны!"</p>
+                    <div class="flex justify-center mt-2 text-yellow-500">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <h4 class="font-bold mt-4 text-green-900">Мария П.</h4>
                 </div>
             </div>
         </div>
@@ -229,6 +249,25 @@
 </footer>
 
 <script>
+    // Слайдшоу фона
+    let slideIndex = 0;
+    const slides = [
+        'images/cropped-zad.jpg',
+        'images/shading4.jpeg', // Убедитесь, что расширения верные
+        'images/shading1.jpeg',
+        'images/teplica2.jpg',
+        'images/shading2.jpeg',
+    ];
+
+    function showSlides() {
+        const hero = document.querySelector('.hero');
+        hero.style.backgroundImage = `url(${slides[slideIndex]})`;
+        slideIndex = (slideIndex + 1) % slides.length;
+        setTimeout(showSlides, 3000); // Переход каждые 5 секунд
+    }
+
+    document.addEventListener('DOMContentLoaded', showSlides);
+
     // Скролл для изменения фона хедера
     window.addEventListener('scroll', function () {
         var header = document.querySelector('header');

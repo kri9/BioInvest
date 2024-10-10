@@ -77,37 +77,7 @@ main {
     color: #22543d;
 }
 
-/* Мобильное меню */
-#mobile-menu ul {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    width: 100%;
-}
 
-#mobile-menu li {
-    width: 100%;
-}
-
-#mobile-menu .submenu-item {
-    padding-left: 20px;
-}
-
-#mobile-menu button.nav-item {
-    background: none;
-    border: none;
-    display: flex;
-    justify-content: space-between;
-}
-
-#mobile-menu .submenu-item {
-    padding-left: 20px;
-    transition: background 0.3s ease;
-}
-
-#mobile-menu .submenu-item:hover {
-    background: rgba(255, 255, 255, 0.1);
-}
 
 /* Герой секция */
 .hero {
@@ -179,10 +149,7 @@ main {
     nav {
         flex-direction: column;
     }
-
-    #mobile-menu {
-        display: flex;
-    }
+    
 }
 
 .info-button {

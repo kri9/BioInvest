@@ -1,31 +1,38 @@
-// Функция для переключения подменю
-function toggleSubmenu(button) {
-    var submenu = button.nextElementSibling;
-    submenu.classList.toggle('hidden'); // Добавляем или убираем класс hidden для подменю
-}
+fetch('menu.html')
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById('menu-placeholder').innerHTML = data;
 
-// Открытие и закрытие мобильного меню через делегирование событий
-document.addEventListener('click', function (event) {
-    const mobileMenuToggle = event.target.closest('#mobile-menu-toggle');
-    const closeMenuButton = event.target.closest('#close-menu-button');
+        // Привязываем обработчики событий для мобильного меню после загрузки меню
+        const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const closeMenuButton = document.getElementById('close-menu-button');
 
-    if (mobileMenuToggle) {
-        var mobileMenu = document.getElementById('mobile-menu');
-        mobileMenu.classList.remove('hidden');
-        document.body.style.overflow = 'hidden';
-    }
+        if (mobileMenuToggle && mobileMenu) {
+            mobileMenuToggle.addEventListener('click', function () {
+                if (mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.remove('hidden');
+                    document.body.style.overflow = 'hidden'; // Блокируем прокрутку
+                } else {
+                    mobileMenu.classList.add('hidden');
+                    document.body.style.overflow = 'auto'; // Восстанавливаем прокрутку
+                }
+            });
+        }
 
-    if (closeMenuButton) {
-        var mobileMenu = document.getElementById('mobile-menu');
-        mobileMenu.classList.add('hidden');
-        document.body.style.overflow = 'auto';
-    }
+        if (closeMenuButton && mobileMenu) {
+            closeMenuButton.addEventListener('click', function () {
+                mobileMenu.classList.add('hidden');
+                document.body.style.overflow = 'auto'; // Восстанавливаем прокрутку
+            });
+        }
 
-    // Автоматическое скрытие подменю при клике вне меню
-    if (!event.target.closest('#mobile-menu') && !mobileMenuToggle) {
-        var submenus = document.querySelectorAll('#mobile-menu ul');
-        submenus.forEach(function (submenu) {
-            submenu.classList.add('hidden');
+        // Закрытие мобильного меню при клике на любой пункт меню
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', function() {
+                mobileMenu.classList.add('hidden');
+                document.body.style.overflow = 'auto'; // Восстанавливаем прокрутку
+            });
         });
-    }
-});
+    })
+    .catch(error => console.error('Ошибка при загрузке меню:', error));

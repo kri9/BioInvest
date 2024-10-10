@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <script src="menu.js"></script>
 </head>
 
 <body class="bg-gray-100">
@@ -125,12 +126,13 @@
     <p>© 2024 BioInvest. Все права защищены.</p>
 </footer>
 
+<script src="menu.js"></script>
 <script>
     // Слайдшоу фона
     let slideIndex = 0;
     const slides = [
         'images/cropped-zad.jpg',
-        'images/shading4.jpeg', // Убедитесь, что расширения верные
+        'images/shading4.jpeg',
         'images/shading1.jpeg',
         'images/teplica2.jpg',
         'images/shading2.jpeg',
@@ -140,7 +142,7 @@
         const hero = document.querySelector('.hero');
         hero.style.backgroundImage = `url(${slides[slideIndex]})`;
         slideIndex = (slideIndex + 1) % slides.length;
-        setTimeout(showSlides, 3000); // Переход каждые 5 секунд
+        setTimeout(showSlides, 3000); // Переход каждые 3 секунды
     }
 
     document.addEventListener('DOMContentLoaded', showSlides);
@@ -154,27 +156,8 @@
             header.classList.remove('header-scrolled');
         }
     });
-
-    // Открытие мобильного меню
-    document.getElementById('mobile-menu-button').addEventListener('click', function () {
-        var mobileMenu = document.getElementById('mobile-menu');
-        mobileMenu.classList.remove('hidden');
-        document.body.style.overflow = 'hidden';
-    });
-
-    // Закрытие мобильного меню
-    document.getElementById('close-menu-button').addEventListener('click', function () {
-        var mobileMenu = document.getElementById('mobile-menu');
-        mobileMenu.classList.add('hidden');
-        document.body.style.overflow = 'auto';
-    });
-
-    // Функция для переключения подменю в мобильной версии
-    function toggleSubmenu(button) {
-        var submenu = button.nextElementSibling;
-        submenu.classList.toggle('hidden');
-    }
 </script>
+
 </body>
 
 </html>

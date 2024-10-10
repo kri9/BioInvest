@@ -7,10 +7,52 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="menu.css">
-
 </head>
 <body>
 
+<div class="md:hidden flex items-center justify-between p-4 bg-green-700 text-white">
+    <a href="index.html" class="text-xl font-bold">BioInvest</a>
+    <button id="mobile-menu-toggle" class="text-white focus:outline-none">
+        <i class="fas fa-bars fa-2x"></i>
+    </button>
+</div>
+
+<nav id="mobile-menu" class="hidden md:hidden flex flex-col space-y-2 items-start bg-green-700 text-white p-4">
+    <a href="index.html" class="mobile-nav-item">Главная</a>
+    <div class="relative group">
+        <a href="#" class="mobile-nav-item">О компании</a>
+        <div class="hidden group-hover:block bg-green-900 text-white rounded shadow-lg">
+            <a href="#" class="submenu-item block px-4 py-2">История</a>
+        </div>
+    </div>
+    <div class="relative group">
+        <a href="#" class="mobile-nav-item">Лесовосстановление</a>
+        <div class="hidden group-hover:block bg-green-900 text-white rounded shadow-lg">
+            <a href="greenhouse.html" class="submenu-item block px-4 py-2">Теплицы</a>
+            <a href="shading-system.html" class="submenu-item block px-4 py-2">Система затенения</a>
+            <a href="equipment.html" class="submenu-item block px-4 py-2">Доп оборудование</a>
+            <a href="film-patilux.html" class="submenu-item block px-4 py-2">Термопленка PATILUX</a>
+        </div>
+    </div>
+    <div class="relative group">
+        <a href="#" class="mobile-nav-item">Проектирование и строительство</a>
+        <div class="hidden group-hover:block bg-green-900 text-white rounded shadow-lg">
+            <a href="nursery.html" class="submenu-item block px-4 py-2">Лесные питомники с ЗКС под ключ</a>
+            <a href="automation.html" class="submenu-item block px-4 py-2">Автоматизация и управление</a>
+            <a href="repair.html" class="submenu-item block px-4 py-2">Ремонт теплиц</a>
+        </div>
+    </div>
+    <div class="relative group">
+        <a href="#" class="mobile-nav-item">Семена и саженцы</a>
+        <div class="hidden group-hover:block bg-green-900 text-white rounded shadow-lg">
+            <a href="seeds.html" class="submenu-item block px-4 py-2">Семена</a>
+            <a href="seedlings.html" class="submenu-item block px-4 py-2">Сеянцы ОКС и ЗКС</a>
+        </div>
+    </div>
+    <a href="contact.html" class="mobile-nav-item">Контакты</a>
+</nav>
+
+<!-- Десктопное меню -->
 <nav class="hidden md:flex space-x-4 items-center justify-center w-full">
     <div class="relative group">
         <a href="index.html" class="nav-item">Главная</a>
@@ -53,6 +95,6 @@
     </div>
 </nav>
 
+<script src="menu.js"></script>
 </body>
-
 </html>

@@ -50,3 +50,14 @@
 .bg-green-900 {
     background-color: #22543d;
 }
+
+#mobile-menu-toggle {
+    padding: 10px; /* Увеличиваем зону клика для тачскринов */
+    cursor: pointer; /* Убедимся, что курсор нажатия установлен */
+}
+
+@media (max-width: 768px) {
+    .md:hidden a.text-xl {
+        margin-right: 20px; /* Добавляем больше пространства между текстом и иконкой */
+    }
+}

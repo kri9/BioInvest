@@ -3,13 +3,13 @@ fetch('menu.html')
     .then(data => {
         document.getElementById('menu-placeholder').innerHTML = data;
 
-        // Привязываем обработчики событий для мобильного меню после загрузки меню
         const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
         const mobileMenu = document.getElementById('mobile-menu');
         const closeMenuButton = document.getElementById('close-menu-button');
 
         if (mobileMenuToggle && mobileMenu) {
             mobileMenuToggle.addEventListener('click', function () {
+                // Проверка наличия класса hidden
                 if (mobileMenu.classList.contains('hidden')) {
                     mobileMenu.classList.remove('hidden');
                     document.body.style.overflow = 'hidden'; // Блокируем прокрутку
@@ -27,7 +27,6 @@ fetch('menu.html')
             });
         }
 
-        // Закрытие мобильного меню при клике на любой пункт меню
         document.querySelectorAll('#mobile-menu a').forEach(link => {
             link.addEventListener('click', function() {
                 mobileMenu.classList.add('hidden');

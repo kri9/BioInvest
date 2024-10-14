@@ -77,8 +77,6 @@ main {
     color: #22543d;
 }
 
-
-
 /* Герой секция */
 .hero {
     position: relative;
@@ -96,18 +94,6 @@ main {
     font-size: 4rem;
     font-weight: bold;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.bg-green-700 {
-    background-color: #2f855a;
-}
-
-.bg-green-900 {
-    background-color: #22543d;
-}
-
-.text-green-900 {
-    color: #22543d;
 }
 
 .rounded-lg {
@@ -149,7 +135,16 @@ main {
     nav {
         flex-direction: column;
     }
-    
+
+    /* Отступ между "BioInvest" и иконкой бургера */
+    a.text-xl {
+        margin-right: 20px; /* Больше пространства между текстом и иконкой */
+    }
+
+    /* Увеличиваем зону клика для кнопки бургера */
+    #mobile-menu-toggle {
+        padding: 10px;
+    }
 }
 
 .info-button {

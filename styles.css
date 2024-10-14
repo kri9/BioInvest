@@ -11,11 +11,21 @@ main {
     padding-top: 6rem; /* Ensure content is not hidden under the fixed header */
 }
 
+/* Медиа-запросы для мобильных устройств до 768px */
+/* Специфические стили для мобильного меню на устройствах до 768px */
+@media (max-width: 768px) {
+    /* Добавляем отступ между "BioInvest" и иконкой бургера */
+    a.text-xl {
+        margin-right: 20px;
+    }
+
+    #mobile-menu-toggle {
+        padding: 10px; /* Увеличиваем зону клика для кнопки бургера */
+    }
+}
 
 
-
-
-/* Обеспечиваем корректное отображение на iPhone 14 Pro Max */
+/* Специфические стили для iPhone 14 Pro Max */
 @media (max-width: 430px) {
     #mobile-menu button.nav-item {
         font-size: 1rem;
@@ -96,14 +106,4 @@ main {
     border-radius: 8px;
     background-color: #f9f9f9;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Стили для мобильных версий */
-@media (max-width: 768px) {
-    .services .service-item {
-        margin-bottom: 1rem;
-    }
-    .grid {
-        grid-template-columns: 1fr !important;
-    }
 }

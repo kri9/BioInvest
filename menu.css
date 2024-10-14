@@ -51,13 +51,47 @@
     background-color: #22543d;
 }
 
-#mobile-menu-toggle {
-    padding: 10px; /* Увеличиваем зону клика для тачскринов */
-    cursor: pointer; /* Убедимся, что курсор нажатия установлен */
+#mobile-menu {
+    display: none; /* По умолчанию скрыто */
+    flex-direction: column;
+    align-items: center;
 }
 
-@media (max-width: 768px) {
-    .md:hidden a.text-xl {
-        margin-right: 20px; /* Добавляем больше пространства между текстом и иконкой */
+#mobile-menu.show {
+    display: flex; /* Показ меню при открытии */
+}
+
+#mobile-menu-toggle {
+    padding: 10px;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+#mobile-menu img {
+    max-width: 150px; /* Размер логотипа */
+    height: auto;
+}
+
+/* Анимация и стили для более приятного UX */
+#mobile-menu.show {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
     }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Специфические стили для мобильных устройств */
+@media (max-width: 768px) {
+    a.text-xl {
+        margin-right: 20px; /* Больше пространства между текстом и иконкой */
+    }
+
 }

@@ -54,6 +54,34 @@
         </div>
     </section>
 
+    <section class="container mx-auto py-10 text-center bg-green-100 rounded-lg shadow-lg my-10">
+        <h2 class="font-bold text-3xl mb-4 text-green-900">Рассчитайте стоимость теплицы</h2>
+        <p class="text-gray-700 mb-6">Введите параметры вашей теплицы и узнайте примерную стоимость.</p>
+
+        <div class="flex flex-col md:flex-row justify-center items-center mb-6">
+            <div class="mx-4">
+                <label for="width" class="block text-green-900 font-bold mb-2">Ширина (м):</label>
+                <input type="range" id="width" min="5" max="30" value="15" class="slider w-full" oninput="updateWidthValue(this.value)">
+                <span id="widthValue" class="font-bold text-green-900">15</span> м
+            </div>
+            <div class="mx-4">
+                <label for="length" class="block text-green-900 font-bold mb-2">Длина (м):</label>
+                <input type="range" id="length" min="10" max="100" value="50" class="slider w-full" oninput="updateLengthValue(this.value)">
+                <span id="lengthValue" class="font-bold text-green-900">50</span> м
+            </div>
+        </div>
+
+        <div class="mb-6">
+            <p class="text-xl text-gray-700 mb-2">Примерная стоимость теплицы:</p>
+            <p id="price" class="font-bold text-3xl text-green-900">300 000 ₽</p>
+        </div>
+
+        <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-6">
+            <button class="bg-green-900 text-white py-2 px-6 rounded-lg hover:bg-green-800 focus:outline-none" onclick="callNow()">Узнать точную стоимость</button>
+        </div>
+    </section>
+
+
     <section class="container mx-auto py-10">
         <h2 class="font-bold text-3xl mb-4 text-green-900">Наши Теплицы</h2>
         <p class="mb-8 text-gray-700">Внедрение передовых технологий для повышения эффективности и экологичности.</p>
@@ -233,6 +261,7 @@
 <div class="overlay" onclick="closeModal()"></div>
 
 <script src="menu.js"></script>
+<script src="calculate-price.js"></script>
 <script>
     // Скролл для изменения фона хедера
     window.addEventListener('scroll', function () {

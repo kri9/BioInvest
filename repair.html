@@ -5,23 +5,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ремонт теплиц - BioInvest</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="repair.css">
 </head>
 
 <body class="bg-gray-50 font-roboto">
+<!-- Header -->
 <header class="fixed w-full bg-green-900 text-white shadow-md z-50">
-    <div class="container mx-auto flex items-center justify-between p-4">
+    <div class="container mx-auto flex items-center p-4">
+        <!-- Логотип слева -->
         <div class="flex items-center">
             <img src="images/logo.png" alt="BioInvest Logo" class="h-12 md:h-16">
         </div>
-
-        <div id="menu-placeholder"></div>
+        <!-- Меню справа -->
+        <div id="menu-placeholder" class="ml-auto"></div>
     </div>
 </header>
 
+<!-- Load menu -->
 <script>
     fetch('menu.html')
         .then(response => response.text())
@@ -31,69 +38,98 @@
         .catch(error => console.error('Ошибка при загрузке меню:', error));
 </script>
 
-
-<main class="pt-20">
-    <section class="flex flex-col md:flex-row items-center py-10 px-4 container mx-auto">
-        <div class="bg-green-800 text-white p-8 rounded-lg shadow-md flex-1 mb-6 md:mb-0">
-            <h2 class="text-2xl font-bold mb-4">Ремонт теплиц</h2>
-            <p class="text-lg">
-                Если вам необходимо отремонтировать ваши теплицы, заменить пленку, фрамуги, двигатели открывания фрамуг и т.д., мы имеем большой опыт в ремонте и готовы выполнить данные работы квалифицированно и в кратчайшие сроки.
-            </p>
-        </div>
-        <img src="images/repair.png" alt="Ремонт теплиц" class="w-full md:w-1/2 rounded-lg shadow-lg md:ml-6">
-    </section>
-
-    <section class="flex flex-col md:flex-row items-center py-10 px-4 container mx-auto">
-        <img src="images/film-supplies.jpg" alt="Поставка ремкомплекта" class="w-full md:w-1/2 rounded-lg shadow-lg md:mr-6 mb-6 md:mb-0">
-        <div class="bg-green-800 text-white p-8 rounded-lg shadow-md flex-1">
-            <h2 class="text-2xl font-bold mb-4">Поставка ремкомплекта</h2>
-            <p class="text-lg">
-                В случае необходимости, мы готовы осуществить поставку полного ремкомплекта, который состоит из: профессиональная сополимерная пленка EVA PATILUX D\AG, материалы для ремонта фрамуг, крепежный брусок, метизы и т.д.
-            </p>
+<!-- Main Content -->
+<main class="pt-24">
+    <!-- Hero Section -->
+    <section class="bg-cover bg-center h-96" style="background-image: url('images/green-house-repair1.jpg');">
+        <div class="bg-black bg-opacity-50 h-full flex items-center justify-center">
+            <h1 class="text-white text-4xl md:text-6xl font-bold">Ремонт теплиц</h1>
         </div>
     </section>
 
-    <section class="flex flex-col md:flex-row items-center py-10 px-4 container mx-auto">
-        <div class="bg-green-800 text-white p-8 rounded-lg shadow-md flex-1 mb-6 md:mb-0">
-            <h2 class="text-2xl font-bold mb-4">Свяжитесь с нами</h2>
-            <p class="text-lg">
-                Более подробную информацию вы сможете получить, обратившись к нам за консультацией. Наша команда всегда готова помочь вам!
-            </p>
-            <a href="tel:+1234567890" class="mt-4 inline-block bg-white text-green-800 font-bold py-2 px-4 rounded shadow hover:bg-gray-200 transition">Позвонить нам</a>
+    <!-- Services Section -->
+    <section class="py-12 px-4 bg-gradient-to-b from-white to-green-50">
+        <div class="container mx-auto grid md:grid-cols-2 gap-8">
+            <!-- Service 1 -->
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-tools text-green-800 text-3xl mr-4"></i>
+                    <h2 class="text-2xl font-bold">Профессиональный ремонт</h2>
+                </div>
+                <p class="text-gray-700">
+                    Мы предоставляем услуги по ремонту теплиц, включая замену пленки, фрамуг, двигателей и других компонентов. Наш опыт позволяет выполнить работы качественно и в кратчайшие сроки.
+                </p>
+            </div>
+            <!-- Service 2 -->
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-box-open text-green-800 text-3xl mr-4"></i>
+                    <h2 class="text-2xl font-bold">Поставка ремкомплекта</h2>
+                </div>
+                <p class="text-gray-700">
+                    Мы можем предоставить полный ремкомплект, включающий профессиональную сополимерную пленку EVA PATILUX D\AG, материалы для ремонта фрамуг, крепежный брусок, метизы и другие необходимые компоненты.
+                </p>
+            </div>
         </div>
-        <img src="images/contact.jpg" alt="Связаться с нами" class="w-full md:w-1/2 rounded-lg shadow-lg md:ml-6">
+    </section>
+
+    <!-- Photo Gallery Section -->
+    <section class="py-12 px-4 bg-gradient-to-b from-green-50 to-white">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-8">Фотографии наших работ</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Photo Item 1 -->
+                <div class="overflow-hidden rounded-lg shadow-lg">
+                    <img src="images/repair1.jpg" alt="Ремонт теплицы 1" class="w-full h-64 object-cover transform hover:scale-105 transition duration-300">
+                </div>
+                <!-- Photo Item 2 -->
+                <div class="overflow-hidden rounded-lg shadow-lg">
+                    <img src="images/repair2.jpg" alt="Ремонт теплицы 2" class="w-full h-64 object-cover transform hover:scale-105 transition duration-300">
+                </div>
+                <!-- Photo Item 3 -->
+                <div class="overflow-hidden rounded-lg shadow-lg">
+                    <img src="images/repair3.jpg" alt="Ремонт теплицы 3" class="w-full h-64 object-cover transform hover:scale-105 transition duration-300">
+                </div>
+                <!-- Photo Item 4 -->
+                <div class="overflow-hidden rounded-lg shadow-lg">
+                    <img src="images/repair4.jpg" alt="Ремонт теплицы 4" class="w-full h-64 object-cover transform hover:scale-105 transition duration-300">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-12 px-4 bg-green-800 text-white rounded-lg shadow-lg">
+        <div class="container mx-auto flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-6 md:mb-0">
+                <h2 class="text-3xl font-bold mb-4">Свяжитесь с нами</h2>
+                <p class="text-lg mb-4">
+                    Получите подробную консультацию от наших специалистов. Мы всегда готовы помочь вам с вашими проектами.
+                </p>
+                <a href="tel:+1234567890" class="inline-block bg-white text-green-800 font-bold py-2 px-6 rounded-full shadow hover:bg-gray-200 transition duration-300">
+                    <i class="fas fa-phone-alt mr-2"></i>Позвонить нам
+                </a>
+            </div>
+        </div>
     </section>
 </main>
 
+<!-- Footer -->
 <footer class="bg-green-900 text-white text-center p-4">
     <p>© 2024 BioInvest. Все права защищены.</p>
 </footer>
+
+<!-- Scripts -->
 <script src="menu.js"></script>
 <script>
+    // Плавное изменение фона шапки при прокрутке
     window.addEventListener('scroll', function () {
         var header = document.querySelector('header');
         if (window.scrollY > 50) {
-            header.classList.add('header-scrolled');
+            header.classList.add('bg-green-800');
         } else {
-            header.classList.remove('header-scrolled');
+            header.classList.remove('bg-green-800');
         }
-    });
-
-    // Открытие мобильного меню
-    document.getElementById('mobile-menu-button').addEventListener('click', function () {
-        var mobileMenu = document.getElementById('mobile-menu');
-        mobileMenu.classList.remove('hidden');
-        document.body.style.overflow = 'hidden';
-    });
-
-    // Закрытие мобильного меню
-    document.getElementById('close-menu-button').addEventListener('click', function () {
-        var mobileMenu = document.getElementById('mobile-menu');
-        mobileMenu.classList.add('hidden');
-        document.body.style.overflow = 'auto';
-    });
-    document.getElementById('mobile-menu-button').addEventListener('click', function () {
-        alert('Мобильное меню не реализовано.');
     });
 </script>
 </body>

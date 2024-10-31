@@ -2,18 +2,27 @@
 <html lang="ru">
 
 <head>
+  <!-- Метатеги и ссылки на стили -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Дополнительное оборудование - BioInvest</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <!-- Tailwind CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <!-- Font Awesome для иконок -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <!-- GLightbox CSS для увеличения изображений -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Ваши собственные стили -->
   <link rel="stylesheet" href="equipment.css">
 </head>
 
 <body class="bg-gray-100 font-roboto">
+<!-- Шапка -->
 <header class="fixed w-full bg-green-900 text-white shadow-md z-50">
   <div class="container mx-auto flex items-center justify-between p-4">
+    <!-- Логотип -->
     <div class="flex items-center">
       <img src="images/logo.png" alt="BioInvest Logo" class="h-12 md:h-16">
     </div>
@@ -31,95 +40,121 @@
           .catch(error => console.error('Ошибка при загрузке меню:', error));
 </script>
 
-
-<main class="pt-16">
-  <section class="bg-cover bg-center" style="background-image: url('images/equipment-bg.jpg'); height: 50vh;">
-    <div class="container mx-auto flex items-center justify-center h-full">
-      <h1 class="text-white text-4xl font-bold text-center">Дополнительное оборудование</h1>
+<!-- Основное содержимое -->
+<main class="pt-24">
+  <!-- Герой секция -->
+  <section class="hero bg-cover bg-center relative" style="background-image: url('images/equipment-bg.jpg'); height: 60vh;">
+    <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+    <div class="container mx-auto flex items-center justify-center h-full relative z-10">
+      <h1 class="text-white text-5xl font-bold text-center">Дополнительное оборудование</h1>
     </div>
   </section>
 
+  <!-- Оборудование в наличии -->
   <section class="bg-white py-10">
     <div class="container mx-auto text-center">
       <h2 class="text-3xl font-bold mb-4 text-green-900">Всегда в наличии на нашем складе</h2>
       <p class="max-w-2xl mx-auto mb-8">
-        На нашем складе в Санкт-Петербурге мы всегда имеем ряд необходимого оборудования, для того чтобы вы
-        могли оперативно разрешить свои производственные задачи.
+        На нашем складе в Санкт-Петербурге мы всегда имеем ряд необходимого оборудования, чтобы вы могли оперативно
+        разрешить свои производственные задачи.
         В случае отсутствия на складе той или иной запчасти или оборудования, мы всегда готовы заказать и
         осуществить поставку для вашей компании.
       </p>
+      <!-- Галерея оборудования -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Поливочные рампы -->
         <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
-          <img src="images/ramp.jpg" alt="Поливочные рампы" class="rounded mb-4">
-          <h3 class="text-xl font-bold text-green-900">Поливочные рампы</h3>
+          <a href="images/poliv-rampa.jpg" class="glightbox" data-gallery="equipment-gallery" data-title="Поливочная рампа ВСС (Sweden)">
+            <img src="images/poliv-rampa.jpg" alt="Поливочная рампа ВСС (Sweden)" class="equipment-image rounded mb-4">
+          </a>
+          <h3 class="text-xl font-bold text-green-900">Поливочная рампа ВСС (Sweden)</h3>
         </div>
         <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
-          <img src="images/hose.jpg" alt="Напорные рукава" class="rounded mb-4">
-          <h3 class="text-xl font-bold text-green-900">Напорные рукава</h3>
+          <a href="images/poliv-rampa-urbinati.jpg" class="glightbox" data-gallery="equipment-gallery" data-title="Поливочная рампа Urbinatti (Italy)">
+            <img src="images/poliv-rampa-urbinati.jpg" alt="Поливочная рампа Urbinatti (Italy)" class="equipment-image rounded mb-4">
+          </a>
+          <h3 class="text-xl font-bold text-green-900">Поливочная рампа Urbinatti (Italy)</h3>
+        </div>
+        <!-- Управление метеостанции -->
+        <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
+          <a href="images/uprav-meteo-stancijej.jpg" class="glightbox" data-gallery="equipment-gallery" data-title="Управление метеостанции">
+            <img src="images/uprav-meteo-stancijej.jpg" alt="Управление метеостанции" class="equipment-image rounded mb-4">
+          </a>
+          <h3 class="text-xl font-bold text-green-900">Управление метеостанции</h3>
         </div>
         <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
-          <img src="images/nozzle.jpg" alt="Форсунки в сборе" class="rounded mb-4">
-          <h3 class="text-xl font-bold text-green-900">Форсунки в сборе</h3>
+          <a href="images/upravlenie-meostancijej-2.jpg" class="glightbox" data-gallery="equipment-gallery" data-title="Управление метеостанции">
+            <img src="images/upravlenie-meostancijej-2.jpg" alt="Управление метеостанции" class="equipment-image rounded mb-4">
+          </a>
+          <h3 class="text-xl font-bold text-green-900">Управление метеостанции</h3>
+        </div>
+        <!-- Датчик метеостанции -->
+        <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
+          <a href="images/datchiki-meteostancii.jpg" class="glightbox" data-gallery="equipment-gallery" data-title="Датчик метеостанции">
+            <img src="images/datchiki-meteostancii.jpg" alt="Датчик метеостанции" class="equipment-image rounded mb-4">
+          </a>
+          <h3 class="text-xl font-bold text-green-900">Датчик метеостанции</h3>
+        </div>
+        <!-- Зубчатые рейки -->
+        <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
+          <a href="images/zubchatije-rejki.jpg" class="glightbox" data-gallery="equipment-gallery" data-title="Зубчатая рейка">
+            <img src="images/zubchatije-rejki.jpg" alt="Зубчатая рейка" class="equipment-image rounded mb-4">
+          </a>
+          <h3 class="text-xl font-bold text-green-900">Зубчатая рейка</h3>
         </div>
         <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
-          <img src="images/motor.jpg" alt="Мотор редукторы" class="rounded mb-4">
-          <h3 class="text-xl font-bold text-green-900">Мотор редукторы</h3>
+          <a href="images/zubchatije-rejki2.jpg" class="glightbox" data-gallery="equipment-gallery" data-title="Зубчатая рейка">
+            <img src="images/zubchatije-rejki2.jpg" alt="Зубчатая рейка" class="equipment-image rounded mb-4">
+          </a>
+          <h3 class="text-xl font-bold text-green-900">Зубчатая рейка</h3>
+        </div>
+        <!-- Форсунки -->
+        <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
+          <a href="images/forsunka.jpg" class="glightbox" data-gallery="equipment-gallery" data-title="Форсунка">
+            <img src="images/forsunka.jpg" alt="Форсунка" class="equipment-image rounded mb-4">
+          </a>
+          <h3 class="text-xl font-bold text-green-900">Форсунка</h3>
         </div>
         <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
-          <img src="images/rack.jpg" alt="Зубчатые рейки" class="rounded mb-4">
-          <h3 class="text-xl font-bold text-green-900">Зубчатые рейки</h3>
+          <a href="images/forsunka-v-sbore.jpg" class="glightbox" data-gallery="equipment-gallery" data-title="Форсунка">
+            <img src="images/forsunka-v-sbore.jpg" alt="Форсунка" class="equipment-image rounded mb-4">
+          </a>
+          <h3 class="text-xl font-bold text-green-900">Форсунка</h3>
+        </div>
+        <!-- Мотор редуктор -->
+        <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
+          <a href="images/vozd-obrezanie-korn2.jpg" class="glightbox" data-gallery="equipment-gallery" data-title="Мотор редуктор">
+            <img src="images/vozd-obrezanie-korn2.jpg" alt="Мотор редуктор" class="equipment-image rounded mb-4">
+          </a>
+          <h3 class="text-xl font-bold text-green-900">Мотор редуктор</h3>
         </div>
         <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
-          <img src="images/cassette.jpg" alt="Кассеты" class="rounded mb-4">
-          <h3 class="text-xl font-bold text-green-900">Кассеты</h3>
-        </div>
-        <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
-          <img src="images/tray.jpg" alt="Воздушное обрезание корней" class="rounded mb-4">
-          <h3 class="text-xl font-bold text-green-900">Воздушное обрезание корней (поддоны)</h3>
-        </div>
-        <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
-          <img src="images/dozatron.jpg" alt="Дозаторы Dozatron" class="rounded mb-4">
-          <h3 class="text-xl font-bold text-green-900">Дозаторы Dozatron</h3>
+          <a href="images/vozd-obrezanie-korn.jpg" class="glightbox" data-gallery="equipment-gallery" data-title="Форсунка">
+            <img src="images/vozd-obrezanie-korn.jpg" alt="Форсунка" class="equipment-image rounded mb-4">
+          </a>
+          <h3 class="text-xl font-bold text-green-900">Форсунка</h3>
         </div>
       </div>
     </div>
   </section>
 </main>
 
+<!-- Подвал -->
 <footer class="bg-green-900 text-white text-center p-4">
   <p>© 2024 BioInvest. Все права защищены.</p>
 </footer>
+
+<!-- Скрипты -->
 <script src="menu.js"></script>
+<!-- GLightbox JS для увеличения изображений -->
+<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
 <script>
-  // Скролл для изменения фона хедера
-  window.addEventListener('scroll', function () {
-    var header = document.querySelector('header');
-    if (window.scrollY > 50) {
-      header.classList.add('header-scrolled');
-    } else {
-      header.classList.remove('header-scrolled');
-    }
+  document.addEventListener("DOMContentLoaded", function () {
+    // Инициализация GLightbox
+    const lightbox = GLightbox({
+      selector: '.glightbox'
+    });
   });
-
-  // Открытие мобильного меню
-  document.getElementById('mobile-menu-button').addEventListener('click', function () {
-    var mobileMenu = document.getElementById('mobile-menu');
-    mobileMenu.classList.remove('hidden');
-    document.body.style.overflow = 'hidden';
-  });
-
-  // Закрытие мобильного меню
-  document.getElementById('close-menu-button').addEventListener('click', function () {
-    var mobileMenu = document.getElementById('mobile-menu');
-    mobileMenu.classList.add('hidden');
-    document.body.style.overflow = 'auto';
-  });
-
-  // Функция для переключения подменю в мобильной версии
-  function toggleSubmenu(button) {
-    var submenu = button.nextElementSibling;
-    submenu.classList.toggle('hidden');
-  }
 </script>
 </body>
 

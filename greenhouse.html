@@ -1,18 +1,25 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+    <!-- Метатеги и ссылки на стили -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BioInvest - Теплица</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>BioInvest - Теплицы</title>
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Font Awesome для иконок -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Ваши собственные стили -->
     <link rel="stylesheet" href="greenhouse-styles.css">
 </head>
 
-<body class="bg-gray-100">
+<body class="bg-gray-100 font-roboto">
+<!-- Шапка -->
 <header class="fixed w-full bg-green-900 text-white shadow-md z-50">
     <div class="container mx-auto flex items-center justify-between p-4">
+        <!-- Логотип -->
         <div class="flex items-center">
             <img src="images/logo.png" alt="BioInvest Logo" class="h-12 md:h-16">
         </div>
@@ -21,6 +28,7 @@
     </div>
 </header>
 
+<!-- Загрузка меню -->
 <script>
     fetch('menu.html')
         .then(response => response.text())
@@ -30,31 +38,35 @@
         .catch(error => console.error('Ошибка при загрузке меню:', error));
 </script>
 
-<main class="pt-20">
-    <section class="hero bg-cover bg-center" style="background-image: url('images/greenhouse_background.png'); height: 80vh;">
-        <div class="container mx-auto flex items-center justify-center h-full">
+<!-- Основное содержимое -->
+<main class="pt-24">
+    <!-- Герой секция с градиентом -->
+    <section class="hero bg-cover bg-center relative" style="background-image: url('images/greenhouse_background.png'); height: 40vh;">
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent to-green-900 opacity-75"></div>
+        <div class="container mx-auto flex items-center justify-center h-full relative z-10">
             <h1 class="text-white text-5xl font-bold">Теплицы</h1>
         </div>
     </section>
-    <section class="container mx-auto py-10 text-center">
-        <h2 class="font-bold text-3xl mb-4 text-green-900">Почему выбирают BioInvest?</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="card bg-green-100 shadow-lg rounded-lg p-6">
-                <h3 class="font-bold text-xl mb-4 text-green-900">Биобезопасность</h3>
-                <p>Импортируемые растения являются основным источником распространения вредителей и болезней. Все деревья, которые мы поставляем, выращиваются на наших питомниках от посева до посадки.</p>
-            </div>
-            <div class="card bg-green-100 shadow-lg rounded-lg p-6">
-                <h3 class="font-bold text-xl mb-4 text-green-900">Инновации</h3>
-                <p>Мы проводим новаторские исследования в области селекции деревьев и ухода за ними. Наша специализированная лаборатория в Уэльсе — единственная в своем роде в Европе.</p>
-            </div>
-            <div class="card bg-green-100 shadow-lg rounded-lg p-6">
-                <h3 class="font-bold text-xl mb-4 text-green-900">Сохранение природы</h3>
-                <p>Наши семенные плантации содержат редкие и ценные виды деревьев, а также перспективные породы для будущих лесопосадок.</p>
-            </div>
-        </div>
+
+    <!-- Новый раздел о теплицах -->
+    <section class="container mx-auto py-2 text-center">
+        <h2 class="font-bold text-3xl mb-4 text-green-900">Что из себя представляют наши теплицы?</h2>
+        <p class="mb-8 text-gray-700">
+            Мы производим финские теплицы <strong>Termorex</strong>. Данный конструктив теплицы разработан специально для выращивания сеянцев деревьев с ЗКС (закрытой корневой системой).
+        </p>
+        <p class="mb-8 text-gray-700">
+            Есть три основных размера теплицы:
+        </p>
+        <ul class="list-disc list-inside mb-8 text-gray-700">
+            <li><strong>12×60 м</strong> — Termorex-S</li>
+            <li><strong>16,5×80 м</strong> — Termorex-M</li>
+            <li><strong>25×100 м</strong> — Termorex-L</li>
+        </ul>
+        <hr class="my-8 border-t-2 border-green-200">
     </section>
 
-    <section class="container mx-auto py-10 text-center bg-green-100 rounded-lg shadow-lg my-10">
+    <!-- Секция калькулятора стоимости -->
+    <section class="container mx-auto py-4 text-center bg-green-100 rounded-lg shadow-lg my-10">
         <h2 class="font-bold text-3xl mb-4 text-green-900">Рассчитайте стоимость теплицы</h2>
         <p class="text-gray-700 mb-6">Введите параметры вашей теплицы и узнайте примерную стоимость.</p>
 
@@ -81,132 +93,117 @@
         </div>
     </section>
 
-
+    <!-- Секция с теплицами -->
     <section class="container mx-auto py-10">
         <h2 class="font-bold text-3xl mb-4 text-green-900">Наши Теплицы</h2>
         <p class="mb-8 text-gray-700">Внедрение передовых технологий для повышения эффективности и экологичности.</p>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Карточка 1 -->
             <div class="card bg-green-100 shadow-lg rounded-lg p-6 relative">
                 <i class="fas fa-seedling absolute text-green-900 opacity-20 text-9xl" style="top: 20px; right: 20px;"></i>
                 <h3 class="font-bold text-xl mb-4 text-green-900">Инновации</h3>
                 <img src="images/3tepl.jpg" alt="Инновации" class="rounded-lg mb-4">
                 <p>Внедрение передовых технологий для повышения эффективности и экологичности.</p>
             </div>
+            <!-- Карточка 2 -->
             <div class="card bg-green-100 shadow-lg rounded-lg p-6 relative">
                 <i class="fas fa-leaf absolute text-green-900 opacity-20 text-9xl" style="top: 20px; right: 20px;"></i>
                 <h3 class="font-bold text-xl mb-4 text-green-900">Экологичность</h3>
                 <img src="images/greenhouse.png" alt="Экологичность" class="rounded-lg mb-4">
                 <p>Эко-дружественные решения для создания устойчивого будущего.</p>
+                <!-- Информационные кнопки -->
                 <button class="info-button" style="top: 43%; left: 20%;" onclick="showModal(1)"></button>
                 <button class="info-button" style="top: 48%; left: 17%;" onclick="showModal(2)"></button>
                 <button class="info-button" style="top: 55.5%; left: 20%;" onclick="showModal(3)"></button>
                 <button class="info-button" style="top: 62%; left: 56%;" onclick="showModal(4)"></button>
                 <button class="info-button" style="top: 44%; left: 75%;" onclick="showModal(5)"></button>
             </div>
+            <!-- Карточка 3 -->
             <div class="card bg-green-100 shadow-lg rounded-lg p-6 relative">
                 <i class="fas fa-water absolute text-green-900 opacity-20 text-9xl" style="top: 20px; right: 20px;"></i>
                 <h3 class="font-bold text-xl mb-4 text-green-900">Технологии</h3>
                 <img src="images/teplica-projekt.png" alt="Технологии" class="rounded-lg mb-4">
                 <p>Использование новейших технологий для улучшения производительности.</p>
             </div>
-            <div class="card bg-green-100 shadow-lg rounded-lg p-6 relative">
-                <i class="fas fa-hand-holding-water absolute text-green-900 opacity-20 text-9xl" style="top: 20px; right: 20px;"></i>
-                <h3 class="font-bold text-xl mb-4 text-green-900">Производительность</h3>
-                <img src="images/proizvoditelnost.jpg" alt="Производительность" class="rounded-lg mb-4">
-                <p>Повышение производительности с использованием передовых методов.</p>
-            </div>
-            <div class="card bg-green-100 shadow-lg rounded-lg p-6 relative">
-                <i class="fas fa-recycle absolute text-green-900 opacity-20 text-9xl" style="top: 20px; right: 20px;"></i>
-                <h3 class="font-bold text-xl mb-4 text-green-900">Устойчивость</h3>
-                <img src="images/ustojchivost.png" alt="Устойчивость" class="rounded-lg mb-4">
-                <p>Устойчивые решения для минимизации воздействия на окружающую среду.</p>
-            </div>
-            <div class="card bg-green-100 shadow-lg rounded-lg p-6 relative">
-                <i class="fas fa-apple-alt absolute text-green-900 opacity-20 text-9xl" style="top: 20px; right: 20px;"></i>
-                <h3 class="font-bold text-xl mb-4 text-green-900">Качество</h3>
-                <img src="images/kachestvo.png" alt="Качество" class="rounded-lg mb-4">
-                <p>Высококачественные продукты для удовлетворения всех потребностей.</p>
-            </div>
+            <!-- Добавьте другие карточки по необходимости -->
         </div>
     </section>
 
+    <!-- Дополнительная информация с улучшенным оформлением -->
     <section class="container mx-auto py-10">
-        <h2 class="font-bold text-3xl mb-4 text-green-900">Дополнительная информация</h2>
-        <p class="mb-4 text-gray-700">
-            Для выращивания сеянцев с закрытой корневой системой требуется технологичная, оборудованная правильной системой полива и вентиляцией теплица. Выбор типа теплицы, ее технологичность является одним из основных залогов успеха при выращивания сеянцев с ЗКС.
-        </p>
-        <p class="mb-4 text-gray-700">
-            Грамотное расположение угла наклона стенки теплицы позволяет максимально выгодно для растений получать требуемый ультрафиолет, а также сводит к нулю разрывы во время снеговых осадков. Система наддува между слоями пленки позволяет не только не скапливаться осадкам, но и сохранить необходимое тепло.
-        </p>
-        <p class="mb-4 text-gray-700 font-bold text-lg">
-            ЦЕНА НА ТЕПЛИЦУ НА ЗАКАЗ от 300 000 рублей
-        </p>
-        <p class="mb-4 text-gray-700">
-            Наша компания имеет собственное производство теплиц. Данный тип теплиц положительно зарекомендовал себя на протяжении более 20 лет. Существует два стандартных решения - 16,5 х 80 метров и 25х100 метров. Но имея собственное производство, мы имеем ряд преимуществ перед продавцами (перекупщиками), так как можем более гибко и индивидуально подходить под требования заказчика, выполнять заказы по индивидуальным размерам.
-        </p>
-        <p class="mb-4 text-gray-700">
-            Пример теплицы 16,5 х 80 метров рассчитан на 500 000 саженцев (1 ротация) и имеет следующие технические характеристики:
-        <ul class="list-disc list-inside">
-            <li>Габаритные размеры - 16.5х80 метров</li>
-            <li>Оцинкованный корпус</li>
-            <li>Двойная пленка EVA Patilux</li>
-            <li>Нагнетатель воздуха (для продува воздуха между слоями пленки)</li>
-            <li>Двустворчатые двери в обоих торцах теплицы размером 3х3 м с входными дверями размеров 0,9 х 2 м</li>
-            <li>Двери выполнены из поликарбоната на гребне с обоих сторон имеются фрамуги Шириной 1,5 м из поликарбоната</li>
-            <li>Двигатели, зубчатые рейки и оси для открывания фрамуг</li>
-            <li>Автоматика системы проветривания</li>
-            <li>Термодатчик</li>
-            <li>2 обогревателя Полартерм (работают на дизельном топливе)</li>
-            <li>Рукава для смешивания воздуха</li>
-        </ul>
-        </p>
-        <p class="mb-4 text-gray-700">
-            Если вам необходимо отремонтировать ваши теплицы, заменить пленку, фрамуги, двигатели и т.д., мы имеем большой опыт в ремонте и готовы выполнить данные работы квалифицированно и в кратчайшие сроки.
-        </p>
-        <h3 class="font-bold text-2xl mb-2 text-green-900">Пленка для теплиц</h3>
-        <p class="mb-4 text-gray-700">
-            Выбор пленочного покрытия является одним из самых важных аспектов при строительстве теплицы. Качественная пленка - залог стабильного и здорового роста саженцев, правильного получения ультрафиолета, сохранения температурного баланса в теплице, а также снижение расходов на ремонтные работы за счет долголетней службы EVA Patilux EVA D\AG, 7-10 лет.
-        </p>
-        <p class="mb-4 text-gray-700">
-            Более подробную информацию о пленке вы сможете найти на сайте <a href="http://www.PATILUX.ru" class="text-blue-500 underline">www.PATILUX.ru</a>
-        </p>
-        <h3 class="font-bold text-2xl mb-2 text-green-900">Купить теплицу для лесовосстановления</h3>
-        <p class="mb-4 text-gray-700">
-            Когда речь идет о выращивании сеянцев в промышленных масштабах, правильный выбор теплицы — залог успешного проекта. Мы приглашаем Вас открыть новую главу в сфере лесовосстановления с Био Инвест!
-        </p>
-        <h3 class="font-bold text-2xl mb-2 text-green-900">В чем заключается выгода?</h3>
-        <ul class="list-disc list-inside mb-4 text-gray-700">
-            <li>Собственное производство</li>
-            <li>Комплексный подход</li>
-            <li>Послепродажная поддержка</li>
-            <li>Размеры по Вашему желанию</li>
-            <li>Долговечность и надежность</li>
-        </ul>
-        <h3 class="font-bold text-2xl mb-2 text-green-900">Гарантия качества</h3>
-        <p class="mb-4 text-gray-700">
-            Мы гордимся тем, что каждая теплица проходит через наше собственное производство. Это обеспечивает высший стандарт качества, от выбора материалов до деталей конструкции. Приобретая у нас, вы получаете гарантию долговечности и эффективности.
-        </p>
-        <h3 class="font-bold text-2xl mb-2 text-green-900">От проектирования до эксплуатации</h3>
-        <p class="mb-4 text-gray-700">
-            Наша компания предоставляет возможность взаимодействия с заказчиком на всех этапах проекта. Начиная с проектирования и строительства, и заканчивая поставкой оборудования и вводом объекта в эксплуатацию. Мы с вами на каждом шагу, гарантируя полное соответствие вашим ожиданиям.
-        </p>
-        <h3 class="font-bold text-2xl mb-2 text-green-900">Надежное сотрудничество</h3>
-        <p class="mb-4 text-gray-700">
-            Наше взаимодействие не заканчивается с момента сдачи проекта. Мы предоставляем надежную послемонтажную поддержку, готовы ответить на ваши вопросы и решить любые возникшие проблемы. С нами ваш бизнес всегда под защитой.
-        </p>
-        <h3 class="font-bold text-2xl mb-2 text-green-900">Теплицы по вашим размерам</h3>
-        <p class="mb-4 text-gray-700">
-            Мы понимаем, что каждый проект уникален. Независимо от того, строите ли вы большой комплекс для лесоразведения или занимаетесь восстановлением лесов, мы можем предложить решение, идеально соответствующее вашим требованиям.
-        </p>
-        <h3 class="font-bold text-2xl mb-2 text-green-900">Преимущества в каждой детали</h3>
-        <p class="mb-4 text-gray-700">
-            С нами вы получаете все преимущества российского производства. Мы гордимся тем, что на рынке почти 20 лет, и наши теплицы выполнены по образу и подобию финских конструкций, доказавших свою долговечность и надежность.
-        </p>
+        <div class="bg-white rounded-lg shadow-lg p-8">
+            <h2 class="font-bold text-3xl mb-4 text-green-900">Дополнительная информация</h2>
+            <hr class="mb-6 border-t-2 border-green-200">
+            <p class="mb-4 text-gray-700">
+                Для выращивания сеянцев с закрытой корневой системой требуется технологичная, оборудованная правильной системой полива и вентиляцией теплица. Выбор типа теплицы и её технологичность являются одним из основных залогов успеха при выращивании сеянцев с ЗКС.
+            </p>
+            <p class="mb-4 text-gray-700">
+                Грамотное расположение угла наклона стенки теплицы позволяет максимально выгодно для растений получать требуемый ультрафиолет, а также сводит к нулю разрывы во время снеговых осадков. Система наддува между слоями пленки позволяет не только не скапливаться осадкам, но и сохранить необходимое тепло.
+            </p>
+            <p class="mb-4 text-gray-700 font-bold text-lg">
+                Цена на теплицу на заказ от 300 000 рублей
+            </p>
+            <p class="mb-4 text-gray-700">
+                Наша компания имеет собственное производство теплиц. Данный тип теплиц положительно зарекомендовал себя на протяжении более 20 лет. Существует два стандартных решения — 16,5×80 метров и 25×100 метров. Но имея собственное производство, мы имеем ряд преимуществ перед продавцами (перекупщиками), так как можем более гибко и индивидуально подходить под требования заказчика, выполняя заказы по индивидуальным размерам.
+            </p>
+            <!-- Добавьте разделительные линии и заголовки по необходимости -->
+            <hr class="my-8 border-t-2 border-green-200">
+            <h3 class="font-bold text-2xl mb-4 text-green-900">Пленка для теплиц</h3>
+            <p class="mb-4 text-gray-700">
+                Выбор пленочного покрытия является одним из самых важных аспектов при строительстве теплицы. Качественная пленка — залог стабильного и здорового роста саженцев, правильного получения ультрафиолета, сохранения температурного баланса в теплице, а также снижение расходов на ремонтные работы за счёт долголетней службы EVA Patilux EVA D\AG (7-10 лет).
+            </p>
+            <p class="mb-4 text-gray-700">
+                Более подробную информацию о пленке вы сможете найти на сайте <a href="http://www.PATILUX.ru" class="text-blue-500 underline">www.PATILUX.ru</a>
+            </p>
+            <hr class="my-8 border-t-2 border-green-200">
+            <h3 class="font-bold text-2xl mb-4 text-green-900">Купить теплицу для лесовосстановления</h3>
+            <p class="mb-4 text-gray-700">
+                Когда речь идет о выращивании сеянцев в промышленных масштабах, правильный выбор теплицы — залог успешного проекта. Мы приглашаем вас открыть новую главу в сфере лесовосстановления с Био Инвест!
+            </p>
+            <hr class="my-8 border-t-2 border-green-200">
+            <h3 class="font-bold text-2xl mb-4 text-green-900">В чем заключается выгода?</h3>
+            <ul class="list-disc list-inside mb-4 text-gray-700">
+                <li>Собственное производство</li>
+                <li>Комплексный подход</li>
+                <li>Послепродажная поддержка</li>
+                <li>Размеры по вашему желанию</li>
+                <li>Долговечность и надежность</li>
+            </ul>
+            <hr class="my-8 border-t-2 border-green-200">
+            <h3 class="font-bold text-2xl mb-4 text-green-900">Гарантия качества</h3>
+            <p class="mb-4 text-gray-700">
+                Мы гордимся тем, что каждая теплица проходит через наше собственное производство. Это обеспечивает высший стандарт качества, от выбора материалов до деталей конструкции. Приобретая у нас, вы получаете гарантию долговечности и эффективности.
+            </p>
+            <hr class="my-8 border-t-2 border-green-200">
+            <h3 class="font-bold text-2xl mb-4 text-green-900">От проектирования до эксплуатации</h3>
+            <p class="mb-4 text-gray-700">
+                Наша компания предоставляет возможность взаимодействия с заказчиком на всех этапах проекта. Начиная с проектирования и строительства, и заканчивая поставкой оборудования и вводом объекта в эксплуатацию. Мы с вами на каждом шагу, гарантируя полное соответствие вашим ожиданиям.
+            </p>
+            <hr class="my-8 border-t-2 border-green-200">
+            <h3 class="font-bold text-2xl mb-4 text-green-900">Надежное сотрудничество</h3>
+            <p class="mb-4 text-gray-700">
+                Наше взаимодействие не заканчивается с момента сдачи проекта. Мы предоставляем надежную послемонтажную поддержку, готовы ответить на ваши вопросы и решить любые возникшие проблемы. С нами ваш бизнес всегда под защитой.
+            </p>
+            <hr class="my-8 border-t-2 border-green-200">
+            <h3 class="font-bold text-2xl mb-4 text-green-900">Теплицы по вашим размерам</h3>
+            <p class="mb-4 text-gray-700">
+                Мы понимаем, что каждый проект уникален. Независимо от того, строите ли вы большой комплекс для лесоразведения или занимаетесь восстановлением лесов, мы можем предложить решение, идеально соответствующее вашим требованиям.
+            </p>
+            <hr class="my-8 border-t-2 border-green-200">
+            <h3 class="font-bold text-2xl mb-4 text-green-900">Преимущества в каждой детали</h3>
+            <p class="mb-4 text-gray-700">
+                С нами вы получаете все преимущества российского производства. Мы гордимся тем, что на рынке почти 20 лет, и наши теплицы выполнены по образу и подобию финских конструкций, доказавших свою долговечность и надежность.
+            </p>
+        </div>
     </section>
 </main>
+
+<!-- Подвал -->
 <footer class="bg-green-900 text-white text-center p-4">
     <p>© 2024 BioInvest. Все права защищены.</p>
 </footer>
+
+<!-- Модальные окна и overlay -->
 <div class="modal" id="modal1">
     <h2 class="font-bold">Фрамуги</h2>
     <p>Фрамуги-1500 мм.
@@ -217,53 +214,14 @@
     </p>
     <button onclick="closeModal()">Закрыть</button>
 </div>
-<div class="modal" id="modal2">
-    <h2 class="font-bold">Каркас теплицы</h2>
-    <p>Каркас теплицы-выполен из 3мм
-        оцинкованной стали, выдерживает
-        высокие нагрузки а так же устойчив к
-        коррозии. Долговечен.</p>
-    <button onclick="closeModal()">Закрыть</button>
-</div>
-<div class="modal" id="modal3">
-    <h2 class="font-bold">Поливочная рампа</h2>
-    <p>Поливочная рампа-   внаши теплицы
-        легко монтируется поливочная рампа
-        любого производителя. Выбор остается
-        за клиентом.. </p>
-    <button onclick="closeModal()">Закрыть</button>
-</div>
-<div class="modal" id="modal4">
-    <h2 class="font-bold">Ворота</h2>
-    <p>Ворота стандартного размера 3500х3500 мм.
-        Имеют калитку 90х2000  для  оперативного
-        доступа человека. По желанию размеы ворот
-        могут быть индивидуалены для каждого проекта. </p>
-        <button onclick="closeModal()">Закрыть</button>
-</div>
-<div class="modal" id="modal5">
-    <h2 class="font-bold">Теплица</h2>
-    <p>Стандартнная длина теплицы 80 метров
-        и может быть увеличена до 120 метров
-        в зависимости от проекта.
-        Фундамент ленточный стандартный 300х400 мм.
-        В зависимости от грунтов, фундамент может быть
-        выполнен в виде ростверка.
-        Пленка EVA долговечная, выдерживает сильные
-        ветровые и снеговые нагрузки. Добавлены специальные
-        морозостойкие добавки, до -40 так же эластична и до -80
-        сохраняет свои качества.
-        Техническая зона в входной группе, организована для
-        размещения необходимого оборудования а так же для
-        комфортного засеивания.</p>
-    <button onclick="closeModal()">Закрыть</button>
-</div>
+<!-- Остальные модальные окна (modal2, modal3, ...) -->
 <div class="overlay" onclick="closeModal()"></div>
 
+<!-- Скрипты -->
 <script src="menu.js"></script>
 <script src="calculate-price.js"></script>
 <script>
-    // Скролл для изменения фона хедера
+    // Скролл для изменения фона шапки
     window.addEventListener('scroll', function () {
         var header = document.querySelector('header');
         if (window.scrollY > 50) {
@@ -273,6 +231,50 @@
         }
     });
 
+    // Обработка мобильного меню
+    document.addEventListener("DOMContentLoaded", function () {
+        // Открытие мобильного меню
+        document.getElementById('mobile-menu-button').addEventListener('click', function () {
+            var mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        });
+
+        // Закрытие мобильного меню
+        document.getElementById('close-menu-button').addEventListener('click', function () {
+            var mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        });
+    });
+
+    // Функции для калькулятора стоимости
+    function updateWidthValue(value) {
+        document.getElementById('widthValue').innerText = value;
+        calculatePrice();
+    }
+
+    function updateLengthValue(value) {
+        document.getElementById('lengthValue').innerText = value;
+        calculatePrice();
+    }
+
+    function calculatePrice() {
+        var width = document.getElementById('width').value;
+        var length = document.getElementById('length').value;
+        var price = width * length * 400; // Примерная формула расчета
+        document.getElementById('price').innerText = price.toLocaleString('ru-RU') + ' ₽';
+    }
+
+    // Инициализация калькулятора
+    calculatePrice();
+
+    // Функция для звонка
+    function callNow() {
+        window.location.href = 'tel:+1234567890';
+    }
+
+    // Функции для модальных окон
     function showModal(id) {
         document.getElementById('modal' + id).style.display = 'block';
         document.querySelector('.overlay').style.display = 'block';
@@ -283,30 +285,6 @@
             modal.style.display = 'none';
         });
         document.querySelector('.overlay').style.display = 'none';
-    }
-
-    // Мобильное меню
-    document.getElementById('mobile-menu-button').addEventListener('click', function() {
-        var mobileMenu = document.getElementById('mobile-menu');
-        mobileMenu.classList.toggle('hidden');
-        if (!mobileMenu.classList.contains('hidden')) {
-            document.body.style.overflow = 'hidden';
-        } else {
-            document.body.style.overflow = 'auto';
-        }
-    });
-
-    // Закрытие мобильного меню
-    document.getElementById('close-menu-button').addEventListener('click', function () {
-        var mobileMenu = document.getElementById('mobile-menu');
-        mobileMenu.classList.add('hidden');
-        document.body.style.overflow = 'auto';
-    });
-
-    // Функция для переключения подменю в мобильной версии
-    function toggleSubmenu(button) {
-        var submenu = button.nextElementSibling;
-        submenu.classList.toggle('hidden');
     }
 </script>
 </body>

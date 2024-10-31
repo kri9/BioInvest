@@ -2,18 +2,25 @@
 <html lang="ru">
 
 <head>
+    <!-- Метатеги и ссылки на стили -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Системы затенения - BioInvest</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Font Awesome для иконок -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Ваши собственные стили -->
     <link rel="stylesheet" href="shading-system.css">
 </head>
 
-<body class="bg-gray-100">
+<body class="bg-gray-100 font-roboto">
+<!-- Шапка -->
 <header class="fixed w-full bg-green-900 text-white shadow-md z-50">
     <div class="container mx-auto flex items-center justify-between p-4">
+        <!-- Логотип -->
         <div class="flex items-center">
             <img src="images/logo.png" alt="BioInvest Logo" class="h-12 md:h-16">
         </div>
@@ -30,77 +37,121 @@
         })
         .catch(error => console.error('Ошибка при загрузке меню:', error));
 </script>
+
+<!-- Основное содержимое -->
 <main class="pt-24">
-    <section class="hero bg-cover bg-center" style="background-image: url('images/shading-bg.jpg'); height: 60vh;">
-        <div class="container mx-auto flex items-center justify-center h-full">
+    <section class="hero relative">
+        <video autoplay muted loop class="absolute inset-0 w-full h-30 object-cover">
+            <source src="images/shad-video.mp4" type="video/mp4">
+            Ваш браузер не поддерживает видео.
+        </video>
+        <!-- Затемнение фона -->
+        <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+        <!-- Содержимое геро-секции -->
+        <div class="container mx-auto flex items-center justify-center h-screen relative z-10">
             <h1 class="text-white text-5xl font-bold text-center">Системы затенения для теплиц</h1>
         </div>
     </section>
-
-    <section class="bg-green-700 text-white py-10">
+    <!-- Секция "Зачем нужна система затенения?" -->
+    <section class="bg-gradient-to-r from-green-700 to-green-900 text-white py-10">
         <div class="container mx-auto text-center">
             <h2 class="text-3xl font-bold mb-4">Зачем нужна система затенения?</h2>
             <p class="max-w-2xl mx-auto">
-                Во время закаливания сеянцев, в зависимости от региона, мы часто сталкиваемся с активным и палящим солнцем, которое обжигает растения и не дает им нормально развиваться. Для этого мы имеем собственную, разработанную своими инженерами систему затенения. Максимальная ширина площадки закаливания до 35 метров.
+                Во время закаливания сеянцев, в зависимости от региона, мы часто сталкиваемся с активным и палящим солнцем, которое обжигает растения и не дает им нормально развиваться. Для этого мы имеем собственную, разработанную нашими инженерами систему затенения. Максимальная ширина площадки закаливания до 35 метров.
             </p>
         </div>
     </section>
 
-    <section class="services bg-gray-100 py-10">
+    <!-- Секция с особенностями -->
+    <section class="services bg-white py-10">
         <div class="container mx-auto text-center">
             <h2 class="text-3xl font-bold mb-8 text-green-900">Особенности наших систем затенения</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="service-item">
+                <div class="service-item transition duration-300 transform hover:scale-105">
                     <div class="icon bg-green-600 text-white rounded-full p-5 inline-block">
                         <i class="fas fa-sun text-4xl"></i>
                     </div>
                     <h3 class="text-xl font-bold mt-4 text-green-900">Защита от солнца</h3>
                     <p class="mt-2">Эффективная защита растений от ожогов и пересыхания благодаря регулировке затенения.</p>
                 </div>
-                <div class="service-item">
+                <div class="service-item transition duration-300 transform hover:scale-105">
                     <div class="icon bg-green-600 text-white rounded-full p-5 inline-block">
                         <i class="fas fa-temperature-low text-4xl"></i>
                     </div>
                     <h3 class="text-xl font-bold mt-4 text-green-900">Контроль температуры</h3>
                     <p class="mt-2">Поддержание оптимальной температуры для роста и развития растений.</p>
                 </div>
-                <div class="service-item">
+                <div class="service-item transition duration-300 transform hover:scale-105">
                     <div class="icon bg-green-600 text-white rounded-full p-5 inline-block">
                         <i class="fas fa-seedling text-4xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold mt-4 text-green-900">Адаптация к внешним условиям</h3>
+                    <h3 class="text-xl font-bold mt-4 text-green-900">Адаптация к условиям</h3>
                     <p class="mt-2">Закалка растений, обеспечивающая их устойчивость к изменяющимся погодным условиям.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="gallery bg-white py-10">
+    <!-- Секция галереи -->
+    <section class="gallery bg-gray-100 py-10">
         <div class="container mx-auto text-center">
             <h2 class="text-3xl font-bold mb-6 text-green-900">Галерея систем затенения</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-                <!-- Placeholder for images -->
-                <div class="image-item shadow-lg rounded overflow-hidden">
-                    <img src="images/shading1.jpeg" alt="Система затенения 1" class="w-full h-48 object-cover">
+                <!-- Изображения с функциональностью увеличения -->
+                <div class="image-item shadow-lg rounded overflow-hidden cursor-pointer" onclick="openModal(1)">
+                    <img src="images/shad1.jpg" alt="Система затенения 1" class="w-full h-48 object-cover">
                 </div>
-                <div class="image-item shadow-lg rounded overflow-hidden">
-                    <img src="images/shading2.jpeg" alt="Система затенения 2" class="w-full h-48 object-cover">
+                <div class="image-item shadow-lg rounded overflow-hidden cursor-pointer" onclick="openModal(2)">
+                    <img src="images/shad2.jpg" alt="Система затенения 2" class="w-full h-48 object-cover">
                 </div>
-                <div class="image-item shadow-lg rounded overflow-hidden">
-                    <img src="images/shading3.jpeg" alt="Система затенения 3" class="w-full h-48 object-cover">
+                <div class="image-item shadow-lg rounded overflow-hidden cursor-pointer" onclick="openModal(3)">
+                    <img src="images/shad3.jpg" alt="Система затенения 3" class="w-full h-48 object-cover">
+                </div>
+                <div class="image-item shadow-lg rounded overflow-hidden cursor-pointer" onclick="openModal(4)">
+                    <img src="images/shad4.jpg" alt="Система затенения 4" class="w-full h-48 object-cover">
+                </div>
+                <div class="image-item shadow-lg rounded overflow-hidden cursor-pointer" onclick="openModal(5)">
+                    <img src="images/shad5.jpg" alt="Система затенения 5" class="w-full h-48 object-cover">
+                </div>
+                <div class="image-item shadow-lg rounded overflow-hidden cursor-pointer" onclick="openModal(6)">
+                    <img src="images/shad6.jpg" alt="Система затенения 6" class="w-full h-48 object-cover">
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Секция с контактом -->
+    <section class="bg-green-800 text-white py-10">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-4">Свяжитесь с нами</h2>
+            <p class="max-w-2xl mx-auto mb-6">
+                Хотите узнать больше о наших системах затенения? Свяжитесь с нами для получения подробной информации и индивидуального предложения.
+            </p>
+            <a href="tel:+1234567890" class="bg-white text-green-800 font-bold py-3 px-8 rounded-full inline-block shadow hover:bg-gray-200 transition duration-300">
+                <i class="fas fa-phone-alt mr-2"></i>Позвонить нам
+            </a>
+        </div>
+    </section>
 </main>
 
+<!-- Подвал -->
 <footer class="bg-green-900 text-white text-center p-4">
     <p>© 2024 BioInvest. Все права защищены.</p>
 </footer>
+
+<!-- Модальные окна для изображений -->
+<!-- Overlay -->
+<div id="image-overlay" class="hidden fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50">
+    <div class="relative">
+        <img id="modal-image" src="" alt="Увеличенное изображение" class="max-w-full max-h-screen">
+        <button class="absolute top-2 right-2 text-white text-3xl" onclick="closeModal()">&times;</button>
+    </div>
+</div>
+
+<!-- Скрипты -->
 <script src="menu.js"></script>
 <script>
-    // Скролл для изменения фона хедера
+    // Скролл для изменения фона шапки
     window.addEventListener('scroll', function () {
         var header = document.querySelector('header');
         if (window.scrollY > 50) {
@@ -110,25 +161,42 @@
         }
     });
 
-    // Открытие мобильного меню
-    document.getElementById('mobile-menu-button').addEventListener('click', function () {
-        var mobileMenu = document.getElementById('mobile-menu');
-        mobileMenu.classList.remove('hidden');
+    // Обработка мобильного меню
+    document.addEventListener("DOMContentLoaded", function () {
+        // Открытие мобильного меню
+        document.getElementById('mobile-menu-button').addEventListener('click', function () {
+            var mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        });
+
+        // Закрытие мобильного меню
+        document.getElementById('close-menu-button').addEventListener('click', function () {
+            var mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        });
+    });
+
+    // Функции для увеличения изображений
+    function openModal(imageIndex) {
+        var modalImage = document.getElementById('modal-image');
+        modalImage.src = 'images/shad' + imageIndex + '.jpg'; // Путь к увеличенному изображению
+        document.getElementById('image-overlay').classList.remove('hidden');
         document.body.style.overflow = 'hidden';
-    });
-
-    // Закрытие мобильного меню
-    document.getElementById('close-menu-button').addEventListener('click', function () {
-        var mobileMenu = document.getElementById('mobile-menu');
-        mobileMenu.classList.add('hidden');
-        document.body.style.overflow = 'auto';
-    });
-
-    // Функция для переключения подменю в мобильной версии
-    function toggleSubmenu(button) {
-        var submenu = button.nextElementSibling;
-        submenu.classList.toggle('hidden');
     }
+
+    function closeModal() {
+        document.getElementById('image-overlay').classList.add('hidden');
+        document.body.style.overflow = 'auto';
+    }
+
+    // Закрытие модального окна при нажатии на overlay
+    document.getElementById('image-overlay').addEventListener('click', function (e) {
+        if (e.target === this) {
+            closeModal();
+        }
+    });
 </script>
 </body>
 

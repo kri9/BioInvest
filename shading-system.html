@@ -13,7 +13,7 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <!-- Ваши собственные стили -->
-    <link rel="stylesheet" href="shading-system.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body class="bg-gray-100 font-roboto">
@@ -40,27 +40,32 @@
 
 <!-- Основное содержимое -->
 <main class="pt-24">
-    <section class="hero relative">
-        <video autoplay muted loop class="absolute inset-0 w-full h-30 object-cover">
-            <source src="images/shad-video.mp4" type="video/mp4">
-            Ваш браузер не поддерживает видео.
-        </video>
-        <!-- Затемнение фона -->
-        <div class="absolute inset-0 bg-black bg-opacity-50"></div>
-        <!-- Содержимое геро-секции -->
-        <div class="container mx-auto flex items-center justify-center h-screen relative z-10">
-            <h1 class="text-white text-5xl font-bold text-center">Системы затенения для теплиц</h1>
+    <section class="bg-cover bg-center h-96" style="background-image: url('images/shading-bg-1.jpg');">
+        <div class="bg-black bg-opacity-50 h-full flex items-center justify-center">
+            <h1 class="text-white text-4xl md:text-6xl font-bold">Системы затенения</h1>
         </div>
     </section>
-    <!-- Секция "Зачем нужна система затенения?" -->
-    <section class="bg-gradient-to-r from-green-700 to-green-900 text-white py-10">
+
+    <section class="bg-gradient-to-r from-green-700 to-green-900 text-white py-8">
         <div class="container mx-auto text-center">
             <h2 class="text-3xl font-bold mb-4">Зачем нужна система затенения?</h2>
-            <p class="max-w-2xl mx-auto">
-                Во время закаливания сеянцев, в зависимости от региона, мы часто сталкиваемся с активным и палящим солнцем, которое обжигает растения и не дает им нормально развиваться. Для этого мы имеем собственную, разработанную нашими инженерами систему затенения. Максимальная ширина площадки закаливания до 35 метров.
-            </p>
+            <!-- Обертка для адаптивного отображения текста и изображения -->
+            <div class="flex flex-col md:flex-row items-center md:space-x-8">
+                <!-- Текстовая часть -->
+                <div class="md:w-1/2 text-left p-4">
+                    <p class="mb-6">
+                        Во время закаливания сеянцев, в зависимости от региона, мы часто сталкиваемся с активным и палящим солнцем, которое обжигает растения и не дает им нормально развиваться. Для этого мы имеем собственную, разработанную нашими инженерами систему затенения. Максимальная ширина площадки закаливания до 35 метров.
+                    </p>
+                </div>
+                <!-- Изображение схемы -->
+                <div class="md:w-1/2 flex justify-center p-4">
+                    <img src="images/shading-schema.jpg" alt="Схема системы затенения" class="rounded-lg shadow-lg w-full md:w-3/4 lg:w-1/2">
+                </div>
+            </div>
         </div>
     </section>
+
+
 
     <!-- Секция с особенностями -->
     <section class="services bg-white py-10">

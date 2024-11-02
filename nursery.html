@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="nursery.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body class="bg-gray-100 font-roboto">
@@ -32,7 +32,7 @@
 </script>
 
 <main class="pt-16">
-    <section class="hero bg-cover bg-center" style="background-image: url('images/nursery-bg.png'); height: 50vh;">
+    <section class="hero bg-cover bg-center" style="background-image: url('images/cropped-zad.jpg'); height: 50vh;">
         <div class="container mx-auto flex items-center justify-center h-full">
             <h1 class="text-white text-5xl font-bold text-center drop-shadow-lg">Строительство лесных питомников</h1>
         </div>
@@ -60,27 +60,35 @@
         </div>
     </section>
 
+    <!-- Gallery Section for Nursery Photos -->
     <section class="bg-green-100 py-10">
         <div class="container mx-auto text-center">
-            <h2 class="text-3xl font-bold mb-6 text-green-900">Почему выбирают нас?</h2>
+            <h2 class="text-3xl font-bold mb-6 text-green-900">Примеры наших проектов</h2>
             <p class="max-w-3xl mx-auto mb-8 text-lg text-gray-700">
-                Мы работаем как с частными коммерческими структурами, так и с государственными компаниями и корпорациями. Наши проекты отличаются высоким качеством, надежностью и долговечностью. Мы предлагаем комплексные решения, которые помогут вам эффективно выращивать сеянцы с ЗКС и достигать ваших целей.
+                Ознакомьтесь с нашими проектами лесных питомников. Эти проекты показывают нашу приверженность качеству и внимание к деталям на каждом этапе строительства.
             </p>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="p-6 bg-white rounded-lg shadow-lg">
-                    <i class="fas fa-seedling text-green-700 text-4xl mb-4"></i>
-                    <h3 class="text-xl font-semibold text-green-900">Индивидуальный подход</h3>
-                    <p class="text-gray-700 mt-2">Каждый проект разрабатывается с учетом специфики вашего участка и потребностей.</p>
+                <!-- Replace with actual paths to your images -->
+                <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                    <img src="images/фото-генплан.png" alt="План лесного питомника 1" class="w-full h-60 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold text-green-900 mb-2">Генеральный план питомника</h3>
+                        <p class="text-gray-700">Проект генерального плана лесного питомника, включающий зоны посадки и инфраструктуру.</p>
+                    </div>
                 </div>
-                <div class="p-6 bg-white rounded-lg shadow-lg">
-                    <i class="fas fa-hard-hat text-green-700 text-4xl mb-4"></i>
-                    <h3 class="text-xl font-semibold text-green-900">Опытные специалисты</h3>
-                    <p class="text-gray-700 mt-2">Наши эксперты с многолетним опытом готовы реализовать проекты любой сложности.</p>
+                <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                    <img src="images/projektir.png" alt="Генплан лесного питомника" class="w-full h-60 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold text-green-900 mb-2">Генплан лесного питомника</h3>
+                        <p class="text-gray-700">Визуализация лесного питомника с распределением зон и необходимых построек.</p>
+                    </div>
                 </div>
-                <div class="p-6 bg-white rounded-lg shadow-lg">
-                    <i class="fas fa-handshake text-green-700 text-4xl mb-4"></i>
-                    <h3 class="text-xl font-semibold text-green-900">Надежные партнёры</h3>
-                    <p class="text-gray-700 mt-2">Работаем с ведущими поставщиками оборудования и материалов для гарантии качества.</p>
+                <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                    <img src="images/nursery.png" alt="Проект лесного питомника" class="w-full h-60 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold text-green-900 mb-2">Проектирование лесного питомника</h3>
+                        <p class="text-gray-700">Разработка проекта с учетом всех особенностей участка и требований клиента.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -116,7 +124,6 @@
         mobileMenu.classList.add('hidden');
         document.body.style.overflow = 'auto';
     });
-
 </script>
 </body>
 

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О компании - Био-Инвест</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-gray-50 font-roboto">
+<header class="fixed w-full bg-green-900 text-white shadow-md z-50">
+    <div class="container mx-auto flex items-center justify-between p-4">
+        <div class="flex items-center">
+            <img src="images/logo.png" alt="BioInvest Logo" class="h-12 md:h-16">
+        </div>
+        <div id="menu-placeholder"></div>
+    </div>
+</header>
+
+<script>
+    fetch('menu.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('menu-placeholder').innerHTML = data;
+        })
+        .catch(error => console.error('Ошибка при загрузке меню:', error));
+</script>
+
+<main class="pt-24">
+    <!-- Company Info Section -->
+    <section class="py-10 px-4 bg-green-700">
+        <div class="container mx-auto text-center">
+            <h1 class="text-4xl font-bold text-white mb-6">О компании</h1>
+            <p class="text-xl text-white leading-relaxed mb-6">
+                Компания ООО «БИО-ИНВЕСТ» организована в 2004 году, в Санкт-Петербурге. Но уже более 10 лет мы помогаем
+                создавать и комплектовать лесные питомники.
+            </p>
+            <p class="text-xl text-white leading-relaxed">
+                За это время компания приобрела опыт в проектировании питомников, поставки различного оборудования, а так
+                же организовало собственное производство теплиц для выращивания сеянцев с ЗКС.
+            </p>
+        </div>
+    </section>
+
+    <!-- Additional Info Section with Image -->
+    <section class="py-10 px-4 container mx-auto flex flex-col md:flex-row items-center bg-white shadow-lg rounded-lg overflow-hidden my-10 border-l-4 border-green-700">
+        <img src="images/greenhouse.png" alt="Company Building" class="w-full md:w-1/2 object-cover rounded-lg mb-6 md:mb-0">
+        <div class="md:ml-8 p-6">
+            <h2 class="text-3xl font-bold text-green-900 mb-4"><i class="fas fa-warehouse text-green-700 mr-2"></i>Наши достижения</h2>
+            <p class="text-lg text-gray-700 mb-4">
+                Мы на протяжении многих лет совершенствуем наши технологии и производство, чтобы обеспечивать лучшие решения для лесных питомников. У нас есть опыт в разработке различных типов теплиц и оборудования, адаптированного под различные климатические условия.
+            </p>
+            <p class="text-lg text-gray-700">
+                Мы гордимся нашими успехами и готовы предложить нашим клиентам лучшие услуги и продукцию на рынке.
+            </p>
+        </div>
+    </section>
+</main>
+
+<footer class="bg-green-900 text-white text-center p-4">
+    <p>© 2024 BioInvest. Все права защищены.</p>
+</footer>
+
+<script src="menu.js"></script>
+<script>
+    // Scroll effect for header background change
+    window.addEventListener('scroll', function () {
+        var header = document.querySelector('header');
+        if (window.scrollY > 50) {
+            header.classList.add('header-scrolled');
+        } else {
+            header.classList.remove('header-scrolled');
+        }
+    });
+
+    // Toggle mobile menu
+    document.addEventListener("DOMContentLoaded", function () {
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        if (mobileMenuButton) {
+            mobileMenuButton.addEventListener('click', function () {
+                var mobileMenu = document.getElementById('mobile-menu');
+                mobileMenu.classList.toggle('hidden');
+                document.body.style.overflow = mobileMenu.classList.contains('hidden') ? 'auto' : 'hidden';
+            });
+        }
+    });
+</script>
+</body>
+</html>

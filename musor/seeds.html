@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Семена и сеянцы ОКС и ЗКС - BioInvest</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="bg-gray-50 font-roboto">
+<header class="fixed w-full bg-green-900 text-white shadow-md z-50">
+    <div class="container mx-auto flex items-center justify-between p-4">
+        <div class="flex items-center">
+            <img src="../images/logo.png" alt="BioInvest Logo" class="h-12 md:h-16">
+        </div>
+
+        <div id="menu-placeholder"></div>
+    </div>
+</header>
+
+<script>
+    fetch('menu.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('menu-placeholder').innerHTML = data;
+        })
+        .catch(error => console.error('Ошибка при загрузке меню:', error));
+</script>
+
+<main class="pt-20">
+    <!-- Секция "Семена хвойных пород" -->
+    <section class="py-10 px-4 container mx-auto">
+        <h1 class="text-4xl font-bold text-center text-green-900 mb-10">Семена и сеянцы ОКС и ЗКС</h1>
+        <div class="flex flex-col md:flex-row items-center bg-white shadow-md rounded-lg overflow-hidden mb-8">
+            <img src="../images/seeds-hand.png" alt="Семена на белой перчатке" class="w-full md:w-1/2 object-cover">
+            <div class="p-8 flex-1">
+                <h2 class="text-2xl font-bold text-green-900 mb-4">Семена хвойных пород</h2>
+                <p class="text-lg text-gray-700 mb-4">
+                    Компания Био-Инвест уже многие годы занимается поставками качественных семян хвойных пород. Мы предлагаем семена сосны и семена ели, которые проходят строгий контроль качества.
+                </p>
+                <p class="text-lg text-gray-700 mb-4">
+                    Хранение семян происходит в специальных условиях, что позволяет поддерживать высокий класс семян на протяжении долгого времени.
+                </p>
+                <p class="text-lg text-gray-700">
+                    Для арендаторов Ленинградской области, существует специальное предложение!
+                </p>
+                <a href="#special-offer" class="mt-4 inline-block bg-green-700 text-white font-bold py-2 px-4 rounded shadow hover:bg-green-800 transition">Узнать больше</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция "Сеянцы ОКС и ЗКС" -->
+    <section class="py-10 px-4 container mx-auto">
+        <h2 class="text-3xl font-bold text-center text-green-900 mb-10">Сеянцы ОКС и ЗКС</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Сеянец сосны с ОКС -->
+            <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300">
+                <img src="../images/pine-oks.png" alt="Сеянец сосны с ОКС" class="w-full h-60 object-cover">
+                <div class="p-6">
+                    <h3 class="text-2xl font-bold text-green-900 mb-4">Сеянец сосны с ОКС</h3>
+                    <p class="text-lg text-gray-700">
+                        На постоянной основе мы реализуем сеянцы сосны и ели, выращенные согласно стандартам ГОСТ. В наличии всегда сеянцы ЗКС (закрытой корневой системой) и ОКС (открытой корневой системой).
+                    </p>
+                </div>
+            </div>
+
+            <!-- Сеянец сосны с ЗКС -->
+            <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300">
+                <img src="../images/pine-zks.jpg" alt="Сеянец сосны с ЗКС" class="w-full h-60 object-cover">
+                <div class="p-6">
+                    <h3 class="text-2xl font-bold text-green-900 mb-4">Сеянец сосны с ЗКС</h3>
+                    <p class="text-lg text-gray-700">
+                        В качестве посевного материала используются только семена первого класса. Приживаемость ели и сосны ЗКС – более 92%.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Сеянец ели с ОКС -->
+            <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300">
+                <img src="../images/spruce-oks.jpg" alt="Сеянец ели с ОКС" class="w-full h-60 object-cover">
+                <div class="p-6">
+                    <h3 class="text-2xl font-bold text-green-900 mb-4">Сеянец ели с ОКС</h3>
+                    <p class="text-lg text-gray-700">
+                        Стандарты сеянцев с ЗКС: Высота сеянца – от 7 до 15 см, толщина шейки стволика – от 2 мм.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Сеянец ели с ЗКС -->
+            <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300">
+                <img src="../images/spruce-oks.jpg" alt="Сеянец ели с ЗКС" class="w-full h-60 object-cover">
+                <div class="p-6">
+                    <h3 class="text-2xl font-bold text-green-900 mb-4">Сеянец ели с ЗКС</h3>
+                    <p class="text-lg text-gray-700">
+                        Доставка сеянцев в любую точку по требованию клиента. Мы гарантируем высокое качество и надежность нашего материала.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="bg-green-900 text-white text-center p-4">
+    <p>© 2024 BioInvest. Все права защищены.</p>
+</footer>
+<script src="../menu.js"></script>
+<script>
+    // Скролл для изменения фона хедера
+    window.addEventListener('scroll', function () {
+        var header = document.querySelector('header');
+        if (window.scrollY > 50) {
+            header.classList.add('header-scrolled');
+        } else {
+            header.classList.remove('header-scrolled');
+        }
+    });
+
+    // Открытие мобильного меню
+    document.getElementById('mobile-menu-button').addEventListener('click', function () {
+        var mobileMenu = document.getElementById('mobile-menu');
+        mobileMenu.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+    });
+
+    // Закрытие мобильного меню
+    document.getElementById('close-menu-button').addEventListener('click', function () {
+        var mobileMenu = document.getElementById('mobile-menu');
+        mobileMenu.classList.add('hidden');
+        document.body.style.overflow = 'auto';
+    });
+
+    // Функция для переключения подменю в мобильной версии
+    function toggleSubmenu(button) {
+        var submenu = button.nextElementSibling;
+        submenu.classList.toggle('hidden');
+    }
+</script>
+</body>
+</html>

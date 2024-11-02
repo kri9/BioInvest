@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Сеянцы ОКС и ЗКС - BioInvest</title>
+    <title>Семена и сеянцы ОКС и ЗКС - BioInvest</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="seedlings.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body class="bg-gray-50 font-roboto">
@@ -32,42 +31,70 @@
 </script>
 
 <main class="pt-20">
+    <!-- Секция "Семена хвойных пород" с фоновым оформлением -->
+    <section class="py-10 px-4 bg-green-700">
+        <div class="container mx-auto">
+            <h1 class="text-4xl font-bold text-center text-white mb-10">Семена и сеянцы ОКС и ЗКС</h1>
+            <div class="flex flex-col md:flex-row items-center bg-white shadow-lg rounded-lg overflow-hidden mb-8 p-6 border-l-4 border-green-700">
+                <img src="images/seeds-hand.png" alt="Семена на белой перчатке" class="w-full md:w-1/2 object-cover rounded-lg">
+                <div class="p-8 flex-1">
+                    <h2 class="text-2xl font-bold text-green-900 mb-4"><i class="fas fa-seedling text-green-700 mr-2"></i>Семена хвойных пород</h2>
+                    <p class="text-lg text-gray-700 mb-4">
+                        Компания Био-Инвест уже многие годы занимается поставками качественных семян хвойных пород. Мы предлагаем семена сосны и семена ели, которые проходят строгий контроль качества.
+                    </p>
+                    <p class="text-lg text-gray-700 mb-4">
+                        Хранение семян происходит в специальных условиях, что позволяет поддерживать высокий класс семян на протяжении долгого времени.
+                    </p>
+                    <p class="text-lg text-gray-700">
+                        Для арендаторов Ленинградской области, существует специальное предложение!
+                    </p>
+                    <a href="#special-offer" class="mt-4 inline-block bg-green-700 text-white font-bold py-2 px-4 rounded shadow hover:bg-green-800 transition">Узнать больше</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция "Сеянцы ОКС и ЗКС" -->
     <section class="py-10 px-4 container mx-auto">
-        <h1 class="text-4xl font-bold text-center text-green-900 mb-10">Сеянцы ОКС и ЗКС</h1>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300">
-                <img src="images/pine-oks.png" alt="Сеянец сосны с ОКС" class="w-full h-60 object-cover">
+        <h2 class="text-3xl font-bold text-center text-green-900 mb-10">Сеянцы ОКС и ЗКС</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+            <!-- Карточка для каждого типа сеянцев с иконками -->
+            <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 border-t-4 border-green-700">
+                <img src="images/sosna-oks1.jpeg" alt="Сеянец сосны с ОКС" class="w-full h-60 object-cover rounded-t-lg">
                 <div class="p-6">
-                    <h2 class="text-2xl font-bold text-green-900 mb-4">Сеянец сосны с ОКС</h2>
+                    <h3 class="text-2xl font-bold text-green-900 mb-4"><i class="fas fa-tree text-green-700 mr-2"></i>Сеянец сосны с ОКС</h3>
                     <p class="text-lg text-gray-700">
                         На постоянной основе мы реализуем сеянцы сосны и ели, выращенные согласно стандартам ГОСТ. В наличии всегда сеянцы ЗКС (закрытой корневой системой) и ОКС (открытой корневой системой).
                     </p>
                 </div>
             </div>
-            <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300">
-                <img src="images/pine-zks.jpg" alt="Сеянец сосны с ЗКС" class="w-full h-60 object-cover">
+
+            <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 border-t-4 border-green-700">
+                <img src="images/sosna-oks.jpg" alt="Сеянец сосны с ЗКС" class="w-full h-60 object-cover rounded-t-lg">
                 <div class="p-6">
-                    <h2 class="text-2xl font-bold text-green-900 mb-4">Сеянец сосны с ЗКС</h2>
+                    <h3 class="text-2xl font-bold text-green-900 mb-4"><i class="fas fa-tree text-green-700 mr-2"></i>Сеянец сосны с ЗКС</h3>
                     <p class="text-lg text-gray-700">
                         В качестве посевного материала используются только семена первого класса. Приживаемость ели и сосны ЗКС – более 92%.
                     </p>
                 </div>
             </div>
-            <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300">
-                <img src="images/spruce-oks.jpg" alt="Сеянец ели с ОКС" class="w-full h-60 object-cover">
+
+            <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 border-t-4 border-green-700">
+                <img src="images/sosna-vzroslaja-zks.jpg" alt="Дополнительный сеянец сосны" class="w-full h-60 object-cover rounded-t-lg">
                 <div class="p-6">
-                    <h2 class="text-2xl font-bold text-green-900 mb-4">Сеянец ели с ОКС</h2>
+                    <h3 class="text-2xl font-bold text-green-900 mb-4"><i class="fas fa-tree text-green-700 mr-2"></i>Сеянец сосны</h3>
                     <p class="text-lg text-gray-700">
-                        Стандарты сеянцев с ЗКС: Высота сеянца – от 7 до 15 см, толщина шейки стволика – от 2 мм.
+                        Наши сеянцы сосны подойдут для любых климатических условий и являются отличным выбором для лесовосстановления.
                     </p>
                 </div>
             </div>
-            <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300">
-                <img src="images/spruce-oks.jpg" alt="Сеянец ели с ЗКС" class="w-full h-60 object-cover">
+
+            <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 border-t-4 border-green-700">
+                <img src="images/jelj-oks.jpg" alt="Сеянец ели с ОКС" class="w-full h-60 object-cover rounded-t-lg">
                 <div class="p-6">
-                    <h2 class="text-2xl font-bold text-green-900 mb-4">Сеянец ели с ЗКС</h2>
+                    <h3 class="text-2xl font-bold text-green-900 mb-4"><i class="fas fa-tree text-green-700 mr-2"></i>Сеянец ели с ОКС</h3>
                     <p class="text-lg text-gray-700">
-                        Доставка сеянцев в любую точку по требованию клиента. Мы гарантируем высокое качество и надежность нашего материала.
+                        Стандарты сеянцев с ЗКС: Высота сеянца – от 7 до 15 см, толщина шейки стволика – от 2 мм.
                     </p>
                 </div>
             </div>
@@ -110,7 +137,5 @@
         submenu.classList.toggle('hidden');
     }
 </script>
-
 </body>
-
 </html>

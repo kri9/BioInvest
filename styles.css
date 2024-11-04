@@ -119,14 +119,26 @@ footer {
 .hero {
     position: relative;
     height: 60vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
     background-size: cover;
     background-position: center;
+    transition: opacity 1s ease-in-out;
+    opacity: 1;
 }
 
+.hero img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.hero img.active {
+    opacity: 1;
+}
 .hero h1 {
     color: white;
     font-weight: bold;
@@ -239,3 +251,14 @@ a:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
+#pdf-modal {
+    display: none;
+}
+
+#pdf-modal.hidden {
+    display: none;
+}
+
+#pdf-modal:not(.hidden) {
+    display: flex;
+}

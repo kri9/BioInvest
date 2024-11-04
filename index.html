@@ -43,8 +43,10 @@
 
 <main class="pt-24">
     <section class="hero bg-cover bg-center slideshow">
-        <div class="container mx-auto flex items-center justify-center h-full">
+        <div class="container mx-auto flex items-center justify-center h-full relative z-10">
             <h1 class="text-white text-5xl font-bold">ООО "БИО-ИНВЕСТ"</h1>
+        </div>
+        <div class="absolute inset-0 z-0">
         </div>
     </section>
 
@@ -134,7 +136,6 @@
 <script src="menu.js"></script>
 
 <script>
-    // Слайдшоу фона
     let slideIndex = 0;
     const slides = [
         'images/cropped-zad.jpg',
@@ -146,12 +147,26 @@
 
     function showSlides() {
         const hero = document.querySelector('.hero');
-        hero.style.backgroundImage = `url(${slides[slideIndex]})`;
+        const images = hero.querySelectorAll('img');
+        images.forEach((img, index) => {
+            img.classList.remove('active');
+            if (index === slideIndex) {
+                img.classList.add('active');
+            }
+        });
         slideIndex = (slideIndex + 1) % slides.length;
-        setTimeout(showSlides, 3000); // Переход каждые 3 секунды
     }
 
-    document.addEventListener('DOMContentLoaded', showSlides);
+    document.addEventListener('DOMContentLoaded', () => {
+        const hero = document.querySelector('.hero');
+        slides.forEach((src, index) => {
+            const img = document.createElement('img');
+            img.src = src;
+            if (index === 0) img.classList.add('active');
+            hero.appendChild(img);
+        });
+        setInterval(showSlides, 4000); // Change slides every 4 seconds
+    });
 
     // Скролл для изменения фона хедера
     window.addEventListener('scroll', function () {

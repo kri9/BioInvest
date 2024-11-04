@@ -56,10 +56,19 @@
                     <p class="mb-6">
                         Во время закаливания сеянцев, в зависимости от региона, мы часто сталкиваемся с активным и палящим солнцем, которое обжигает растения и не дает им нормально развиваться. Для этого мы имеем собственную, разработанную нашими инженерами систему затенения. Максимальная ширина площадки закаливания до 35 метров.
                     </p>
+                    <button class="bg-green-700 text-white py-2 px-4 rounded" onclick="openPdfModal()">Показать инструкцию</button>
                 </div>
                 <!-- Изображение схемы -->
                 <div class="md:w-1/2 flex justify-center p-4">
                     <img src="images/shading-schema.jpg" alt="Схема системы затенения" class="rounded-lg shadow-lg w-full md:w-3/4 lg:w-1/2">
+                </div>
+            </div>
+
+            <!-- Modal for PDF -->
+            <div id="pdf-modal" class="hidden fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50">
+                <div class="relative bg-white p-4 rounded-lg shadow-lg w-3/4 h-3/4">
+                    <button class="absolute top-2 right-2 text-black text-3xl" onclick="closePdfModal()">&times;</button>
+                    <iframe id="pdf-frame" src="pdf/instruction.pdf" class="w-full h-full"></iframe>
                 </div>
             </div>
         </div>
@@ -193,6 +202,16 @@
 
     function closeModal() {
         document.getElementById('image-overlay').classList.add('hidden');
+        document.body.style.overflow = 'auto';
+    }
+
+    function openPdfModal() {
+        document.getElementById('pdf-modal').classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closePdfModal() {
+        document.getElementById('pdf-modal').classList.add('hidden');
         document.body.style.overflow = 'auto';
     }
 

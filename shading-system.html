@@ -68,7 +68,9 @@
             <div id="pdf-modal" class="hidden fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50">
                 <div class="relative bg-white p-4 rounded-lg shadow-lg w-3/4 h-3/4">
                     <button class="absolute top-2 right-2 text-black text-3xl" onclick="closePdfModal()">&times;</button>
-                    <iframe id="pdf-frame" src="pdf/instruction.pdf" class="w-full h-full"></iframe>
+                    <object id="pdf-frame" data="pdf/instruction.pdf" type="application/pdf" class="w-full h-full">
+                        <p>У вас в браузере на телефоне отсуствует плагин для просмотра PDF контента. <a href="pdf/instruction.pdf">click here to download the PDF file.</a></p>
+                    </object>
                 </div>
             </div>
         </div>

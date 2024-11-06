@@ -42,21 +42,32 @@
 <!-- Основное содержимое -->
 <main class="pt-24">
     <!-- Герой секция с градиентом -->
-    <section class="hero bg-cover bg-center relative" style="background-image: url('images/greenhouse_background.png'); height: 40vh;">
-        <div class="absolute inset-0 bg-gradient-to-b from-transparent to-green-900 opacity-75"></div>
+    <!-- Running banner section -->
+    <section class="hero bg-cover bg-center slideshow">
         <div class="container mx-auto flex items-center justify-center h-full relative z-10">
-            <h1 class="text-white text-5xl font-bold">Теплицы</h1>
+            <h1 class="text-white text-5xl font-bold">ТЕПЛИЦЫ</h1>
+        </div>
+        <div class="absolute inset-0 z-0">
+            <!-- Images will be placed here by JavaScript -->
         </div>
     </section>
 
     <section class="container mx-auto py-10 text-center">
-        <h2 class="font-bold text-3xl mb-4 text-green-900">Что из себя представляют наши теплицы?</h2>
-        <p class="mb-8 text-gray-700">
-            Мы производим финские теплицы <strong>Termorex</strong>. Данный конструктив теплицы разработан специально для выращивания сеянцев деревьев с ЗКС (закрытой корневой системой).
+        <h2 class="font-bold text-3xl mb-4 text-green-900">Наши теплицы</h2>
+        <div class="flex justify-center items-center space-x-4 mb-4">
+            <img src="images/fin.png" alt="Российский и Финский флаги" class="h-24">
+            <p class="text-gray-700 text-lg">
+                Мы производим <strong class="text-green-600">ФИНСКИЕ теплицы Termorex</strong> в РОССИИ.
+            </p>
+            <img src="images/fin.png" alt="Российский и Финский флаги" class="h-24">
+        </div>
+        <p class="text-gray-700 text-lg">
+            Данный конструктив теплицы разработан специально для выращивания сеянцев деревьев с ЗКС (закрытой корневой системой).
         </p>
-        <p class="mb-8 text-gray-700">
-            Есть три основных размера теплицы:
-        </p>
+    </section>
+
+    <section>
+
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 
@@ -64,6 +75,7 @@
             <div class="flex flex-col items-center bg-white rounded-lg shadow-lg p-4 hover:shadow-xl transition-shadow duration-300">
                 <img src="images/termorexs.jpg" alt="Termorex-S" class="rounded-lg mb-4 w-full h-64 object-cover">
                 <p class="font-bold text-lg text-green-900">12×60 м — Termorex-S</p>
+                <p>250 000 сеянцев ЗКС (1 ротация)</p>
                 <p class="text-gray-700 text-center">Идеально подходит для небольших участков. Компактный размер и высокая эффективность.</p>
             </div>
 
@@ -78,6 +90,7 @@
                     </a>
                 </div>
                 <p class="font-bold text-lg text-green-900">16,5×80 м — Termorex-M</p>
+                <p>500 000 сеянцев ЗКС (1 ротация)</p>
                 <p class="text-gray-700 text-center">Средний размер, отлично подходит для средних и крупных хозяйств, требует больше места.</p>
             </div>
 
@@ -92,6 +105,7 @@
                     </a>
                 </div>
                 <p class="font-bold text-lg text-green-900">25×100 м — Termorex-L</p>
+                <p>1 000 000 сеянцев ЗКС (1 ротация)</p>
                 <p class="text-gray-700 text-center">Самая большая модель, предназначена для крупных предприятий, максимальная эффективность.</p>
             </div>
 
@@ -100,23 +114,23 @@
         <hr class="my-8 border-t-2 border-green-900">
     </section>
 
-
-
-    <!-- Секция калькулятора стоимости -->
     <section class="container mx-auto py-4 text-center bg-green-900 rounded-lg shadow-lg my-10">
         <h2 class="font-bold text-3xl mb-4 text-white">Рассчитайте стоимость теплицы</h2>
         <p class="text-white mb-6">Введите параметры вашей теплицы и узнайте примерную стоимость.</p>
 
         <div class="flex flex-col md:flex-row justify-center items-center mb-6">
+            <!-- "Слайдер" для ширины -->
             <div class="mx-4">
-                <label for="width" class="block text-white font-bold mb-2">Ширина (м):</label>
-                <input type="range" id="width" min="5" max="30" value="15" class="slider w-full" oninput="updateWidthValue(this.value)">
-                <span id="widthValue" class="font-bold text-white">15</span> м
+                <label class="block text-white font-bold mb-2">Ширина (м):</label>
+                <input type="range" id="width" min="12" max="25" step="1" value="12" class="slider w-full" oninput="updateWidthValue(this.value)">
+                <span id="widthValue" class="font-bold text-white">12</span> м
             </div>
+
+            <!-- Слайдер для длины -->
             <div class="mx-4">
                 <label for="length" class="block text-white font-bold mb-2">Длина (м):</label>
-                <input type="range" id="length" min="10" max="100" value="50" class="slider w-full" oninput="updateLengthValue(this.value)">
-                <span id="lengthValue" class="font-bold text-white">50</span> м
+                <input type="range" id="length" min="10" max="120" step="10" value="60" class="slider w-full" oninput="updateLengthValue(this.value)">
+                <span id="lengthValue" class="font-bold text-white">60</span> м
             </div>
         </div>
 
@@ -130,6 +144,7 @@
         </div>
     </section>
 
+
     <!-- Секция с теплицами -->
     <section class="container mx-auto py-10">
         <h2 class="font-bold text-3xl mb-4 text-green-900">Наши Теплицы</h2>
@@ -137,12 +152,12 @@
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             <!-- Карточка 1 -->
             <div class="card bg-green-900 shadow-lg rounded-lg p-6 relative">
-                <i class="fas fa-seedling absolute text-green-900 opacity-20 text-9xl" style="top: 20px; right: 20px;"></i>
-                <h3 class="font-bold text-xl mb-4 text-green-100">Инновации</h3>
-                <a href="images/3tepl.jpg" class="glightbox" data-gallery="gallery1" data-title="Инновации">
-                    <img src="images/3tepl.jpg" alt="Инновации" class="rounded-lg mb-4">
+                <i class="fas fa-shield-alt absolute text-green-900 opacity-20 text-9xl" style="top: 20px; right: 20px;"></i>
+                <h3 class="font-bold text-xl mb-4 text-green-100">Надежность</h3>
+                <a href="images/ustojchivost.png" class="glightbox" data-gallery="gallery" data-title="Надежность">
+                    <img src="images/ustojchivost.png" alt="Надежность" class="rounded-lg mb-4">
                 </a>
-                <p class="font text=xl mb-4 text-white">Внедрение передовых технологий для повышения эффективности и экологичности.</p>
+                <p class="text-white">Конструкции выполнены из качественной оцинкованной стали 3мм; «П» образный профиль, делает конструкцию прочной и очень надежной, особенно в заснеженных регионах.</p>
             </div>
             <!-- Карточка 2 -->
             <div class="card bg-green-900 shadow-lg rounded-lg p-6 relative">
@@ -295,6 +310,40 @@
 <script src="menu.js"></script>
 <script src="calculate-price.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+
+<script>
+    let slideIndex = 0;
+    const slides = [
+        'images/tep1.jpg',
+        'images/tep2.jpg',
+        'images/tep3.jpg',
+        'images/tep4.jpeg'
+    ];
+
+    function showSlides() {
+        const hero = document.querySelector('.hero');
+        const images = hero.querySelectorAll('img');
+        images.forEach((img, index) => {
+            img.classList.remove('active');
+            if (index === slideIndex) {
+                img.classList.add('active');
+            }
+        });
+        slideIndex = (slideIndex + 1) % slides.length;
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const hero = document.querySelector('.hero');
+        slides.forEach((src, index) => {
+            const img = document.createElement('img');
+            img.src = src;
+            if (index === 0) img.classList.add('active');
+            hero.appendChild(img);
+        });
+        setInterval(showSlides, 4000);
+    });
+</script>
+
 <script>
     function openModal() {
         document.getElementById('infoModal').classList.remove('hidden');

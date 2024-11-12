@@ -30,32 +30,98 @@
 </script>
 
 <main class="pt-24">
-    <!-- Company Info Section -->
-    <section class="py-10 px-4 bg-green-700">
+    <!-- Hero Section -->
+    <section class="hero bg-cover bg-center" style="background-image: url('images/tep2.jpg'); height: 50vh;">
+        <div class="container mx-auto flex items-center justify-center h-full text-center">
+            <h1 class="text-white text-5xl font-bold drop-shadow-lg">О компании</h1>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="py-16 bg-green-700 text-white">
         <div class="container mx-auto text-center">
-            <h1 class="text-4xl font-bold text-white mb-6">О компании</h1>
-            <p class="text-xl text-white leading-relaxed mb-6">
-                Компания ООО «БИО-ИНВЕСТ» организована в 2004 году, в Санкт-Петербурге. Но уже более 10 лет мы помогаем
-                создавать и комплектовать лесные питомники.
-            </p>
-            <p class="text-xl text-white leading-relaxed">
-                За это время компания приобрела опыт в проектировании питомников, поставки различного оборудования, а так
-                же организовало собственное производство теплиц для выращивания сеянцев с ЗКС.
+            <h2 class="text-4xl font-bold mb-6">Наша миссия</h2>
+            <p class="text-lg leading-relaxed max-w-3xl mx-auto">
+                Наша миссия — способствовать устойчивому развитию лесных ресурсов и сохранению окружающей среды. Мы стремимся создавать надежные и эффективные решения для питомников и теплиц, чтобы поддерживать восстановление лесов.
             </p>
         </div>
     </section>
 
-    <!-- Additional Info Section with Image -->
-    <section class="py-10 px-4 container mx-auto flex flex-col md:flex-row items-center bg-white shadow-lg rounded-lg overflow-hidden my-10 border-l-4 border-green-700">
-        <img src="images/greenhouse.png" alt="Company Building" class="w-full md:w-1/2 object-cover rounded-lg mb-6 md:mb-0">
-        <div class="md:ml-8 p-6">
-            <h2 class="text-3xl font-bold text-green-900 mb-4"><i class="fas fa-warehouse text-green-700 mr-2"></i>Наши достижения</h2>
-            <p class="text-lg text-gray-700 mb-4">
-                Мы на протяжении многих лет совершенствуем наши технологии и производство, чтобы обеспечивать лучшие решения для лесных питомников. У нас есть опыт в разработке различных типов теплиц и оборудования, адаптированного под различные климатические условия.
-            </p>
-            <p class="text-lg text-gray-700">
-                Мы гордимся нашими успехами и готовы предложить нашим клиентам лучшие услуги и продукцию на рынке.
-            </p>
+    <!-- Company Info Section -->
+    <section class="py-12 bg-white">
+        <div class="container mx-auto flex flex-col md:flex-row items-center">
+            <div class="md:w-1/4 mb-8 md:mb-0">
+                <img src="images/achievements.png" alt="Company Building" class="rounded-lg shadow-lg">
+            </div>
+            <div class="md:w-1/2 md:pl-12">
+                <h2 class="text-3xl font-bold text-green-900 mb-4">О нас</h2>
+                <p class="text-lg text-gray-700 mb-4">
+                    Компания ООО «БИО-ИНВЕСТ» основана в 2004 году в Санкт-Петербурге. Уже более 10 лет мы помогаем создавать и развивать лесные питомники, поставляем оборудование и производим теплицы для выращивания сеянцев с закрытой корневой системой (ЗКС).
+                </p>
+                <p class="text-lg text-gray-700">
+                    Наша цель — поставлять продукцию высочайшего качества, соответствующую всем потребностям наших клиентов. Мы постоянно совершенствуем наши технологии и находим новые решения для лучших результатов.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section class="py-12 bg-green-100">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold text-green-900 mb-8"><i class="fas fa-trophy text-green-700 mr-2"></i>Наши достижения</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="achievement-card bg-white shadow-lg rounded-lg p-6">
+                    <i class="fas fa-award text-green-700 text-4xl mb-4"></i>
+                    <h3 class="text-2xl font-semibold text-green-900">20+ Лет Опыта</h3>
+                    <p class="text-lg text-gray-700 mt-2">
+                        Более 20 лет мы совершенствуем производство и технологические решения для лесных питомников.
+                    </p>
+                </div>
+                <div class="achievement-card bg-white shadow-lg rounded-lg p-6">
+                    <i class="fas fa-seedling text-green-700 text-4xl mb-4"></i>
+                    <h3 class="text-2xl font-semibold text-green-900">Экологически Чистые Продукты</h3>
+                    <p class="text-lg text-gray-700 mt-2">
+                        Наши теплицы и технологии поддерживают экологически чистое производство и сохранение природы.
+                    </p>
+                </div>
+                <div class="achievement-card bg-white shadow-lg rounded-lg p-6">
+                    <i class="fas fa-handshake text-green-700 text-4xl mb-4"></i>
+                    <h3 class="text-2xl font-semibold text-green-900">Надежное Партнёрство</h3>
+                    <p class="text-lg text-gray-700 mt-2">
+                        Мы построили долгосрочные отношения с клиентами и партнёрами, доверяя и поддерживая друг друга.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Values Section -->
+    <section class="py-12 bg-white">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold text-green-900 mb-8">Наши Ценности</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+                    <i class="fas fa-heart text-green-700 text-4xl mb-4"></i>
+                    <h3 class="text-xl font-semibold text-green-900">Ответственность</h3>
+                    <p class="text-lg text-gray-700 mt-2">
+                        Мы ответственны перед нашими клиентами и природой, создавая продукцию, которая поддерживает устойчивое развитие.
+                    </p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+                    <i class="fas fa-lightbulb text-green-700 text-4xl mb-4"></i>
+                    <h3 class="text-xl font-semibold text-green-900">Иновации</h3>
+                    <p class="text-lg text-gray-700 mt-2">
+                        Мы стремимся к постоянному развитию, внедряя современные технологии для улучшения результатов.
+                    </p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+                    <i class="fas fa-users text-green-700 text-4xl mb-4"></i>
+                    <h3 class="text-xl font-semibold text-green-900">Партнёрство</h3>
+                    <p class="text-lg text-gray-700 mt-2">
+                        Мы ценим отношения с нашими клиентами и поставщиками, стремясь к долгосрочному сотрудничеству.
+                    </p>
+                </div>
+            </div>
         </div>
     </section>
 </main>

@@ -122,7 +122,7 @@
             <!-- "Слайдер" для ширины -->
             <div class="mx-4">
                 <label class="block text-white font-bold mb-2">Ширина (м):</label>
-                <input type="range" id="width" min="12" max="25" step="1" value="12" class="slider w-full" oninput="updateWidthValue(this.value)">
+                <input type="range" id="width" min="1" max="3" step="1" value="1" class="slider w-full" oninput="updateWidthValue(this.value)">
                 <span id="widthValue" class="font-bold text-white">12</span> м
             </div>
 
@@ -154,16 +154,16 @@
             <div class="card bg-green-900 shadow-lg rounded-lg p-6 relative">
                 <i class="fas fa-shield-alt absolute text-green-900 opacity-20 text-9xl" style="top: 20px; right: 20px;"></i>
                 <h3 class="font-bold text-xl mb-4 text-green-100">Надежность</h3>
-                <a href="images/ustojchivost.png" class="glightbox" data-gallery="gallery" data-title="Надежность">
-                    <img src="images/ustojchivost.png" alt="Надежность" class="rounded-lg mb-4">
+                <a href="images/nadjozhnost.jpeg" class="glightbox" data-gallery="gallery" data-title="Надежность">
+                    <img src="images/nadjozhnost.jpeg" alt="Надежность" class="rounded-lg mb-4">
                 </a>
                 <p class="text-white">Конструкции выполнены из качественной оцинкованной стали 3мм; «П» образный профиль, делает конструкцию прочной и очень надежной, особенно в заснеженных регионах.</p>
             </div>
             <!-- Карточка 2 -->
             <div class="card bg-green-900 shadow-lg rounded-lg p-6 relative">
                 <i class="fas fa-leaf absolute text-green-900 opacity-20 text-9xl" style="top: 20px; right: 20px;"></i>
-                <h3 class="font-bold text-xl mb-4 text-green-100">Экологичность</h3>
-                <a href="images/greenhouse.png" class="glightbox" data-gallery="gallery1" data-title="Экологичность">
+                <h3 class="font-bold text-xl mb-4 text-green-100">Основные узлы</h3>
+                <a href="images/greenhouse_psd1.png" class="glightbox" data-gallery="gallery1" data-title="Основные узлы">
                     <img src="images/greenhouse.png" alt="Экологичность" class="rounded-lg mb-4">
                 </a>
                 <p class="font text-xl mb-4 text-white">Фрамуги-1500 мм.
@@ -215,6 +215,27 @@
                 </a>
                 <p class="font text=xl mb-4 text-white">Использование новейших технологий для улучшения производительности.</p>
             </div>
+
+            <!-- Карточка 4: Простота конструкции -->
+            <div class="card bg-green-900 shadow-lg rounded-lg p-6 relative">
+                <i class="fas fa-cogs absolute text-green-900 opacity-20 text-9xl" style="top: 20px; right: 20px;"></i>
+                <h3 class="font-bold text-xl mb-4 text-green-100">Простота конструкции</h3>
+                <a href="images/easy_construction.png" class="glightbox" data-gallery="gallery1" data-title="Простота конструкции">
+                    <img src="images/easy_construction.png" alt="Простота конструкции" class="rounded-lg mb-4">
+                </a>
+                <p class="font text-xl mb-4 text-white">Конструкция разработана с учетом удобства установки и легкости в обслуживании, что делает теплицу доступной для широкого круга пользователей.</p>
+            </div>
+
+            <!-- Карточка 5: Сборка -->
+            <div class="card bg-green-900 shadow-lg rounded-lg p-6 relative">
+                <i class="fas fa-tools absolute text-green-900 opacity-20 text-9xl" style="top: 20px; right: 20px;"></i>
+                <h3 class="font-bold text-xl mb-4 text-green-100">Сборка</h3>
+                <a href="images/assembly.png" class="glightbox" data-gallery="gallery1" data-title="Сборка">
+                    <img src="images/assembly.png" alt="Сборка" class="rounded-lg mb-4">
+                </a>
+                <p class="font text-xl mb-4 text-white">Сборка производится на земле  при возведении требуется  3-4 человека и 1  автокран. Для правильной сборки теплицы разработана удобная и понятная инструкция</p>
+            </div>
+
         </div>
     </section>
 
@@ -242,8 +263,9 @@
                 Выбор пленочного покрытия является одним из самых важных аспектов при строительстве теплицы. Качественная пленка — залог стабильного и здорового роста саженцев, правильного получения ультрафиолета, сохранения температурного баланса в теплице, а также снижение расходов на ремонтные работы за счёт долголетней службы EVA Patilux EVA D\AG (7-10 лет).
             </p>
             <p class="mb-4 text-gray-700">
-                Более подробную информацию о пленке вы сможете найти на сайте <a href="http://www.PATILUX.ru" class="text-blue-500 underline">www.PATILUX.ru</a>
+                Более подробную информацию о пленке вы сможете найти на сайте <a href="http://www.PATILUX.ru" class="text-blue-500 underline">www.PATILUX.ru</a> или на <a href="film-patilux.html" class="text-blue-500 underline">внутренней вкладке о плёнке</a>.
             </p>
+
             <hr class="my-8 border-t-2 border-green-900">
             <h3 class="font-bold text-2xl mb-4 text-green-900">Купить теплицу для лесовосстановления</h3>
             <p class="mb-4 text-gray-700">
@@ -316,8 +338,8 @@
     const slides = [
         'images/tep1.jpg',
         'images/tep2.jpg',
-        'images/tep3.jpg',
-        'images/tep4.jpeg'
+        'images/teplic_bag1.jpeg',
+        'images/teplic_bag2.jpeg'
     ];
 
     function showSlides() {
@@ -371,15 +393,6 @@
     });
 
 
-    function calculatePrice() {
-        var width = document.getElementById('width').value;
-        var length = document.getElementById('length').value;
-        var price = width * length * 400; // Примерная формула расчета
-        document.getElementById('price').innerText = price.toLocaleString('ru-RU') + ' ₽';
-    }
-
-    // Инициализация калькулятора
-    calculatePrice();
 
     function toggleZoom(imgElement) {
         if (imgElement.classList.contains('zoomed')) {

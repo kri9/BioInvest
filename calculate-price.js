@@ -29,23 +29,20 @@ function calculatePrice(width, length) {
     width = parseFloat(width);
     length = parseInt(length);
 
-    const basePrice = 3000000; // Базовая цена 3 000 000 рублей
-
-    let widthMultiplier;
+    let pricePerSquareMeter;
     if (width === 12) {
-        widthMultiplier = 1;
+        pricePerSquareMeter = 4166.67; // Цена за м² для ширины 12 м
     } else if (width === 16.5) {
-        widthMultiplier = 1.5;
+        pricePerSquareMeter = 6060.61; // Цена за м² для ширины 16.5 м
     } else if (width === 25) {
-        widthMultiplier = 2;
+        pricePerSquareMeter = 6000; // Цена за м² для ширины 25 м
     } else {
-        widthMultiplier = 1; // По умолчанию
+        pricePerSquareMeter = 5000; // Значение по умолчанию
     }
 
-    const lengthMultiplier = length / 60;
-
-    const finalPrice = basePrice * widthMultiplier * lengthMultiplier;
-    const formattedPrice = finalPrice.toLocaleString('ru-RU');
+    const area = width * length;
+    const finalPrice = area * pricePerSquareMeter;
+    const formattedPrice = Math.round(finalPrice).toLocaleString('ru-RU');
     document.getElementById('price').textContent = `${formattedPrice} ₽`;
 }
 

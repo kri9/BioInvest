@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сертификаты - BioInvest</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Page Background */
+        body {
+            background-color: #f0fdf4; /* Light green background */
+            font-family: 'Roboto', sans-serif;
+        }
+
+        /* Central container styling */
+        .certificates-container {
+            /*max-width: 1920px;*/
+            margin: auto;
+            padding: 2rem;
+            background-color: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0px 4px 12px rgba(0, 128, 0, 0.1);
+            position: relative;
+        }
+
+        /* Leafy Border Icons */
+        .leaf-icon {
+            color: #3B7A57;
+            font-size: 1.5rem;
+            position: absolute;
+        }
+        /* Positioning leafy icons in corners */
+        .leaf-icon-top-left { top: 0.5rem; left: 0.5rem; }
+        .leaf-icon-top-right { top: 0.5rem; right: 0.5rem; }
+        .leaf-icon-bottom-left { bottom: 0.5rem; left: 0.5rem; }
+        .leaf-icon-bottom-right { bottom: 0.5rem; right: 0.5rem; }
+
+        /* Certificate card styling */
+        .certificate-card {
+            background-color: #f0fdf4;
+            border: 2px solid #3B7A57;
+            border-radius: 10px;
+            padding: 1rem;
+            margin: 1rem 0;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        .certificate-card:hover {
+            transform: scale(1.05);
+        }
+        .certificate-link {
+            color: #3B7A57;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+        .certificate-link:hover {
+            color: #1F5135;
+        }
+    </style></head>
+
+<body class="bg-gray-50 font-roboto">
+<header class="fixed w-full bg-green-900 text-white shadow-md z-50">
+    <div class="container mx-auto flex items-center justify-between p-4">
+        <div class="flex items-center">
+            <img src="images/logo.png" alt="BioInvest Logo" class="h-12 md:h-16">
+        </div>
+        <div id="menu-placeholder"></div>
+    </div>
+</header>
+
+<script>
+    fetch('menu.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('menu-placeholder').innerHTML = data;
+        })
+        .catch(error => console.error('Ошибка при загрузке меню:', error));
+</script>
+
+<main class="pt-24">
+    <!-- Introduction Section with Leafy Border -->
+    <section class="hero bg-cover bg-center" style="background-image: url('images/greenhouse_background.png'); height: 50vh;">
+        <div class="container mx-auto flex items-center justify-center h-full text-center">
+            <h1 class="text-white text-5xl font-bold drop-shadow-lg">Сертификаты</h1>
+        </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section class="certificates-container relative text-center">
+        <!-- Leafy Border Icons -->
+        <i class="fas fa-leaf leaf-icon leaf-icon-top-left"></i>
+        <i class="fas fa-leaf leaf-icon leaf-icon-top-right"></i>
+        <i class="fas fa-leaf leaf-icon leaf-icon-bottom-left"></i>
+        <i class="fas fa-leaf leaf-icon leaf-icon-bottom-right"></i>
+
+<!--        <h1 class="text-5xl font-bold text-green-900 mb-6">Сертификаты</h1>-->
+        <p class="text-xl text-gray-700 mb-14">
+            Мы гордимся тем, что наши продукты и услуги соответствуют самым высоким стандартам качества. Здесь вы можете ознакомиться с сертификатами, подтверждающими нашу приверженность к качеству и экологической устойчивости.
+        </p>
+
+        <!-- Certificates Section -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Certificate Card -->
+            <div class="certificate-card">
+                <i class="fas fa-file-pdf text-green-700 text-6xl mb-4"></i>
+                <h3 class="text-2xl font-semibold text-green-900 mb-2">Сертификат Качества</h3>
+                <p class="text-lg text-gray-700 mb-4">Подтверждает высокие стандарты нашей продукции.</p>
+                <a href="pdf/certificate.pdf" class="certificate-link" target="_blank">Просмотреть PDF</a>
+            </div>
+            <div class="certificate-card">
+                <i class="fas fa-file-pdf text-green-700 text-6xl mb-4"></i>
+                <h3 class="text-2xl font-semibold text-green-900 mb-2">Эко-Сертификат</h3>
+                <p class="text-lg text-gray-700 mb-4">Подтверждает нашу приверженность экологии.</p>
+                <a href="pdf/sejsmijka.pdf" class="certificate-link" target="_blank">Просмотреть PDF</a>
+            </div>
+            <!-- Additional certificates can be added similarly -->
+        </div>
+    </section>
+
+</main>
+
+<footer class="bg-green-900 text-white text-center p-4">
+    <p>© 2024 BioInvest. Все права защищены.</p>
+</footer>
+
+<script src="menu.js"></script>
+</body>
+</html>

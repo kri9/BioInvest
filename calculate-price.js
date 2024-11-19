@@ -29,23 +29,40 @@ function calculatePrice(width, length) {
     width = parseFloat(width);
     length = parseInt(length);
 
-    let pricePerSquareMeter;
-    if (width === 12) {
-        pricePerSquareMeter = 4166.67; // Цена за м² для ширины 12 м
-    } else if (width === 16.5) {
-        pricePerSquareMeter = 6060.61; // Цена за м² для ширины 16.5 м
-    } else if (width === 25) {
-        pricePerSquareMeter = 6000; // Цена за м² для ширины 25 м
+    let finalPrice;
+
+    // Фиксированные цены для заданных комбинаций
+    if (width === 12 && length === 60) {
+        finalPrice = 5000000; // 5 млн рублей
+    } else if (width === 16.5 && length === 80) {
+        finalPrice = 8000000; // 8 млн рублей
+    } else if (width === 25 && length === 100) {
+        finalPrice = 18000000; // 18 млн рублей
     } else {
-        pricePerSquareMeter = 5000; // Значение по умолчанию
+        // Базовая стоимость за квадратный метр
+        const basePricePerSquareMeter = 5000;
+        const area = width * length;
+
+        // Коэффициенты увеличения стоимости в зависимости от ширины
+        let widthMultiplier;
+        if (width === 12) {
+            widthMultiplier = 1; // Базовая стоимость
+        } else if (width === 16.5) {
+            widthMultiplier = 1.2; // Увеличение на 20%
+        } else if (width === 25) {
+            widthMultiplier = 1.4; // Увеличение на 40%
+        } else {
+            widthMultiplier = 1; // По умолчанию (для новых размеров)
+        }
+
+        // Расчет стоимости
+        finalPrice = area * basePricePerSquareMeter * widthMultiplier;
     }
 
-    const area = width * length;
-    const finalPrice = area * pricePerSquareMeter;
-    const formattedPrice = Math.round(finalPrice).toLocaleString('ru-RU');
-    document.getElementById('price').textContent = `${formattedPrice} ₽`;
+    const formattedPrice = `${Math.round(finalPrice).toLocaleString('ru-RU')} ₽`;
+    document.getElementById('price').textContent = formattedPrice;
 }
 
 function callNow() {
-    window.location.href = 'tel:+78005553535';  // Номер телефона компании
+    window.location.href = 'tel:+78005553535'; // Номер телефона компании
 }

@@ -29,35 +29,24 @@ function calculatePrice(width, length) {
     width = parseFloat(width);
     length = parseInt(length);
 
-    let finalPrice;
+    // Базовая стоимость за квадратный метр
+    const basePricePerSquareMeter = 6700;
+    const area = width * length;
 
-    // Фиксированные цены для заданных комбинаций
-    if (width === 12 && length === 60) {
-        finalPrice = 5000000; // 5 млн рублей
-    } else if (width === 16.5 && length === 80) {
-        finalPrice = 8000000; // 8 млн рублей
-    } else if (width === 25 && length === 100) {
-        finalPrice = 18000000; // 18 млн рублей
+    // Коэффициенты увеличения стоимости в зависимости от ширины
+    let widthMultiplier;
+    if (width === 12) {
+        widthMultiplier = 1; // Базовая стоимость
+    } else if (width === 16.5) {
+        widthMultiplier = 1.2; // Увеличение на 20%
+    } else if (width === 25) {
+        widthMultiplier = 1.4; // Увеличение на 40%
     } else {
-        // Базовая стоимость за квадратный метр
-        const basePricePerSquareMeter = 5000;
-        const area = width * length;
-
-        // Коэффициенты увеличения стоимости в зависимости от ширины
-        let widthMultiplier;
-        if (width === 12) {
-            widthMultiplier = 1; // Базовая стоимость
-        } else if (width === 16.5) {
-            widthMultiplier = 1.2; // Увеличение на 20%
-        } else if (width === 25) {
-            widthMultiplier = 1.4; // Увеличение на 40%
-        } else {
-            widthMultiplier = 1; // По умолчанию (для новых размеров)
-        }
-
-        // Расчет стоимости
-        finalPrice = area * basePricePerSquareMeter * widthMultiplier;
+        widthMultiplier = 1; // По умолчанию (для новых размеров)
     }
+
+    // Расчет стоимости
+    const finalPrice = area * basePricePerSquareMeter * widthMultiplier;
 
     const formattedPrice = `${Math.round(finalPrice).toLocaleString('ru-RU')} ₽`;
     document.getElementById('price').textContent = formattedPrice;

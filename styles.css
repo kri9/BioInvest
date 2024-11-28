@@ -290,3 +290,36 @@ a:hover {
 #pdf-modal:not(.hidden) {
     display: flex;
 }
+
+/* Галерея изображений */
+#gallery img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.card {
+    height: 750px; /* Фиксированная высота карточки */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden; /* Убираем выходящий за пределы контент */
+}
+
+.card img {
+    height: 60%; /* Изображение занимает 60% высоты карточки */
+    object-fit: cover; /* Сохраняет пропорции изображения */
+    width: 100%;
+}
+
+.card-content {
+    height: 40%; /* Контент занимает оставшиеся 40% */
+    padding: 1rem;
+}
+

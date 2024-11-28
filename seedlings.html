@@ -16,7 +16,6 @@
         <div class="flex items-center">
             <img src="images/logo.png" alt="BioInvest Logo" class="h-12 md:h-16">
         </div>
-
         <div id="menu-placeholder"></div>
     </div>
 </header>
@@ -31,73 +30,117 @@
 </script>
 
 <main class="pt-20">
-    <!-- Секция "Семена хвойных пород" с фоновым оформлением -->
-    <section class="py-10 px-4 bg-green-700">
-        <div class="container mx-auto">
-            <h1 class="text-4xl font-bold text-center text-white mb-10">Семена и сеянцы ОКС и ЗКС</h1>
-            <div class="flex flex-col md:flex-row items-center bg-white shadow-lg rounded-lg overflow-hidden mb-8 p-6 border-l-4 border-green-700">
-                <img src="images/seeds-hand.png" alt="Семена на белой перчатке" class="w-full md:w-1/2 object-cover rounded-lg">
-                <div class="p-8 flex-1">
-                    <h2 class="text-2xl font-bold text-green-900 mb-4"><i class="fas fa-seedling text-green-700 mr-2"></i>Семена хвойных пород</h2>
-                    <p class="text-lg text-gray-700 mb-4">
-                        Компания Био-Инвест уже многие годы занимается поставками качественных семян хвойных пород. Мы предлагаем семена сосны и семена ели, которые проходят строгий контроль качества.
-                    </p>
-                    <p class="text-lg text-gray-700 mb-4">
-                        Хранение семян происходит в специальных условиях, что позволяет поддерживать высокий класс семян на протяжении долгого времени.
-                    </p>
+    <!-- Секция "Сеянцы ОКС и ЗКС" -->
+    <section class="bg-cover bg-center h-96" style="background-image: url('images/cropped-zad.jpg');">
+        <div class="bg-black bg-opacity-50 h-full flex items-center justify-center">
+            <h1 class="text-white text-4xl md:text-6xl font-bold">Семена и сеянцы хвойных пород</h1>
+        </div>
+    </section>
+
+    <!-- Секция описания -->
+    <section class="py-10 px-4 bg-white">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold text-green-900 mb-6">Компания "Био-Инвест"</h2>
+            <p class="text-lg text-gray-700 mb-4">
+                Компания "Био-Инвест" многие годы поставляет качественные семена хвойных пород. Мы предлагаем семена
+                <strong>Сосны обыкновенной (Pinus sylvestris)</strong> и <strong>Ели европейской (Pícea ábies)</strong>, которые проходят строгий контроль качества.
+            </p>
+        </div>
+    </section>
+
+
+    <section class="py-10 px-4 container mx-auto">
+        <h2 class="text-3xl font-bold text-center text-green-900 mb-10">Сеянцы ОКС и ЗКС</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+            <!-- Карточки -->
+            <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 border-t-4 border-green-700 card">
+                <img src="images/sosna-zks.jpg" alt="Сеянец сосны с ЗКС">
+                <div class="p-6 card-content">
+                    <h3 class="text-2xl font-bold text-green-900 mb-4"><i class="fas fa-tree text-green-700 mr-2"></i>Сеянец сосны с ЗКС</h3>
                     <p class="text-lg text-gray-700">
-                        Для арендаторов Ленинградской области, существует специальное предложение!
+                        Сеянцы сосны с ЗКС
+                        На постоянной основе мы реализуем сеянцы сосны, выращенные согласно стандартам ГОСТ 3317-90.
+                        Наши сеянцы сосны устойчивы для любых климатических условий и являются отличным выбором для лесовосстановления.
                     </p>
-                    <a href="#special-offer" class="mt-4 inline-block bg-green-700 text-white font-bold py-2 px-4 rounded shadow hover:bg-green-800 transition">Узнать больше</a>
+                </div>
+            </div>
+
+            <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 border-t-4 border-green-700 card">
+                <img src="images/jelj-zks.jpg" alt="Дополнительный сеянец сосны">
+                <div class="p-6 card-content">
+                    <h3 class="text-2xl font-bold text-green-900 mb-4"><i class="fas fa-tree text-green-700 mr-2"></i>Сеянец ели с ЗКС</h3>
+                    <p class="text-lg text-gray-700">
+                        Сеянец ели с ЗКС.  Стандарты сеянцев Ели европейской  с ЗКС: Высота сеянца – от 7 до 15 см, толщина шейки стволика – от 2 мм.
+                        Наши сеянцы ели устойчивы для любых климатических условий и являются отличным выбором для лесовосстановления.
+                    </p>
+                </div>
+            </div>
+
+            <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 border-t-4 border-green-700 card">
+                <img src="images/sosna-oks.jpg" alt="Дополнительный сеянец сосны">
+                <div class="p-6 card-content">
+                    <h3 class="text-2xl font-bold text-green-900 mb-4"><i class="fas fa-tree text-green-700 mr-2"></i>Сеянец сосны с ОКС</h3>
+                    <p class="text-lg text-gray-700">
+                        Сеянцы сосны с ЗКС
+                        На постоянной основе мы реализуем сеянцы сосны, выращенные согласно стандартам ГОСТ 3317-90.
+                        Наши сеянцы сосны устойчивы для любых климатических условий и являются отличным выбором для лесовосстановления.
+                    </p>
+                </div>
+            </div>
+
+            <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 border-t-4 border-green-700 card">
+                <img src="images/OKS-jelj.jpeg" alt="Дополнительный сеянец сосны">
+                <div class="p-6 card-content">
+                    <h3 class="text-2xl font-bold text-green-900 mb-4"><i class="fas fa-tree text-green-700 mr-2"></i>Сеянец ели с ОКС</h3>
+                    <p class="text-lg text-gray-700">
+                        Стандарты сеянцев Ели европейской с OКС: высота – от 7 до 15 см, толщина шейки стволика – от 2 мм.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Секция "Сеянцы ОКС и ЗКС" -->
-    <section class="py-10 px-4 container mx-auto">
-        <h2 class="text-3xl font-bold text-center text-green-900 mb-10">Сеянцы ОКС и ЗКС</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
-            <!-- Карточка для каждого типа сеянцев с иконками -->
-            <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 border-t-4 border-green-700">
-                <img src="images/sosna-oks1.jpeg" alt="Сеянец сосны с ОКС" class="w-full h-60 object-cover rounded-t-lg">
-                <div class="p-6">
-                    <h3 class="text-2xl font-bold text-green-900 mb-4"><i class="fas fa-tree text-green-700 mr-2"></i>Сеянец сосны с ОКС</h3>
-                    <p class="text-lg text-gray-700">
-                        На постоянной основе мы реализуем сеянцы сосны и ели, выращенные согласно стандартам ГОСТ. В наличии всегда сеянцы ЗКС (закрытой корневой системой) и ОКС (открытой корневой системой).
-                    </p>
-                </div>
-            </div>
 
-            <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 border-t-4 border-green-700">
-                <img src="images/sosna-oks.jpg" alt="Сеянец сосны с ЗКС" class="w-full h-60 object-cover rounded-t-lg">
-                <div class="p-6">
-                    <h3 class="text-2xl font-bold text-green-900 mb-4"><i class="fas fa-tree text-green-700 mr-2"></i>Сеянец сосны с ЗКС</h3>
-                    <p class="text-lg text-gray-700">
-                        В качестве посевного материала используются только семена первого класса. Приживаемость ели и сосны ЗКС – более 92%.
-                    </p>
-                </div>
-            </div>
 
-            <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 border-t-4 border-green-700">
-                <img src="images/sosna-vzroslaja-zks.jpg" alt="Дополнительный сеянец сосны" class="w-full h-60 object-cover rounded-t-lg">
-                <div class="p-6">
-                    <h3 class="text-2xl font-bold text-green-900 mb-4"><i class="fas fa-tree text-green-700 mr-2"></i>Сеянец сосны</h3>
-                    <p class="text-lg text-gray-700">
-                        Наши сеянцы сосны подойдут для любых климатических условий и являются отличным выбором для лесовосстановления.
-                    </p>
-                </div>
-            </div>
 
-            <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 border-t-4 border-green-700">
-                <img src="images/jelj-oks.jpg" alt="Сеянец ели с ОКС" class="w-full h-60 object-cover rounded-t-lg">
-                <div class="p-6">
-                    <h3 class="text-2xl font-bold text-green-900 mb-4"><i class="fas fa-tree text-green-700 mr-2"></i>Сеянец ели с ОКС</h3>
-                    <p class="text-lg text-gray-700">
-                        Стандарты сеянцев с ЗКС: Высота сеянца – от 7 до 15 см, толщина шейки стволика – от 2 мм.
-                    </p>
+    <!-- Секция "Шишки сосны и ели" -->
+    <section class="gallery bg-gray-100 py-10">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold text-green-900 mb-6">Галерея семян и сеянцев</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                <!-- Изображения с функциональностью увеличения -->
+                <div class="image-item shadow-lg rounded overflow-hidden cursor-pointer" onclick="openModal(1)">
+                    <img src="images/cone1.jpg" alt="Семена 1" class="w-full h-48 object-cover">
+                </div>
+                <div class="image-item shadow-lg rounded overflow-hidden cursor-pointer" onclick="openModal(2)">
+                    <img src="images/cone2.jpg" alt="Семена 2" class="w-full h-48 object-cover">
+                </div>
+                <div class="image-item shadow-lg rounded overflow-hidden cursor-pointer" onclick="openModal(3)">
+                    <img src="images/cone3.jpg" alt="Семена 3" class="w-full h-48 object-cover">
+                </div>
+                <div class="image-item shadow-lg rounded overflow-hidden cursor-pointer" onclick="openModal(4)">
+                    <img src="images/cone4.jpg" alt="Семена 4" class="w-full h-48 object-cover">
+                </div>
+                <div class="image-item shadow-lg rounded overflow-hidden cursor-pointer" onclick="openModal(5)">
+                    <img src="images/cone5.jpg" alt="Семена 5" class="w-full h-48 object-cover">
+                </div>
+                <div class="image-item shadow-lg rounded overflow-hidden cursor-pointer" onclick="openModal(6)">
+                    <img src="images/cone6.jpg" alt="Семена 5" class="w-full h-48 object-cover">
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Секция с контактом -->
+    <section class="bg-green-800 text-white py-10">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-4">Свяжитесь с нами</h2>
+            <p class="max-w-2xl mx-auto mb-6">
+                Хотите узнать больше о наших семенах и сеянцах? Свяжитесь с нами для получения подробной информации и индивидуального предложения.
+            </p>
+            <a href="tel:+79219338353" class="bg-white text-green-800 font-bold py-3 px-8 rounded-full inline-block shadow hover:bg-gray-200 transition duration-300">
+                <i class="fas fa-phone-alt mr-2"></i>Позвонить нам
+            </a>
         </div>
     </section>
 </main>
@@ -105,37 +148,29 @@
 <footer class="bg-green-900 text-white text-center p-4">
     <p>© 2024 BioInvest. Все права защищены.</p>
 </footer>
-<script src="menu.js"></script>
+
+<!-- Модальное окно для увеличения изображений -->
+<div id="image-overlay" class="hidden fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50">
+    <div class="relative">
+        <img id="modal-image" src="" alt="Увеличенное изображение" class="max-w-full max-h-screen">
+        <button class="absolute top-2 right-2 text-white text-3xl" onclick="closeModal()">&times;</button>
+    </div>
+</div>
+
 <script>
-    // Скролл для изменения фона хедера
-    window.addEventListener('scroll', function () {
-        var header = document.querySelector('header');
-        if (window.scrollY > 50) {
-            header.classList.add('header-scrolled');
-        } else {
-            header.classList.remove('header-scrolled');
-        }
-    });
-
-    // Открытие мобильного меню
-    document.getElementById('mobile-menu-button').addEventListener('click', function () {
-        var mobileMenu = document.getElementById('mobile-menu');
-        mobileMenu.classList.remove('hidden');
+    // Функции для увеличения изображений
+    function openModal(imageIndex) {
+        var modalImage = document.getElementById('modal-image');
+        modalImage.src = 'images/cone' + imageIndex + '.jpg';
+        document.getElementById('image-overlay').classList.remove('hidden');
         document.body.style.overflow = 'hidden';
-    });
+    }
 
-    // Закрытие мобильного меню
-    document.getElementById('close-menu-button').addEventListener('click', function () {
-        var mobileMenu = document.getElementById('mobile-menu');
-        mobileMenu.classList.add('hidden');
+    function closeModal() {
+        document.getElementById('image-overlay').classList.add('hidden');
         document.body.style.overflow = 'auto';
-    });
-
-    // Функция для переключения подменю в мобильной версии
-    function toggleSubmenu(button) {
-        var submenu = button.nextElementSibling;
-        submenu.classList.toggle('hidden');
     }
 </script>
 </body>
+
 </html>

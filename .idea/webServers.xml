@@ -2,8 +2,8 @@
 <project version="4">
   <component name="WebServers">
     <option name="servers">
-      <webServer id="ada190e9-20f2-4fd1-b2b3-c83efbe7ca91" name="ftp.funnyenglish.eu" url="https://funnyenglish.eu/">
-        <fileTransfer rootFolder="/home2/funnyeng/public_html" host="ftp.funnyenglish.eu" port="21">
+      <webServer id="ada190e9-20f2-4fd1-b2b3-c83efbe7ca91" name="ftp.funnyenglish.eu" url="https://pottiputki.ru/">
+        <fileTransfer host="37.140.192.64" port="21">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
           </advancedOptions>
